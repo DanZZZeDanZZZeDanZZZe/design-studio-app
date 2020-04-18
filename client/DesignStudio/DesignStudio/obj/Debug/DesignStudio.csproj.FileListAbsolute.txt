@@ -1,0 +1,10 @@
+D:\Repositories\design-studio-app\client\DesignStudio\DesignStudio\bin\Debug\DesignStudio.exe.config
+D:\Repositories\design-studio-app\client\DesignStudio\DesignStudio\bin\Debug\DesignStudio.exe
+D:\Repositories\design-studio-app\client\DesignStudio\DesignStudio\bin\Debug\DesignStudio.pdb
+D:\Repositories\design-studio-app\client\DesignStudio\DesignStudio\obj\Debug\DesignStudio.csprojAssemblyReference.cache
+D:\Repositories\design-studio-app\client\DesignStudio\DesignStudio\obj\Debug\DesignStudio.ConnectionSetupForm.resources
+D:\Repositories\design-studio-app\client\DesignStudio\DesignStudio\obj\Debug\DesignStudio.MainForm.resources
+D:\Repositories\design-studio-app\client\DesignStudio\DesignStudio\obj\Debug\DesignStudio.Properties.Resources.resources
+D:\Repositories\design-studio-app\client\DesignStudio\DesignStudio\obj\Debug\DesignStudio.csproj.GenerateResource.cache
+D:\Repositories\design-studio-app\client\DesignStudio\DesignStudio\obj\Debug\DesignStudio.exe
+D:\Repositories\design-studio-app\client\DesignStudio\DesignStudio\obj\Debug\DesignStudio.pdb
