@@ -13,7 +13,7 @@ namespace DesignStudio
     public partial class ConnectionSetupForm : Form
     {
 
-        public ConnectionSetupForm(MainForm f)
+        public ConnectionSetupForm(mainForm f)
         {
             InitializeComponent();
             string[] DBNameArr = f.DBName.Split('=');

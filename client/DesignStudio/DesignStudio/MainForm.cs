@@ -12,9 +12,9 @@ using System.Windows.Forms;
 
 namespace DesignStudio
 {
-    public partial class MainForm : Form
+    public partial class mainForm : Form
     {
-        public MainForm()
+        public mainForm()
         {
             InitializeComponent();
         }
@@ -28,12 +28,19 @@ namespace DesignStudio
         public string DBName { get   => dBName; set => dBName = value; }
         public string Settings { get => settings; set => settings = value; }
 
+        public SqlConnection con;
+        public DataSet ds;
+        SqlDataAdapter sqlDataAdapter;
+
         bool ContactTheDB(bool flag)
         {
             string connectionString = ServerName + DBName + Settings;
             bool chekintConnection;
 
-            SqlConnection con = new SqlConnection(connectionString);
+            con = new SqlConnection(connectionString);
+            sqlDataAdapter = new SqlDataAdapter("SELECT * FROM fonts", con);
+            ds = new DataSet();
+
             try
             {
                 if (flag)
@@ -77,6 +84,11 @@ namespace DesignStudio
             return chekintConnection;
         }
 
+        /*DataSet InitDataset()
+        {
+
+        }*/
+
         private void connectButton_Click(object sender, EventArgs e)
         {
             SetEnableButtons();
@@ -103,6 +115,16 @@ namespace DesignStudio
         {
             ConnectionSetupForm DialogF = new ConnectionSetupForm(this);
             DialogF.ShowDialog();
+        }
+
+        private void updateButton_Click(object sender, EventArgs e)
+        {
+
+            ds.Tables.Clear();
+            sqlDataAdapter.Fill(ds, "fonts");
+
+            mainDataGrid.DataSource = ds.Tables[0];
+
         }
     }
 }
