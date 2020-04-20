@@ -53,6 +53,7 @@
     <Compile Include="ConnectionSetupForm.Designer.cs">
       <DependentUpon>ConnectionSetupForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="DatabaseAPI.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -20,37 +20,42 @@ namespace DesignStudio
         }
 
         bool flagConnectionButton = true;
-        string serverName = ConfigurationManager.ConnectionStrings["ServerName"].ConnectionString;
-        string dBName = ConfigurationManager.ConnectionStrings["DBName"].ConnectionString;
-        string settings = ConfigurationManager.ConnectionStrings["Settings"].ConnectionString;
+        /* string serverName = ConfigurationManager.ConnectionStrings["ServerName"].ConnectionString;
+         string dBName = ConfigurationManager.ConnectionStrings["DBName"].ConnectionString;
+         string settings = ConfigurationManager.ConnectionStrings["Settings"].ConnectionString;
 
-        public string ServerName { get => serverName; set => serverName = value; }
-        public string DBName { get   => dBName; set => dBName = value; }
-        public string Settings { get => settings; set => settings = value; }
+         public string ServerName { get => serverName; set => serverName = value; }
+         public string DBName { get   => dBName; set => dBName = value; }
+         public string Settings { get => settings; set => settings = value; }
 
-        public SqlConnection con;
-        public DataSet ds;
-        SqlDataAdapter sqlDataAdapter;
+         public SqlConnection con;
+       /*  public DataSet ds;
+         SqlDataAdapter sqlDataAdapter;*/
+        private DatabaseAPI api = new DatabaseAPI();
+
+        internal DatabaseAPI Api { get => api; set => api = value; }
 
         bool ContactTheDB(bool flag)
         {
-            string connectionString = ServerName + DBName + Settings;
+            
             bool chekintConnection;
-
-            con = new SqlConnection(connectionString);
-            sqlDataAdapter = new SqlDataAdapter("SELECT * FROM fonts", con);
-            ds = new DataSet();
+            
+            // con = new SqlConnection(connectionString);
+            /*sqlDataAdapter = new SqlDataAdapter("SELECT * FROM fonts", con);
+            ds = new DataSet();*/
+            Api.CreateConnection();
 
             try
             {
                 if (flag)
                 {
-                    con.Open();
+                    // con.Open();
+                    Api.ConnectionOpen();
                     MessageBox.Show("База данных подключена", "Успешно", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else
                 {
-                    con.Close();
+                    Api.ConnectionClose();
                     MessageBox.Show("База данных отключена", "Успешно", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
 
@@ -115,16 +120,6 @@ namespace DesignStudio
         {
             ConnectionSetupForm DialogF = new ConnectionSetupForm(this);
             DialogF.ShowDialog();
-        }
-
-        private void updateButton_Click(object sender, EventArgs e)
-        {
-
-            ds.Tables.Clear();
-            sqlDataAdapter.Fill(ds, "fonts");
-
-            mainDataGrid.DataSource = ds.Tables[0];
-
         }
     }
 }
