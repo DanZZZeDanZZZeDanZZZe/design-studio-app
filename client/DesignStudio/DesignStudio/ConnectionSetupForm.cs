@@ -16,9 +16,9 @@ namespace DesignStudio
         public ConnectionSetupForm(mainForm f)
         {
             InitializeComponent();
-            string[] DBNameArr = f.Api.dbName.Split('=');
+            string[] DBNameArr = DatabaseAPI.dbName.Split('=');
             dBNameTextBox.Text = DBNameArr[1];
-            string[] ServerNameArr = f.Api.serverName.Split('=');
+            string[] ServerNameArr = DatabaseAPI.serverName.Split('=');
             serverNameTextBox.Text = ServerNameArr[1];
         }
 

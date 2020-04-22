@@ -20,42 +20,33 @@ namespace DesignStudio
         }
 
         bool flagConnectionButton = true;
-        /* string serverName = ConfigurationManager.ConnectionStrings["ServerName"].ConnectionString;
-         string dBName = ConfigurationManager.ConnectionStrings["DBName"].ConnectionString;
-         string settings = ConfigurationManager.ConnectionStrings["Settings"].ConnectionString;
-
-         public string ServerName { get => serverName; set => serverName = value; }
-         public string DBName { get   => dBName; set => dBName = value; }
-         public string Settings { get => settings; set => settings = value; }
-
-         public SqlConnection con;
-       /*  public DataSet ds;
-         SqlDataAdapter sqlDataAdapter;*/
-        private DatabaseAPI api = new DatabaseAPI();
-
-        internal DatabaseAPI Api { get => api; set => api = value; }
+        public SqlConnection con;
+        public List<string[]> CurrentData;
+        /*  public DataSet ds;
+          SqlDataAdapter sqlDataAdapter;*/
 
         bool ContactTheDB(bool flag)
         {
             
             bool chekintConnection;
-            
+
             // con = new SqlConnection(connectionString);
             /*sqlDataAdapter = new SqlDataAdapter("SELECT * FROM fonts", con);
             ds = new DataSet();*/
-            Api.CreateConnection();
+            DatabaseAPI.CreateConnection();
 
             try
             {
                 if (flag)
                 {
                     // con.Open();
-                    Api.ConnectionOpen();
+                    DatabaseAPI.ConnectionOpen();
                     MessageBox.Show("База данных подключена", "Успешно", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    FillGrids();
                 }
                 else
                 {
-                    Api.ConnectionClose();
+                    DatabaseAPI.ConnectionClose();
                     MessageBox.Show("База данных отключена", "Успешно", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
 
@@ -120,6 +111,27 @@ namespace DesignStudio
         {
             ConnectionSetupForm DialogF = new ConnectionSetupForm(this);
             DialogF.ShowDialog();
+        }
+
+        public void FillGrids()
+        {
+            Helper.GenerateGrid(fontsDataGrid, "fonts");
+            Helper.GenerateGrid(logosDataGrid, "logos");
+        }
+
+        private void logosDataGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void internalOrdersPage_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tabPage1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Configuration;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -10,74 +11,81 @@ namespace DesignStudio
 {
     class DatabaseAPI
     {
-        public string serverName = ConfigurationManager.ConnectionStrings["ServerName"].ConnectionString;
-        public string dbName = ConfigurationManager.ConnectionStrings["DBName"].ConnectionString;
-        public string settings = ConfigurationManager.ConnectionStrings["Settings"].ConnectionString;
+        public static string serverName = ConfigurationManager.ConnectionStrings["ServerName"].ConnectionString;
+        public static string dbName = ConfigurationManager.ConnectionStrings["DBName"].ConnectionString;
+        public static string settings = ConfigurationManager.ConnectionStrings["Settings"].ConnectionString;
 
-        public string connectionString;
-        public SqlConnection connection;
- 
-        public void CreateConnectionString()
+        public static string connectionString;
+        public static SqlConnection connection;
+
+        public static SqlCommand command;
+        public static SqlDataReader reader;
+      //  public static List<string[]> data;
+       // public static DataTable dataTable;
+        public static void CreateConnectionString()
         {
             connectionString = serverName + dbName + settings;
         }
 
-        public void CreateConnection()
+        public static void CreateConnection()
         {
             CreateConnectionString();
             connection = new SqlConnection(connectionString);
         }
 
-        public SqlCommand CreateSqlCommand(string query)
-        {
-            SqlCommand command = new SqlCommand(query, connection);
-            return command;
-        }
-        public SqlDataReader CreateReader(string query)
-        {
-            SqlCommand command = CreateSqlCommand(query);
-            SqlDataReader reader = command.ExecuteReader();
-            return reader;
-        }
-        
-        public void ConnectionOpen()
+        public static void ConnectionOpen()
         {
             connection.Open();
         }
 
-        public void ConnectionClose()
+        public static void ConnectionClose()
         {
             connection.Close();
         }
-        public List<string[]> LoadData(string query)
+
+        public static void CreateSqlCommand(string query)
         {
-           // connection.Open();
-
-            //string query = "SELECT * FROM Faculty ORDER BY fac_id";
-
-            // SqlCommand command = new SqlCommand(query, connection);
-
-            // SqlDataReader reader = command.ExecuteReader();
-
-            SqlDataReader reader = CreateReader(query);
-
-            List<string[]> data = new List<string[]>();
-
-            while (reader.Read())
-            {
-                data.Add(new string[3]);
-
-                data[data.Count - 1][0] = reader[0].ToString();
-                data[data.Count - 1][1] = reader[1].ToString();
-                data[data.Count - 1][2] = reader[2].ToString();
-            }
-
-            reader.Close();
-
-            connection.Close();
-            return data;
-            /*foreach (string[] s in data)
-                dataGridView1.Rows.Add(s);*/
+            command = new SqlCommand(query, connection);
         }
+        public static void CreateReader(string query)
+        {
+            CreateSqlCommand(query);
+            reader = command.ExecuteReader();
+        }
+        
+        public static DataTable LoadDataTableFromQuery(string query)
+        {
+            DataTable dataTable = new DataTable();
+            CreateReader(query);
+            dataTable.Load(reader);
+            return dataTable;
+        }
+
+        public static DataTable LoadAllDataFromTable(string name)
+        {
+            return LoadDataTableFromQuery("SELECT * FROM " + name);
+        }
+
+        /*  public List<string[]> LoadData(string query)
+          {
+
+              CreateReader(query);
+              Console.WriteLine(reader.ToString(), command.ToString());
+              data = new List<string[]>();
+
+              while (reader.Read())
+              {
+
+                  data.Add(new string[3]);
+                  data[data.Count - 1][0] = reader[0].ToString();
+                  data[data.Count - 1][1] = reader[1].ToString();
+                  data[data.Count - 1][2] = reader[2].ToString();
+              }
+
+              reader.Close();
+              return data;
+              /*foreach (string[] s in data)
+                  dataGridView1.Rows.Add(s);*/
+
     }
 }
