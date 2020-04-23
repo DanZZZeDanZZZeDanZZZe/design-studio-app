@@ -133,5 +133,10 @@ namespace DesignStudio
         {
 
         }
+
+        private void fontsDataGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
