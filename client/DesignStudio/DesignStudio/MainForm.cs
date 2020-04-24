@@ -80,11 +80,6 @@ namespace DesignStudio
             return chekintConnection;
         }
 
-        /*DataSet InitDataset()
-        {
-
-        }*/
-
         private void connectButton_Click(object sender, EventArgs e)
         {
             SetEnableButtons();
@@ -115,28 +110,40 @@ namespace DesignStudio
 
         public void FillGrids()
         {
-            Helper.GenerateGrid(fontsDataGrid, "fonts");
-            Helper.GenerateGrid(logosDataGrid, "logos");
+            DatabaseAPI.GenerateGrid(fontsDataGrid, "fonts");
+            DatabaseAPI.GenerateGrid(logosDataGrid, "logos");
+            DatabaseAPI.GenerateGrid(individualsDataGrid, "individuals");
+            DatabaseAPI.GenerateGrid(legalEntitiesDataGrid, "legal entities");
+            DatabaseAPI.GenerateGrid(externalOrdersDataGrid, "external orders");
+            DatabaseAPI.GenerateGrid(internalOrdersDataGrid, "internal orders");
+            DatabaseAPI.GenerateGrid(developmentTeamsDataGrid, "development teams");
+            DatabaseAPI.GenerateGrid(designersDataGrid, "designers");
+            DatabaseAPI.GenerateGrid(employeesDataGrid, "employees");
+            DatabaseAPI.GenerateGrid(clothesDataGrid, "clothes");
+            DatabaseAPI.GenerateGrid(circlesDataGrid, "circles");
+            DatabaseAPI.GenerateGrid(coversDataGrid, "covers");
         }
 
-        private void logosDataGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void individualsDeleteButton_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void internalOrdersPage_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tabPage1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void fontsDataGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
+            int id = Helper.getDataGridSelectedKey(individualsDataGrid, 0);
+            MessageBox.Show(id.ToString());
+            int code = DatabaseAPI.IndividualsDelete(id);
+            DatabaseAPI.GenerateGrid(individualsDataGrid, "individuals");
+            switch (code)
+            {
+                case 0:
+                    MessageBox.Show("deleted item with key " + id.ToString());
+                    break;
+                case 1:
+                    MessageBox.Show("Item does not exist", "Error message",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    break;
+                case 2:
+                    MessageBox.Show("Item has related records", "Error message",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    break;
+            }
         }
     }
 }

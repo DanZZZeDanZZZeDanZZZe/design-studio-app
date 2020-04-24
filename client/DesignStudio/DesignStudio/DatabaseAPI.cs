@@ -6,6 +6,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace DesignStudio
 {
@@ -61,10 +62,33 @@ namespace DesignStudio
             return dataTable;
         }
 
+        public static int IndividualsDelete(int id)
+        {
+            CreateSqlCommand("deleteIndividuals");
+            command.CommandType = CommandType.StoredProcedure;
+            command.Parameters.Add("@ID", SqlDbType.Int).Value = id;
+            command.Parameters.Add("@returnCode", SqlDbType.Int);
+            command.Parameters["@returnCode"].Direction = ParameterDirection.Output;
+            command.ExecuteNonQuery();
+            int returnCode = int.Parse(command.Parameters["@returnCode"].Value.ToString());
+            return returnCode;
+        }
+
         public static DataTable LoadAllDataFromTable(string name)
         {
-            return LoadDataTableFromQuery("SELECT * FROM " + name);
+            return LoadDataTableFromQuery("SELECT * FROM [" + name + "]");
         }
+
+
+
+        public static void GenerateGrid(DataGridView grid, string name)
+        {
+            DataTable dt = DatabaseAPI.LoadAllDataFromTable(name);
+            grid.DataSource = dt;
+            grid.Update();
+        }
+
+
 
         /*  public List<string[]> LoadData(string query)
           {

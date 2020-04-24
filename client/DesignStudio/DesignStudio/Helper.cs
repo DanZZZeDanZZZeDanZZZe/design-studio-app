@@ -10,30 +10,12 @@ namespace DesignStudio
 {
     class Helper
     {
-        public static void GenerateGrid(DataGridView grid, string name) 
+        public static int getDataGridSelectedKey(DataGridView grid, int keyIndex)
         {
-            DataTable dt = DatabaseAPI.LoadAllDataFromTable(name);
-            grid.DataSource = dt;
-           // grid.Rows[0].Colums[0].HeaderText =
-            grid.Update();
+            int rowNum = grid.CurrentCell.RowIndex;
+            int keyValue = int.Parse(grid.Rows[rowNum].Cells[keyIndex].Value.ToString());
+            return keyValue;
         }
-        public static string ConvertTableName(string str)
-        {
-            string newStr;
-            switch (str)
-            {
-                case "Шрифты":
-                    newStr = "fonts";
-                    break;
-                case "Логотипы":
-                    newStr = "logos";
-                    break;
-                default:
-                    newStr = "error";
-                    break;
-            }
 
-            return newStr;
-        }
     }
 }

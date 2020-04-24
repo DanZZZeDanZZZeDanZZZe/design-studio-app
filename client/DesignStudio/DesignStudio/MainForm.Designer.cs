@@ -32,70 +32,70 @@
             this.connectButton = new System.Windows.Forms.Button();
             this.Pages = new System.Windows.Forms.TabControl();
             this.fontsPage = new System.Windows.Forms.TabPage();
+            this.fontsDeleteButton = new System.Windows.Forms.Button();
             this.fontsDataGrid = new System.Windows.Forms.DataGridView();
             this.logosPage = new System.Windows.Forms.TabPage();
+            this.LogosDeleteButton = new System.Windows.Forms.Button();
             this.logosDataGrid = new System.Windows.Forms.DataGridView();
             this.individualsPage = new System.Windows.Forms.TabPage();
+            this.individualsDeleteButton = new System.Windows.Forms.Button();
+            this.individualsDataGrid = new System.Windows.Forms.DataGridView();
             this.legalEntitiesPage = new System.Windows.Forms.TabPage();
+            this.legalEntitiesDeleteButton = new System.Windows.Forms.Button();
+            this.legalEntitiesDataGrid = new System.Windows.Forms.DataGridView();
             this.externalOrdersPage = new System.Windows.Forms.TabPage();
+            this.externalOrdersDeleteButton = new System.Windows.Forms.Button();
+            this.externalOrdersDataGrid = new System.Windows.Forms.DataGridView();
             this.internalOrdersPage = new System.Windows.Forms.TabPage();
+            this.internalOrdersDeleteButton = new System.Windows.Forms.Button();
+            this.internalOrdersDataGrid = new System.Windows.Forms.DataGridView();
             this.developmentTeamsPage = new System.Windows.Forms.TabPage();
+            this.developmentTeamsDeleteButton = new System.Windows.Forms.Button();
+            this.developmentTeamsDataGrid = new System.Windows.Forms.DataGridView();
             this.designersPage = new System.Windows.Forms.TabPage();
+            this.designersDeleteButton = new System.Windows.Forms.Button();
+            this.designersDataGrid = new System.Windows.Forms.DataGridView();
             this.employeesPage = new System.Windows.Forms.TabPage();
+            this.employeesDeleteButton = new System.Windows.Forms.Button();
+            this.employeesDataGrid = new System.Windows.Forms.DataGridView();
             this.clothesPage = new System.Windows.Forms.TabPage();
+            this.clothesDeleteButton = new System.Windows.Forms.Button();
+            this.clothesDataGrid = new System.Windows.Forms.DataGridView();
             this.circlesPage = new System.Windows.Forms.TabPage();
+            this.circlesDeleteButton = new System.Windows.Forms.Button();
+            this.circlesDataGrid = new System.Windows.Forms.DataGridView();
             this.coversPage = new System.Windows.Forms.TabPage();
+            this.coversDeleteButton = new System.Windows.Forms.Button();
+            this.coversDataGrid = new System.Windows.Forms.DataGridView();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.pageSetupDialog1 = new System.Windows.Forms.PageSetupDialog();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.fontsDeleteButton = new System.Windows.Forms.Button();
-            this.LogosDeleteButton = new System.Windows.Forms.Button();
-            this.individualsDeleteButton = new System.Windows.Forms.Button();
-            this.individualsDataGrid = new System.Windows.Forms.DataGridView();
-            this.legalEntitiesDeleteButton = new System.Windows.Forms.Button();
-            this.legalEntitiesDataGrid = new System.Windows.Forms.DataGridView();
-            this.externalOrdersDeleteButton = new System.Windows.Forms.Button();
-            this.externalOrdersDataGrid = new System.Windows.Forms.DataGridView();
-            this.internalOrdersDeleteButton = new System.Windows.Forms.Button();
-            this.internalOrdersDataGrid = new System.Windows.Forms.DataGridView();
-            this.developmentTeamsDeleteButton = new System.Windows.Forms.Button();
-            this.developmentTeamsDataGridS = new System.Windows.Forms.DataGridView();
-            this.designersDeleteButton = new System.Windows.Forms.Button();
-            this.designersDataGrid = new System.Windows.Forms.DataGridView();
-            this.employeesDeleteButton = new System.Windows.Forms.Button();
-            this.employeesDataGrid = new System.Windows.Forms.DataGridView();
-            this.clothesDeleteButton = new System.Windows.Forms.Button();
-            this.clothesDataGrid = new System.Windows.Forms.DataGridView();
-            this.circlesDeleteButton = new System.Windows.Forms.Button();
-            this.circlesDataGrid = new System.Windows.Forms.DataGridView();
-            this.coversDeleteButton = new System.Windows.Forms.Button();
-            this.coversDataGrid = new System.Windows.Forms.DataGridView();
             this.Pages.SuspendLayout();
             this.fontsPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.fontsDataGrid)).BeginInit();
             this.logosPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logosDataGrid)).BeginInit();
             this.individualsPage.SuspendLayout();
-            this.legalEntitiesPage.SuspendLayout();
-            this.externalOrdersPage.SuspendLayout();
-            this.internalOrdersPage.SuspendLayout();
-            this.developmentTeamsPage.SuspendLayout();
-            this.designersPage.SuspendLayout();
-            this.employeesPage.SuspendLayout();
-            this.clothesPage.SuspendLayout();
-            this.circlesPage.SuspendLayout();
-            this.coversPage.SuspendLayout();
-            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.individualsDataGrid)).BeginInit();
+            this.legalEntitiesPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.legalEntitiesDataGrid)).BeginInit();
+            this.externalOrdersPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.externalOrdersDataGrid)).BeginInit();
+            this.internalOrdersPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.internalOrdersDataGrid)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.developmentTeamsDataGridS)).BeginInit();
+            this.developmentTeamsPage.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.developmentTeamsDataGrid)).BeginInit();
+            this.designersPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.designersDataGrid)).BeginInit();
+            this.employeesPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.employeesDataGrid)).BeginInit();
+            this.clothesPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.clothesDataGrid)).BeginInit();
+            this.circlesPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.circlesDataGrid)).BeginInit();
+            this.coversPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.coversDataGrid)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // settingButton
@@ -139,7 +139,6 @@
             this.Pages.SelectedIndex = 0;
             this.Pages.Size = new System.Drawing.Size(959, 554);
             this.Pages.TabIndex = 3;
-            this.Pages.Visible = false;
             // 
             // fontsPage
             // 
@@ -152,6 +151,15 @@
             this.fontsPage.Text = "fonts";
             this.fontsPage.UseVisualStyleBackColor = true;
             // 
+            // fontsDeleteButton
+            // 
+            this.fontsDeleteButton.Location = new System.Drawing.Point(748, 458);
+            this.fontsDeleteButton.Name = "fontsDeleteButton";
+            this.fontsDeleteButton.Size = new System.Drawing.Size(186, 55);
+            this.fontsDeleteButton.TabIndex = 1;
+            this.fontsDeleteButton.Text = "delete";
+            this.fontsDeleteButton.UseVisualStyleBackColor = true;
+            // 
             // fontsDataGrid
             // 
             this.fontsDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -162,7 +170,6 @@
             this.fontsDataGrid.RowTemplate.Height = 24;
             this.fontsDataGrid.Size = new System.Drawing.Size(920, 341);
             this.fontsDataGrid.TabIndex = 0;
-            this.fontsDataGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.fontsDataGrid_CellContentClick);
             // 
             // logosPage
             // 
@@ -176,6 +183,15 @@
             this.logosPage.Text = "logos";
             this.logosPage.UseVisualStyleBackColor = true;
             // 
+            // LogosDeleteButton
+            // 
+            this.LogosDeleteButton.Location = new System.Drawing.Point(700, 443);
+            this.LogosDeleteButton.Name = "LogosDeleteButton";
+            this.LogosDeleteButton.Size = new System.Drawing.Size(186, 55);
+            this.LogosDeleteButton.TabIndex = 2;
+            this.LogosDeleteButton.Text = "delete";
+            this.LogosDeleteButton.UseVisualStyleBackColor = true;
+            // 
             // logosDataGrid
             // 
             this.logosDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -185,7 +201,6 @@
             this.logosDataGrid.RowTemplate.Height = 24;
             this.logosDataGrid.Size = new System.Drawing.Size(781, 303);
             this.logosDataGrid.TabIndex = 0;
-            this.logosDataGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.logosDataGrid_CellContentClick);
             // 
             // individualsPage
             // 
@@ -199,6 +214,26 @@
             this.individualsPage.Text = "individuals";
             this.individualsPage.UseVisualStyleBackColor = true;
             // 
+            // individualsDeleteButton
+            // 
+            this.individualsDeleteButton.Location = new System.Drawing.Point(680, 432);
+            this.individualsDeleteButton.Name = "individualsDeleteButton";
+            this.individualsDeleteButton.Size = new System.Drawing.Size(186, 55);
+            this.individualsDeleteButton.TabIndex = 4;
+            this.individualsDeleteButton.Text = "delete";
+            this.individualsDeleteButton.UseVisualStyleBackColor = true;
+            this.individualsDeleteButton.Click += new System.EventHandler(this.individualsDeleteButton_Click);
+            // 
+            // individualsDataGrid
+            // 
+            this.individualsDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.individualsDataGrid.Location = new System.Drawing.Point(85, 37);
+            this.individualsDataGrid.Name = "individualsDataGrid";
+            this.individualsDataGrid.RowHeadersWidth = 51;
+            this.individualsDataGrid.RowTemplate.Height = 24;
+            this.individualsDataGrid.Size = new System.Drawing.Size(781, 303);
+            this.individualsDataGrid.TabIndex = 3;
+            // 
             // legalEntitiesPage
             // 
             this.legalEntitiesPage.Controls.Add(this.legalEntitiesDeleteButton);
@@ -210,150 +245,6 @@
             this.legalEntitiesPage.TabIndex = 3;
             this.legalEntitiesPage.Text = "legal entities";
             this.legalEntitiesPage.UseVisualStyleBackColor = true;
-            // 
-            // externalOrdersPage
-            // 
-            this.externalOrdersPage.Controls.Add(this.externalOrdersDeleteButton);
-            this.externalOrdersPage.Controls.Add(this.externalOrdersDataGrid);
-            this.externalOrdersPage.Location = new System.Drawing.Point(4, 25);
-            this.externalOrdersPage.Name = "externalOrdersPage";
-            this.externalOrdersPage.Padding = new System.Windows.Forms.Padding(3);
-            this.externalOrdersPage.Size = new System.Drawing.Size(951, 525);
-            this.externalOrdersPage.TabIndex = 4;
-            this.externalOrdersPage.Text = "external orders";
-            this.externalOrdersPage.UseVisualStyleBackColor = true;
-            // 
-            // internalOrdersPage
-            // 
-            this.internalOrdersPage.Controls.Add(this.internalOrdersDeleteButton);
-            this.internalOrdersPage.Controls.Add(this.internalOrdersDataGrid);
-            this.internalOrdersPage.Location = new System.Drawing.Point(4, 25);
-            this.internalOrdersPage.Name = "internalOrdersPage";
-            this.internalOrdersPage.Padding = new System.Windows.Forms.Padding(3);
-            this.internalOrdersPage.Size = new System.Drawing.Size(951, 525);
-            this.internalOrdersPage.TabIndex = 5;
-            this.internalOrdersPage.Text = "internal orders";
-            this.internalOrdersPage.UseVisualStyleBackColor = true;
-            this.internalOrdersPage.Click += new System.EventHandler(this.internalOrdersPage_Click);
-            // 
-            // developmentTeamsPage
-            // 
-            this.developmentTeamsPage.Controls.Add(this.developmentTeamsDeleteButton);
-            this.developmentTeamsPage.Controls.Add(this.developmentTeamsDataGridS);
-            this.developmentTeamsPage.Location = new System.Drawing.Point(4, 25);
-            this.developmentTeamsPage.Name = "developmentTeamsPage";
-            this.developmentTeamsPage.Padding = new System.Windows.Forms.Padding(3);
-            this.developmentTeamsPage.Size = new System.Drawing.Size(951, 525);
-            this.developmentTeamsPage.TabIndex = 6;
-            this.developmentTeamsPage.Text = "development teams";
-            this.developmentTeamsPage.UseVisualStyleBackColor = true;
-            // 
-            // designersPage
-            // 
-            this.designersPage.Controls.Add(this.designersDeleteButton);
-            this.designersPage.Controls.Add(this.designersDataGrid);
-            this.designersPage.Location = new System.Drawing.Point(4, 25);
-            this.designersPage.Name = "designersPage";
-            this.designersPage.Padding = new System.Windows.Forms.Padding(3);
-            this.designersPage.Size = new System.Drawing.Size(951, 525);
-            this.designersPage.TabIndex = 7;
-            this.designersPage.Text = "designers";
-            this.designersPage.UseVisualStyleBackColor = true;
-            // 
-            // employeesPage
-            // 
-            this.employeesPage.Controls.Add(this.employeesDeleteButton);
-            this.employeesPage.Controls.Add(this.employeesDataGrid);
-            this.employeesPage.Location = new System.Drawing.Point(4, 25);
-            this.employeesPage.Name = "employeesPage";
-            this.employeesPage.Padding = new System.Windows.Forms.Padding(3);
-            this.employeesPage.Size = new System.Drawing.Size(951, 525);
-            this.employeesPage.TabIndex = 8;
-            this.employeesPage.Text = "employees";
-            this.employeesPage.UseVisualStyleBackColor = true;
-            this.employeesPage.Click += new System.EventHandler(this.tabPage1_Click);
-            // 
-            // clothesPage
-            // 
-            this.clothesPage.Controls.Add(this.clothesDeleteButton);
-            this.clothesPage.Controls.Add(this.clothesDataGrid);
-            this.clothesPage.Location = new System.Drawing.Point(4, 25);
-            this.clothesPage.Name = "clothesPage";
-            this.clothesPage.Padding = new System.Windows.Forms.Padding(3);
-            this.clothesPage.Size = new System.Drawing.Size(951, 525);
-            this.clothesPage.TabIndex = 9;
-            this.clothesPage.Text = "clothes";
-            this.clothesPage.UseVisualStyleBackColor = true;
-            // 
-            // circlesPage
-            // 
-            this.circlesPage.Controls.Add(this.circlesDeleteButton);
-            this.circlesPage.Controls.Add(this.circlesDataGrid);
-            this.circlesPage.Location = new System.Drawing.Point(4, 25);
-            this.circlesPage.Name = "circlesPage";
-            this.circlesPage.Padding = new System.Windows.Forms.Padding(3);
-            this.circlesPage.Size = new System.Drawing.Size(951, 525);
-            this.circlesPage.TabIndex = 10;
-            this.circlesPage.Text = "circles";
-            this.circlesPage.UseVisualStyleBackColor = true;
-            // 
-            // coversPage
-            // 
-            this.coversPage.Controls.Add(this.coversDeleteButton);
-            this.coversPage.Controls.Add(this.coversDataGrid);
-            this.coversPage.Location = new System.Drawing.Point(4, 25);
-            this.coversPage.Name = "coversPage";
-            this.coversPage.Padding = new System.Windows.Forms.Padding(3);
-            this.coversPage.Size = new System.Drawing.Size(951, 525);
-            this.coversPage.TabIndex = 11;
-            this.coversPage.Text = "covers";
-            this.coversPage.UseVisualStyleBackColor = true;
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.connectButton);
-            this.panel1.Controls.Add(this.settingButton);
-            this.panel1.Location = new System.Drawing.Point(973, 37);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(266, 134);
-            this.panel1.TabIndex = 4;
-            // 
-            // fontsDeleteButton
-            // 
-            this.fontsDeleteButton.Location = new System.Drawing.Point(748, 458);
-            this.fontsDeleteButton.Name = "fontsDeleteButton";
-            this.fontsDeleteButton.Size = new System.Drawing.Size(186, 55);
-            this.fontsDeleteButton.TabIndex = 1;
-            this.fontsDeleteButton.Text = "delete";
-            this.fontsDeleteButton.UseVisualStyleBackColor = true;
-            // 
-            // LogosDeleteButton
-            // 
-            this.LogosDeleteButton.Location = new System.Drawing.Point(700, 443);
-            this.LogosDeleteButton.Name = "LogosDeleteButton";
-            this.LogosDeleteButton.Size = new System.Drawing.Size(186, 55);
-            this.LogosDeleteButton.TabIndex = 2;
-            this.LogosDeleteButton.Text = "delete";
-            this.LogosDeleteButton.UseVisualStyleBackColor = true;
-            // 
-            // individualsDeleteButton
-            // 
-            this.individualsDeleteButton.Location = new System.Drawing.Point(680, 432);
-            this.individualsDeleteButton.Name = "individualsDeleteButton";
-            this.individualsDeleteButton.Size = new System.Drawing.Size(186, 55);
-            this.individualsDeleteButton.TabIndex = 4;
-            this.individualsDeleteButton.Text = "delete";
-            this.individualsDeleteButton.UseVisualStyleBackColor = true;
-            // 
-            // individualsDataGrid
-            // 
-            this.individualsDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.individualsDataGrid.Location = new System.Drawing.Point(85, 37);
-            this.individualsDataGrid.Name = "individualsDataGrid";
-            this.individualsDataGrid.RowHeadersWidth = 51;
-            this.individualsDataGrid.RowTemplate.Height = 24;
-            this.individualsDataGrid.Size = new System.Drawing.Size(781, 303);
-            this.individualsDataGrid.TabIndex = 3;
             // 
             // legalEntitiesDeleteButton
             // 
@@ -374,6 +265,18 @@
             this.legalEntitiesDataGrid.Size = new System.Drawing.Size(781, 303);
             this.legalEntitiesDataGrid.TabIndex = 3;
             // 
+            // externalOrdersPage
+            // 
+            this.externalOrdersPage.Controls.Add(this.externalOrdersDeleteButton);
+            this.externalOrdersPage.Controls.Add(this.externalOrdersDataGrid);
+            this.externalOrdersPage.Location = new System.Drawing.Point(4, 25);
+            this.externalOrdersPage.Name = "externalOrdersPage";
+            this.externalOrdersPage.Padding = new System.Windows.Forms.Padding(3);
+            this.externalOrdersPage.Size = new System.Drawing.Size(951, 525);
+            this.externalOrdersPage.TabIndex = 4;
+            this.externalOrdersPage.Text = "external orders";
+            this.externalOrdersPage.UseVisualStyleBackColor = true;
+            // 
             // externalOrdersDeleteButton
             // 
             this.externalOrdersDeleteButton.Location = new System.Drawing.Point(680, 432);
@@ -392,6 +295,18 @@
             this.externalOrdersDataGrid.RowTemplate.Height = 24;
             this.externalOrdersDataGrid.Size = new System.Drawing.Size(781, 303);
             this.externalOrdersDataGrid.TabIndex = 3;
+            // 
+            // internalOrdersPage
+            // 
+            this.internalOrdersPage.Controls.Add(this.internalOrdersDeleteButton);
+            this.internalOrdersPage.Controls.Add(this.internalOrdersDataGrid);
+            this.internalOrdersPage.Location = new System.Drawing.Point(4, 25);
+            this.internalOrdersPage.Name = "internalOrdersPage";
+            this.internalOrdersPage.Padding = new System.Windows.Forms.Padding(3);
+            this.internalOrdersPage.Size = new System.Drawing.Size(951, 525);
+            this.internalOrdersPage.TabIndex = 5;
+            this.internalOrdersPage.Text = "internal orders";
+            this.internalOrdersPage.UseVisualStyleBackColor = true;
             // 
             // internalOrdersDeleteButton
             // 
@@ -412,6 +327,18 @@
             this.internalOrdersDataGrid.Size = new System.Drawing.Size(781, 303);
             this.internalOrdersDataGrid.TabIndex = 3;
             // 
+            // developmentTeamsPage
+            // 
+            this.developmentTeamsPage.Controls.Add(this.developmentTeamsDeleteButton);
+            this.developmentTeamsPage.Controls.Add(this.developmentTeamsDataGrid);
+            this.developmentTeamsPage.Location = new System.Drawing.Point(4, 25);
+            this.developmentTeamsPage.Name = "developmentTeamsPage";
+            this.developmentTeamsPage.Padding = new System.Windows.Forms.Padding(3);
+            this.developmentTeamsPage.Size = new System.Drawing.Size(951, 525);
+            this.developmentTeamsPage.TabIndex = 6;
+            this.developmentTeamsPage.Text = "development teams";
+            this.developmentTeamsPage.UseVisualStyleBackColor = true;
+            // 
             // developmentTeamsDeleteButton
             // 
             this.developmentTeamsDeleteButton.Location = new System.Drawing.Point(680, 432);
@@ -421,15 +348,27 @@
             this.developmentTeamsDeleteButton.Text = "delete";
             this.developmentTeamsDeleteButton.UseVisualStyleBackColor = true;
             // 
-            // developmentTeamsDataGridS
+            // developmentTeamsDataGrid
             // 
-            this.developmentTeamsDataGridS.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.developmentTeamsDataGridS.Location = new System.Drawing.Point(85, 37);
-            this.developmentTeamsDataGridS.Name = "developmentTeamsDataGridS";
-            this.developmentTeamsDataGridS.RowHeadersWidth = 51;
-            this.developmentTeamsDataGridS.RowTemplate.Height = 24;
-            this.developmentTeamsDataGridS.Size = new System.Drawing.Size(781, 303);
-            this.developmentTeamsDataGridS.TabIndex = 3;
+            this.developmentTeamsDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.developmentTeamsDataGrid.Location = new System.Drawing.Point(85, 37);
+            this.developmentTeamsDataGrid.Name = "developmentTeamsDataGrid";
+            this.developmentTeamsDataGrid.RowHeadersWidth = 51;
+            this.developmentTeamsDataGrid.RowTemplate.Height = 24;
+            this.developmentTeamsDataGrid.Size = new System.Drawing.Size(781, 303);
+            this.developmentTeamsDataGrid.TabIndex = 3;
+            // 
+            // designersPage
+            // 
+            this.designersPage.Controls.Add(this.designersDeleteButton);
+            this.designersPage.Controls.Add(this.designersDataGrid);
+            this.designersPage.Location = new System.Drawing.Point(4, 25);
+            this.designersPage.Name = "designersPage";
+            this.designersPage.Padding = new System.Windows.Forms.Padding(3);
+            this.designersPage.Size = new System.Drawing.Size(951, 525);
+            this.designersPage.TabIndex = 7;
+            this.designersPage.Text = "designers";
+            this.designersPage.UseVisualStyleBackColor = true;
             // 
             // designersDeleteButton
             // 
@@ -450,6 +389,18 @@
             this.designersDataGrid.Size = new System.Drawing.Size(781, 303);
             this.designersDataGrid.TabIndex = 3;
             // 
+            // employeesPage
+            // 
+            this.employeesPage.Controls.Add(this.employeesDeleteButton);
+            this.employeesPage.Controls.Add(this.employeesDataGrid);
+            this.employeesPage.Location = new System.Drawing.Point(4, 25);
+            this.employeesPage.Name = "employeesPage";
+            this.employeesPage.Padding = new System.Windows.Forms.Padding(3);
+            this.employeesPage.Size = new System.Drawing.Size(951, 525);
+            this.employeesPage.TabIndex = 8;
+            this.employeesPage.Text = "employees";
+            this.employeesPage.UseVisualStyleBackColor = true;
+            // 
             // employeesDeleteButton
             // 
             this.employeesDeleteButton.Location = new System.Drawing.Point(680, 432);
@@ -468,6 +419,18 @@
             this.employeesDataGrid.RowTemplate.Height = 24;
             this.employeesDataGrid.Size = new System.Drawing.Size(781, 303);
             this.employeesDataGrid.TabIndex = 3;
+            // 
+            // clothesPage
+            // 
+            this.clothesPage.Controls.Add(this.clothesDeleteButton);
+            this.clothesPage.Controls.Add(this.clothesDataGrid);
+            this.clothesPage.Location = new System.Drawing.Point(4, 25);
+            this.clothesPage.Name = "clothesPage";
+            this.clothesPage.Padding = new System.Windows.Forms.Padding(3);
+            this.clothesPage.Size = new System.Drawing.Size(951, 525);
+            this.clothesPage.TabIndex = 9;
+            this.clothesPage.Text = "clothes";
+            this.clothesPage.UseVisualStyleBackColor = true;
             // 
             // clothesDeleteButton
             // 
@@ -488,6 +451,18 @@
             this.clothesDataGrid.Size = new System.Drawing.Size(781, 303);
             this.clothesDataGrid.TabIndex = 3;
             // 
+            // circlesPage
+            // 
+            this.circlesPage.Controls.Add(this.circlesDeleteButton);
+            this.circlesPage.Controls.Add(this.circlesDataGrid);
+            this.circlesPage.Location = new System.Drawing.Point(4, 25);
+            this.circlesPage.Name = "circlesPage";
+            this.circlesPage.Padding = new System.Windows.Forms.Padding(3);
+            this.circlesPage.Size = new System.Drawing.Size(951, 525);
+            this.circlesPage.TabIndex = 10;
+            this.circlesPage.Text = "circles";
+            this.circlesPage.UseVisualStyleBackColor = true;
+            // 
             // circlesDeleteButton
             // 
             this.circlesDeleteButton.Location = new System.Drawing.Point(680, 432);
@@ -506,6 +481,18 @@
             this.circlesDataGrid.RowTemplate.Height = 24;
             this.circlesDataGrid.Size = new System.Drawing.Size(781, 303);
             this.circlesDataGrid.TabIndex = 3;
+            // 
+            // coversPage
+            // 
+            this.coversPage.Controls.Add(this.coversDeleteButton);
+            this.coversPage.Controls.Add(this.coversDataGrid);
+            this.coversPage.Location = new System.Drawing.Point(4, 25);
+            this.coversPage.Name = "coversPage";
+            this.coversPage.Padding = new System.Windows.Forms.Padding(3);
+            this.coversPage.Size = new System.Drawing.Size(951, 525);
+            this.coversPage.TabIndex = 11;
+            this.coversPage.Text = "covers";
+            this.coversPage.UseVisualStyleBackColor = true;
             // 
             // coversDeleteButton
             // 
@@ -526,6 +513,15 @@
             this.coversDataGrid.Size = new System.Drawing.Size(781, 303);
             this.coversDataGrid.TabIndex = 3;
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.connectButton);
+            this.panel1.Controls.Add(this.settingButton);
+            this.panel1.Location = new System.Drawing.Point(973, 37);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(266, 134);
+            this.panel1.TabIndex = 4;
+            // 
             // mainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -541,26 +537,26 @@
             this.logosPage.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.logosDataGrid)).EndInit();
             this.individualsPage.ResumeLayout(false);
-            this.legalEntitiesPage.ResumeLayout(false);
-            this.externalOrdersPage.ResumeLayout(false);
-            this.internalOrdersPage.ResumeLayout(false);
-            this.developmentTeamsPage.ResumeLayout(false);
-            this.designersPage.ResumeLayout(false);
-            this.employeesPage.ResumeLayout(false);
-            this.clothesPage.ResumeLayout(false);
-            this.circlesPage.ResumeLayout(false);
-            this.coversPage.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.individualsDataGrid)).EndInit();
+            this.legalEntitiesPage.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.legalEntitiesDataGrid)).EndInit();
+            this.externalOrdersPage.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.externalOrdersDataGrid)).EndInit();
+            this.internalOrdersPage.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.internalOrdersDataGrid)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.developmentTeamsDataGridS)).EndInit();
+            this.developmentTeamsPage.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.developmentTeamsDataGrid)).EndInit();
+            this.designersPage.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.designersDataGrid)).EndInit();
+            this.employeesPage.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.employeesDataGrid)).EndInit();
+            this.clothesPage.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.clothesDataGrid)).EndInit();
+            this.circlesPage.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.circlesDataGrid)).EndInit();
+            this.coversPage.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.coversDataGrid)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -597,7 +593,7 @@
         private System.Windows.Forms.Button internalOrdersDeleteButton;
         private System.Windows.Forms.DataGridView internalOrdersDataGrid;
         private System.Windows.Forms.Button developmentTeamsDeleteButton;
-        private System.Windows.Forms.DataGridView developmentTeamsDataGridS;
+        private System.Windows.Forms.DataGridView developmentTeamsDataGrid;
         private System.Windows.Forms.Button designersDeleteButton;
         private System.Windows.Forms.DataGridView designersDataGrid;
         private System.Windows.Forms.Button employeesDeleteButton;
