@@ -17,5 +17,11 @@ namespace DesignStudio
             return keyValue;
         }
 
+        public static string getDate()
+        {
+            DateTime dateTime = DateTime.Now;
+            return dateTime.ToString("dd.MM.yyyy");
+        }
+
     }
 }

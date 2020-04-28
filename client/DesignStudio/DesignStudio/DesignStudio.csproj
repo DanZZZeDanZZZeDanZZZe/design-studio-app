@@ -47,6 +47,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddDevelopmentTeams.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddDevelopmentTeams.Designer.cs">
+      <DependentUpon>AddDevelopmentTeams.cs</DependentUpon>
+    </Compile>
     <Compile Include="ConnectionSetupForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -63,6 +69,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AddDevelopmentTeams.resx">
+      <DependentUpon>AddDevelopmentTeams.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ConnectionSetupForm.resx">
       <DependentUpon>ConnectionSetupForm.cs</DependentUpon>
     </EmbeddedResource>

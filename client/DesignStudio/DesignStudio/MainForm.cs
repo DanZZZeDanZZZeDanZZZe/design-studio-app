@@ -145,5 +145,11 @@ namespace DesignStudio
                     break;
             }
         }
-    }
+
+        private void developmentTeamsAddButton_Click(object sender, EventArgs e)
+        {
+            AddDevelopmentTeam addDevelopmentTeam = new AddDevelopmentTeam(this);
+            addDevelopmentTeam.ShowDialog();
+        }
+    }   
 }

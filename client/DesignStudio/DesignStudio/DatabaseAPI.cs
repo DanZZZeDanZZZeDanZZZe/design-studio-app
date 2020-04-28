@@ -73,6 +73,16 @@ namespace DesignStudio
             int returnCode = int.Parse(command.Parameters["@returnCode"].Value.ToString());
             return returnCode;
         }
+        public static void addDevelopmentTeams(int id, int teamLeaders, string datetime)
+        {
+            CreateSqlCommand("addDevelopmentTeams");
+            command.CommandType = CommandType.StoredProcedure;
+            command.Parameters.Add("@ID", SqlDbType.Int).Value = id;
+            command.Parameters.Add("@teamLeaders", SqlDbType.Int).Value = teamLeaders;
+            command.Parameters.Add("@dateOfFormation", SqlDbType.DateTime2).Value = datetime;
+            command.ExecuteNonQuery();
+        }
+
 
         public static DataTable LoadAllDataFromTable(string name)
         {

@@ -70,6 +70,7 @@
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.pageSetupDialog1 = new System.Windows.Forms.PageSetupDialog();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.developmentTeamsAddButton = new System.Windows.Forms.Button();
             this.Pages.SuspendLayout();
             this.fontsPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.fontsDataGrid)).BeginInit();
@@ -329,6 +330,7 @@
             // 
             // developmentTeamsPage
             // 
+            this.developmentTeamsPage.Controls.Add(this.developmentTeamsAddButton);
             this.developmentTeamsPage.Controls.Add(this.developmentTeamsDeleteButton);
             this.developmentTeamsPage.Controls.Add(this.developmentTeamsDataGrid);
             this.developmentTeamsPage.Location = new System.Drawing.Point(4, 25);
@@ -522,6 +524,16 @@
             this.panel1.Size = new System.Drawing.Size(266, 134);
             this.panel1.TabIndex = 4;
             // 
+            // developmentTeamsAddButton
+            // 
+            this.developmentTeamsAddButton.Location = new System.Drawing.Point(471, 432);
+            this.developmentTeamsAddButton.Name = "developmentTeamsAddButton";
+            this.developmentTeamsAddButton.Size = new System.Drawing.Size(186, 55);
+            this.developmentTeamsAddButton.TabIndex = 5;
+            this.developmentTeamsAddButton.Text = "add";
+            this.developmentTeamsAddButton.UseVisualStyleBackColor = true;
+            this.developmentTeamsAddButton.Click += new System.EventHandler(this.developmentTeamsAddButton_Click);
+            // 
             // mainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -604,6 +616,7 @@
         private System.Windows.Forms.DataGridView circlesDataGrid;
         private System.Windows.Forms.Button coversDeleteButton;
         private System.Windows.Forms.DataGridView coversDataGrid;
+        private System.Windows.Forms.Button developmentTeamsAddButton;
     }
 }
 
