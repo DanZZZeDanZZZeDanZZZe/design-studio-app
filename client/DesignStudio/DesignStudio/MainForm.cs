@@ -151,5 +151,10 @@ namespace DesignStudio
             AddDevelopmentTeam addDevelopmentTeam = new AddDevelopmentTeam(this);
             addDevelopmentTeam.ShowDialog();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
     }   
 }

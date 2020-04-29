@@ -50,6 +50,7 @@
             this.internalOrdersDeleteButton = new System.Windows.Forms.Button();
             this.internalOrdersDataGrid = new System.Windows.Forms.DataGridView();
             this.developmentTeamsPage = new System.Windows.Forms.TabPage();
+            this.developmentTeamsAddButton = new System.Windows.Forms.Button();
             this.developmentTeamsDeleteButton = new System.Windows.Forms.Button();
             this.developmentTeamsDataGrid = new System.Windows.Forms.DataGridView();
             this.designersPage = new System.Windows.Forms.TabPage();
@@ -70,7 +71,7 @@
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.pageSetupDialog1 = new System.Windows.Forms.PageSetupDialog();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.developmentTeamsAddButton = new System.Windows.Forms.Button();
+            this.internalOrdersAdd = new System.Windows.Forms.Button();
             this.Pages.SuspendLayout();
             this.fontsPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.fontsDataGrid)).BeginInit();
@@ -299,6 +300,7 @@
             // 
             // internalOrdersPage
             // 
+            this.internalOrdersPage.Controls.Add(this.internalOrdersAdd);
             this.internalOrdersPage.Controls.Add(this.internalOrdersDeleteButton);
             this.internalOrdersPage.Controls.Add(this.internalOrdersDataGrid);
             this.internalOrdersPage.Location = new System.Drawing.Point(4, 25);
@@ -340,6 +342,16 @@
             this.developmentTeamsPage.TabIndex = 6;
             this.developmentTeamsPage.Text = "development teams";
             this.developmentTeamsPage.UseVisualStyleBackColor = true;
+            // 
+            // developmentTeamsAddButton
+            // 
+            this.developmentTeamsAddButton.Location = new System.Drawing.Point(471, 432);
+            this.developmentTeamsAddButton.Name = "developmentTeamsAddButton";
+            this.developmentTeamsAddButton.Size = new System.Drawing.Size(186, 55);
+            this.developmentTeamsAddButton.TabIndex = 5;
+            this.developmentTeamsAddButton.Text = "add";
+            this.developmentTeamsAddButton.UseVisualStyleBackColor = true;
+            this.developmentTeamsAddButton.Click += new System.EventHandler(this.developmentTeamsAddButton_Click);
             // 
             // developmentTeamsDeleteButton
             // 
@@ -524,15 +536,15 @@
             this.panel1.Size = new System.Drawing.Size(266, 134);
             this.panel1.TabIndex = 4;
             // 
-            // developmentTeamsAddButton
+            // internalOrdersAdd
             // 
-            this.developmentTeamsAddButton.Location = new System.Drawing.Point(471, 432);
-            this.developmentTeamsAddButton.Name = "developmentTeamsAddButton";
-            this.developmentTeamsAddButton.Size = new System.Drawing.Size(186, 55);
-            this.developmentTeamsAddButton.TabIndex = 5;
-            this.developmentTeamsAddButton.Text = "add";
-            this.developmentTeamsAddButton.UseVisualStyleBackColor = true;
-            this.developmentTeamsAddButton.Click += new System.EventHandler(this.developmentTeamsAddButton_Click);
+            this.internalOrdersAdd.Location = new System.Drawing.Point(472, 432);
+            this.internalOrdersAdd.Name = "internalOrdersAdd";
+            this.internalOrdersAdd.Size = new System.Drawing.Size(186, 55);
+            this.internalOrdersAdd.TabIndex = 5;
+            this.internalOrdersAdd.Text = "add";
+            this.internalOrdersAdd.UseVisualStyleBackColor = true;
+            this.internalOrdersAdd.Click += new System.EventHandler(this.button1_Click);
             // 
             // mainForm
             // 
@@ -617,6 +629,7 @@
         private System.Windows.Forms.Button coversDeleteButton;
         private System.Windows.Forms.DataGridView coversDataGrid;
         private System.Windows.Forms.Button developmentTeamsAddButton;
+        private System.Windows.Forms.Button internalOrdersAdd;
     }
 }
 

@@ -36,10 +36,18 @@ namespace DesignStudio
         {
             int teamLeaders = int.Parse(leadersComboBox.SelectedValue.ToString());
             int ID = int.Parse(IDBox.Text);
-            string date = dateBox.Text;
-            DatabaseAPI.addDevelopmentTeams(ID, teamLeaders, date);
-            this.Close();
-            main.FillGrids();
+            int code = DatabaseAPI.checkDevelopmentTeamID(ID);
+            if (Convert.ToBoolean(code))
+            {
+                MessageBox.Show("A team with that id already exists", "Error message",
+                MessageBoxButtons.OK, MessageBoxIcon.Error);
+            } else
+            {
+                string date = dateBox.Text;
+                DatabaseAPI.addDevelopmentTeams(ID, teamLeaders, date);
+                this.Close();
+                main.FillGrids();
+            }
         }
     }
 
