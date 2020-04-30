@@ -47,6 +47,7 @@
             this.externalOrdersDeleteButton = new System.Windows.Forms.Button();
             this.externalOrdersDataGrid = new System.Windows.Forms.DataGridView();
             this.internalOrdersPage = new System.Windows.Forms.TabPage();
+            this.internalOrdersAddButton = new System.Windows.Forms.Button();
             this.internalOrdersDeleteButton = new System.Windows.Forms.Button();
             this.internalOrdersDataGrid = new System.Windows.Forms.DataGridView();
             this.developmentTeamsPage = new System.Windows.Forms.TabPage();
@@ -71,7 +72,6 @@
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.pageSetupDialog1 = new System.Windows.Forms.PageSetupDialog();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.internalOrdersAdd = new System.Windows.Forms.Button();
             this.Pages.SuspendLayout();
             this.fontsPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.fontsDataGrid)).BeginInit();
@@ -300,7 +300,7 @@
             // 
             // internalOrdersPage
             // 
-            this.internalOrdersPage.Controls.Add(this.internalOrdersAdd);
+            this.internalOrdersPage.Controls.Add(this.internalOrdersAddButton);
             this.internalOrdersPage.Controls.Add(this.internalOrdersDeleteButton);
             this.internalOrdersPage.Controls.Add(this.internalOrdersDataGrid);
             this.internalOrdersPage.Location = new System.Drawing.Point(4, 25);
@@ -310,6 +310,16 @@
             this.internalOrdersPage.TabIndex = 5;
             this.internalOrdersPage.Text = "internal orders";
             this.internalOrdersPage.UseVisualStyleBackColor = true;
+            // 
+            // internalOrdersAddButton
+            // 
+            this.internalOrdersAddButton.Location = new System.Drawing.Point(472, 432);
+            this.internalOrdersAddButton.Name = "internalOrdersAddButton";
+            this.internalOrdersAddButton.Size = new System.Drawing.Size(186, 55);
+            this.internalOrdersAddButton.TabIndex = 5;
+            this.internalOrdersAddButton.Text = "add";
+            this.internalOrdersAddButton.UseVisualStyleBackColor = true;
+            this.internalOrdersAddButton.Click += new System.EventHandler(this.internalOrdersAddButton_Click);
             // 
             // internalOrdersDeleteButton
             // 
@@ -536,16 +546,6 @@
             this.panel1.Size = new System.Drawing.Size(266, 134);
             this.panel1.TabIndex = 4;
             // 
-            // internalOrdersAdd
-            // 
-            this.internalOrdersAdd.Location = new System.Drawing.Point(472, 432);
-            this.internalOrdersAdd.Name = "internalOrdersAdd";
-            this.internalOrdersAdd.Size = new System.Drawing.Size(186, 55);
-            this.internalOrdersAdd.TabIndex = 5;
-            this.internalOrdersAdd.Text = "add";
-            this.internalOrdersAdd.UseVisualStyleBackColor = true;
-            this.internalOrdersAdd.Click += new System.EventHandler(this.button1_Click);
-            // 
             // mainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -629,7 +629,7 @@
         private System.Windows.Forms.Button coversDeleteButton;
         private System.Windows.Forms.DataGridView coversDataGrid;
         private System.Windows.Forms.Button developmentTeamsAddButton;
-        private System.Windows.Forms.Button internalOrdersAdd;
+        private System.Windows.Forms.Button internalOrdersAddButton;
     }
 }
 

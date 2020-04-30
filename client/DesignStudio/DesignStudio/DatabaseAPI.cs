@@ -83,6 +83,15 @@ namespace DesignStudio
             command.ExecuteNonQuery();
         }
 
+        public static void addInternalOrders(int id, string datetime)
+        {
+            CreateSqlCommand("addInternalOrders");
+            command.CommandType = CommandType.StoredProcedure;
+            command.Parameters.Add("@ID", SqlDbType.Int).Value = id;
+            command.Parameters.Add("@dateOfFormation", SqlDbType.DateTime2).Value = datetime;
+            command.ExecuteNonQuery();
+        }
+
         public static int checkDevelopmentTeamID(int id)
         {
             CreateSqlCommand("checkDevelopmentTeamID");
@@ -95,6 +104,17 @@ namespace DesignStudio
             return returnCode;
         }
 
+        public static int checkOrdersID(int id)
+        {
+            CreateSqlCommand("checkOrdersID");
+            command.CommandType = CommandType.StoredProcedure;
+            command.Parameters.Add("@ID", SqlDbType.Int).Value = id;
+            command.Parameters.Add("@returnCode", SqlDbType.Int);
+            command.Parameters["@returnCode"].Direction = ParameterDirection.Output;
+            command.ExecuteNonQuery();
+            int returnCode = int.Parse(command.Parameters["@returnCode"].Value.ToString());
+            return returnCode;
+        }
 
         public static DataTable LoadAllDataFromTable(string name)
         {

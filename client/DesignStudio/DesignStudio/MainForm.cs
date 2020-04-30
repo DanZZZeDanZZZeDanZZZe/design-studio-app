@@ -152,9 +152,10 @@ namespace DesignStudio
             addDevelopmentTeam.ShowDialog();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void internalOrdersAddButton_Click(object sender, EventArgs e)
         {
-
+            AddInternalOrders addInternalOrders = new AddInternalOrders(this);
+            addInternalOrders.ShowDialog();
         }
     }   
 }
