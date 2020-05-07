@@ -256,6 +256,7 @@
             this.legalEntitiesDeleteButton.TabIndex = 4;
             this.legalEntitiesDeleteButton.Text = "delete";
             this.legalEntitiesDeleteButton.UseVisualStyleBackColor = true;
+            this.legalEntitiesDeleteButton.Click += new System.EventHandler(this.legalEntitiesDeleteButton_Click);
             // 
             // legalEntitiesDataGrid
             // 
@@ -329,6 +330,7 @@
             this.internalOrdersDeleteButton.TabIndex = 4;
             this.internalOrdersDeleteButton.Text = "delete";
             this.internalOrdersDeleteButton.UseVisualStyleBackColor = true;
+            this.internalOrdersDeleteButton.Click += new System.EventHandler(this.internalOrdersDeleteButton_Click);
             // 
             // internalOrdersDataGrid
             // 
@@ -371,6 +373,7 @@
             this.developmentTeamsDeleteButton.TabIndex = 4;
             this.developmentTeamsDeleteButton.Text = "delete";
             this.developmentTeamsDeleteButton.UseVisualStyleBackColor = true;
+            this.developmentTeamsDeleteButton.Click += new System.EventHandler(this.developmentTeamsDeleteButton_Click);
             // 
             // developmentTeamsDataGrid
             // 

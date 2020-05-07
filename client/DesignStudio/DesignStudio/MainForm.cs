@@ -130,20 +130,7 @@ namespace DesignStudio
             MessageBox.Show(id.ToString());
             int code = DatabaseAPI.IndividualsDelete(id);
             DatabaseAPI.GenerateGrid(individualsDataGrid, "individuals");
-            switch (code)
-            {
-                case 0:
-                    MessageBox.Show("deleted item with key " + id.ToString());
-                    break;
-                case 1:
-                    MessageBox.Show("Item does not exist", "Error message",
-                    MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    break;
-                case 2:
-                    MessageBox.Show("Item has related records", "Error message",
-                    MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    break;
-            }
+            Helper.callDeleteMessage(code, id);
         }
 
         private void developmentTeamsAddButton_Click(object sender, EventArgs e)
@@ -157,5 +144,26 @@ namespace DesignStudio
             AddInternalOrders addInternalOrders = new AddInternalOrders(this);
             addInternalOrders.ShowDialog();
         }
+
+        private void legalEntitiesDeleteButton_Click(object sender, EventArgs e)
+        {
+            Helper.generateDelete(legalEntitiesDataGrid, "legal entities", "customers");
+        }
+
+        private void internalOrdersDeleteButton_Click(object sender, EventArgs e)
+        {
+            Helper.generateDelete(internalOrdersDataGrid, "internal orders", "orders");
+        }
+
+        private void developmentTeamsDeleteButton_Click(object sender, EventArgs e)
+        {
+          /*  int id = Helper.getDataGridSelectedKey(internalOrdersDataGrid, 0);
+            int code = Helper.deleteLegalEntities(id);
+            if (code == 0)
+                DatabaseAPI.GenerateGrid(internalOrdersDataGrid, "internal orders");
+            Helper.callDeleteMessage(code, id);*/
+        }
+
+        
     }   
 }

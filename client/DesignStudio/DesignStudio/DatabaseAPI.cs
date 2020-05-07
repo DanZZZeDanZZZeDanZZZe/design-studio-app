@@ -73,6 +73,33 @@ namespace DesignStudio
             int returnCode = int.Parse(command.Parameters["@returnCode"].Value.ToString());
             return returnCode;
         }
+
+        public static int deleteByID(int id, string tableName)
+        {
+            CreateSqlCommand("deleteByID");
+            command.CommandType = CommandType.StoredProcedure;
+            command.Parameters.Add("@ID", SqlDbType.Int).Value = id;
+            command.Parameters.Add("@tableName", SqlDbType.NVarChar).Value = tableName;
+            command.Parameters.Add("@returnCode", SqlDbType.Int);
+            command.Parameters["@returnCode"].Direction = ParameterDirection.Output;
+            command.ExecuteNonQuery();
+            int returnCode = int.Parse(command.Parameters["@returnCode"].Value.ToString());
+            return returnCode;
+        }
+
+        public static int checkByID(int id, string tableName)
+        {
+            CreateSqlCommand("checkID");
+            command.CommandType = CommandType.StoredProcedure;
+            command.Parameters.Add("@ID", SqlDbType.Int).Value = id;
+            command.Parameters.Add("@tableName", SqlDbType.NVarChar).Value = tableName;
+            command.Parameters.Add("@returnCode", SqlDbType.Int);
+            command.Parameters["@returnCode"].Direction = ParameterDirection.Output;
+            command.ExecuteNonQuery();
+            int returnCode = int.Parse(command.Parameters["@returnCode"].Value.ToString());
+            return returnCode;
+        }
+
         public static void addDevelopmentTeams(int id, int teamLeaders, string datetime)
         {
             CreateSqlCommand("addDevelopmentTeams");
