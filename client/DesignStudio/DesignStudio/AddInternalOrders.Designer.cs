@@ -28,19 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.IDBox = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.dateBox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.buttonAdd = new System.Windows.Forms.Button();
+            this.teamComboBox = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
-            // 
-            // IDBox
-            // 
-            this.IDBox.Location = new System.Drawing.Point(318, 95);
-            this.IDBox.Name = "IDBox";
-            this.IDBox.Size = new System.Drawing.Size(100, 22);
-            this.IDBox.TabIndex = 13;
             // 
             // label3
             // 
@@ -77,12 +70,20 @@
             this.buttonAdd.UseVisualStyleBackColor = true;
             this.buttonAdd.Click += new System.EventHandler(this.buttonAdd_Click);
             // 
+            // teamComboBox
+            // 
+            this.teamComboBox.FormattingEnabled = true;
+            this.teamComboBox.Location = new System.Drawing.Point(318, 100);
+            this.teamComboBox.Name = "teamComboBox";
+            this.teamComboBox.Size = new System.Drawing.Size(100, 24);
+            this.teamComboBox.TabIndex = 17;
+            // 
             // AddInternalOrders
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(457, 288);
-            this.Controls.Add(this.IDBox);
+            this.Controls.Add(this.teamComboBox);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.dateBox);
             this.Controls.Add(this.label2);
@@ -96,11 +97,10 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox IDBox;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox dateBox;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button buttonAdd;
+        private System.Windows.Forms.ComboBox teamComboBox;
     }
 }

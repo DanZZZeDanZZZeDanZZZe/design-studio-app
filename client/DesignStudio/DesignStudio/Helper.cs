@@ -17,10 +17,10 @@ namespace DesignStudio
             return keyValue;
         }
 
-        public static string getDate()
+        public static DateTime getDate()
         {
             DateTime dateTime = DateTime.Now;
-            return dateTime.ToString("dd.MM.yyyy");
+            return dateTime;
         }
 
         public static int deleteAdapter(int id, string tableName)
@@ -45,7 +45,7 @@ namespace DesignStudio
             return 0;
         }
 
-        public static void callDeleteMessage(int code, int id) 
+        public static void callDeleteMessage(int code, int id)
         {
             switch (code)
             {
@@ -61,6 +61,27 @@ namespace DesignStudio
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
                     break;
             }
+        }
+
+        public static List<string> getFieldList(string tableName, string fieldName)
+        {
+            DataTable data = DatabaseAPI.getTableField(tableName, fieldName);
+            List<string> list = new List<string>();
+            foreach (DataRow row in data.Rows)
+            {
+                list.Add(row.ItemArray[0].ToString());
+            }
+            return list;
+        }
+
+        public static List<string> getFieldListFromDataTable(DataTable data)
+        {
+            List<string> list = new List<string>();
+            foreach (DataRow row in data.Rows)
+            {
+                list.Add(row.ItemArray[0].ToString());
+            }
+            return list;
         }
 
         public static void generateDelete(DataGridView grid, string tableName, string parentTableName)
@@ -80,5 +101,6 @@ namespace DesignStudio
         {
             return deleteAdapter(id, "internal orders", "orders");
         }
+
     }
 }

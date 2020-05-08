@@ -72,6 +72,9 @@
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.pageSetupDialog1 = new System.Windows.Forms.PageSetupDialog();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.legalEntitiesAddButton = new System.Windows.Forms.Button();
+            this.addIndividuals = new System.Windows.Forms.Button();
+            this.externalOrdersAddButton = new System.Windows.Forms.Button();
             this.Pages.SuspendLayout();
             this.fontsPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.fontsDataGrid)).BeginInit();
@@ -206,6 +209,7 @@
             // 
             // individualsPage
             // 
+            this.individualsPage.Controls.Add(this.addIndividuals);
             this.individualsPage.Controls.Add(this.individualsDeleteButton);
             this.individualsPage.Controls.Add(this.individualsDataGrid);
             this.individualsPage.Location = new System.Drawing.Point(4, 25);
@@ -238,6 +242,7 @@
             // 
             // legalEntitiesPage
             // 
+            this.legalEntitiesPage.Controls.Add(this.legalEntitiesAddButton);
             this.legalEntitiesPage.Controls.Add(this.legalEntitiesDeleteButton);
             this.legalEntitiesPage.Controls.Add(this.legalEntitiesDataGrid);
             this.legalEntitiesPage.Location = new System.Drawing.Point(4, 25);
@@ -270,6 +275,7 @@
             // 
             // externalOrdersPage
             // 
+            this.externalOrdersPage.Controls.Add(this.externalOrdersAddButton);
             this.externalOrdersPage.Controls.Add(this.externalOrdersDeleteButton);
             this.externalOrdersPage.Controls.Add(this.externalOrdersDataGrid);
             this.externalOrdersPage.Location = new System.Drawing.Point(4, 25);
@@ -288,6 +294,7 @@
             this.externalOrdersDeleteButton.TabIndex = 4;
             this.externalOrdersDeleteButton.Text = "delete";
             this.externalOrdersDeleteButton.UseVisualStyleBackColor = true;
+            this.externalOrdersDeleteButton.Click += new System.EventHandler(this.externalOrdersDeleteButton_Click);
             // 
             // externalOrdersDataGrid
             // 
@@ -549,6 +556,36 @@
             this.panel1.Size = new System.Drawing.Size(266, 134);
             this.panel1.TabIndex = 4;
             // 
+            // legalEntitiesAddButton
+            // 
+            this.legalEntitiesAddButton.Location = new System.Drawing.Point(488, 432);
+            this.legalEntitiesAddButton.Name = "legalEntitiesAddButton";
+            this.legalEntitiesAddButton.Size = new System.Drawing.Size(186, 55);
+            this.legalEntitiesAddButton.TabIndex = 5;
+            this.legalEntitiesAddButton.Text = "add";
+            this.legalEntitiesAddButton.UseVisualStyleBackColor = true;
+            this.legalEntitiesAddButton.Click += new System.EventHandler(this.legalEntitiesAddButton_Click);
+            // 
+            // addIndividuals
+            // 
+            this.addIndividuals.Location = new System.Drawing.Point(488, 432);
+            this.addIndividuals.Name = "addIndividuals";
+            this.addIndividuals.Size = new System.Drawing.Size(186, 55);
+            this.addIndividuals.TabIndex = 6;
+            this.addIndividuals.Text = "add";
+            this.addIndividuals.UseVisualStyleBackColor = true;
+            this.addIndividuals.Click += new System.EventHandler(this.addIndividuals_Click);
+            // 
+            // externalOrdersAddButton
+            // 
+            this.externalOrdersAddButton.Location = new System.Drawing.Point(465, 432);
+            this.externalOrdersAddButton.Name = "externalOrdersAddButton";
+            this.externalOrdersAddButton.Size = new System.Drawing.Size(186, 55);
+            this.externalOrdersAddButton.TabIndex = 5;
+            this.externalOrdersAddButton.Text = "add";
+            this.externalOrdersAddButton.UseVisualStyleBackColor = true;
+            this.externalOrdersAddButton.Click += new System.EventHandler(this.externalOrdersAddButton_Click);
+            // 
             // mainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -633,6 +670,9 @@
         private System.Windows.Forms.DataGridView coversDataGrid;
         private System.Windows.Forms.Button developmentTeamsAddButton;
         private System.Windows.Forms.Button internalOrdersAddButton;
+        private System.Windows.Forms.Button legalEntitiesAddButton;
+        private System.Windows.Forms.Button addIndividuals;
+        private System.Windows.Forms.Button externalOrdersAddButton;
     }
 }
 

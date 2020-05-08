@@ -10,3 +10,6 @@ D:\Repositories\design-studio-app\client\DesignStudio\DesignStudio\obj\Debug\Des
 D:\Repositories\design-studio-app\client\DesignStudio\DesignStudio\obj\Debug\DesignStudio.pdb
 D:\Repositories\design-studio-app\client\DesignStudio\DesignStudio\obj\Debug\DesignStudio.AddDevelopmentTeam.resources
 D:\Repositories\design-studio-app\client\DesignStudio\DesignStudio\obj\Debug\DesignStudio.AddInternalOrders.resources
+D:\Repositories\design-studio-app\client\DesignStudio\DesignStudio\obj\Debug\DesignStudio.AddLegalEntities.resources
+D:\Repositories\design-studio-app\client\DesignStudio\DesignStudio\obj\Debug\DesignStudio.AddIndividualas.resources
+D:\Repositories\design-studio-app\client\DesignStudio\DesignStudio\obj\Debug\DesignStudio.AddExternalOrders.resources

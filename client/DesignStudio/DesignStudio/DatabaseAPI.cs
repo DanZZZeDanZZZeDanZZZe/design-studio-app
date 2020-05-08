@@ -62,6 +62,28 @@ namespace DesignStudio
             return dataTable;
         }
 
+        public static DataTable getTableField(string tableName, string fieldName)
+        {
+            CreateSqlCommand("getTableField");
+            command.CommandType = CommandType.StoredProcedure;
+            command.Parameters.Add("@tableName", SqlDbType.NVarChar).Value = tableName;
+            command.Parameters.Add("@fieldName", SqlDbType.NVarChar).Value = fieldName;
+            reader = command.ExecuteReader();
+            DataTable dataTable = new DataTable();
+            dataTable.Load(reader);
+            return dataTable;
+        }
+
+        public static DataTable getTeamsWithouOrders()
+        {
+            CreateSqlCommand("getTeamsWithouOrders");
+            command.CommandType = CommandType.StoredProcedure;
+            reader = command.ExecuteReader();
+            DataTable dataTable = new DataTable();
+            dataTable.Load(reader);
+            return dataTable;
+        }
+
         public static int IndividualsDelete(int id)
         {
             CreateSqlCommand("deleteIndividuals");
@@ -116,6 +138,41 @@ namespace DesignStudio
             command.CommandType = CommandType.StoredProcedure;
             command.Parameters.Add("@ID", SqlDbType.Int).Value = id;
             command.Parameters.Add("@dateOfFormation", SqlDbType.DateTime2).Value = datetime;
+            command.ExecuteNonQuery();
+        }
+
+        public static void addExternalOrders(int id, string datetime, string deadline, int customersID)
+        {
+            CreateSqlCommand("addExternalOrders");
+            command.CommandType = CommandType.StoredProcedure;
+            command.Parameters.Add("@ID", SqlDbType.Int).Value = id;
+            command.Parameters.Add("@dateOfFormation", SqlDbType.DateTime2).Value = datetime;
+            command.Parameters.Add("@deadline", SqlDbType.DateTime2).Value = deadline;
+            command.Parameters.Add("@customersID", SqlDbType.Int).Value = customersID;
+            command.ExecuteNonQuery();
+        }
+
+        public static void addLegalEntities(int id, string name, float inn)
+        {
+            CreateSqlCommand("addLegalEntities");
+            command.CommandType = CommandType.StoredProcedure;
+            command.Parameters.Add("@ID", SqlDbType.Int).Value = id;
+            command.Parameters.Add("@name", SqlDbType.NVarChar).Value = name;
+            command.Parameters.Add("@inn", SqlDbType.Float).Value = inn;
+
+            command.ExecuteNonQuery();
+        }
+
+        public static void addIndividualas(int id, float passportID, string name, string suname, string patronymic, float phoneNumber)
+        {
+            CreateSqlCommand("addIndividualas");
+            command.CommandType = CommandType.StoredProcedure;
+            command.Parameters.Add("@ID", SqlDbType.Int).Value = id;
+            command.Parameters.Add("@passportID", SqlDbType.Float).Value = passportID;
+            command.Parameters.Add("@name", SqlDbType.NVarChar).Value = name;
+            command.Parameters.Add("@suname", SqlDbType.NVarChar).Value = suname;
+            command.Parameters.Add("@patronymic", SqlDbType.NVarChar).Value = patronymic;
+            command.Parameters.Add("@phoneNumber", SqlDbType.Float).Value = phoneNumber;
             command.ExecuteNonQuery();
         }
 

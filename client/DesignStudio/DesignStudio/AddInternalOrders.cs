@@ -21,7 +21,7 @@ namespace DesignStudio
 
         private void buttonAdd_Click(object sender, EventArgs e)
         {
-            int ID = int.Parse(IDBox.Text);
+            int ID = int.Parse(teamComboBox.SelectedValue.ToString());
             int code = DatabaseAPI.checkOrdersID(ID);
             if (Convert.ToBoolean(code))
             {
@@ -39,7 +39,9 @@ namespace DesignStudio
 
         private void AddInternalOrders_Load(object sender, EventArgs e)
         {
-            dateBox.Text = Helper.getDate();
+            dateBox.Text = Helper.getDate().ToString("dd.MM.yyyy");
+            List<string> list = Helper.getFieldListFromDataTable(DatabaseAPI.getTeamsWithouOrders());
+            teamComboBox.DataSource = list;
         }
     }
 }

@@ -22,14 +22,15 @@ namespace DesignStudio
 
         private void AddDevelopmentTeam_Load(object sender, EventArgs e)
         {
-            leaders = DatabaseAPI.LoadDataTableFromQuery("SELECT [personnel number] FROM designers");
-            List<string> leadersList = new List<string>();
-            foreach (DataRow row in leaders.Rows)
-            {
-                leadersList.Add(row.ItemArray[0].ToString());
-            }
-            leadersComboBox.DataSource = leadersList;
-            dateBox.Text = Helper.getDate();
+            /*  leaders = DatabaseAPI.LoadDataTableFromQuery("SELECT [personnel number] FROM designers");
+              List<string> leadersList = new List<string>();
+              foreach (DataRow row in leaders.Rows)
+              {
+                  leadersList.Add(row.ItemArray[0].ToString());
+              }
+              leadersComboBox.DataSource = leadersList;*/
+            leadersComboBox.DataSource = Helper.getFieldList("designers", "personnel number");
+            dateBox.Text = Helper.getDate().ToString("dd.MM.yyyy"); ;
         }
 
         private void buttonAdd_Click(object sender, EventArgs e)

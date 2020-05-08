@@ -127,7 +127,6 @@ namespace DesignStudio
         private void individualsDeleteButton_Click(object sender, EventArgs e)
         {
             int id = Helper.getDataGridSelectedKey(individualsDataGrid, 0);
-            MessageBox.Show(id.ToString());
             int code = DatabaseAPI.IndividualsDelete(id);
             DatabaseAPI.GenerateGrid(individualsDataGrid, "individuals");
             Helper.callDeleteMessage(code, id);
@@ -164,6 +163,27 @@ namespace DesignStudio
             Helper.callDeleteMessage(code, id);*/
         }
 
-        
+        private void legalEntitiesAddButton_Click(object sender, EventArgs e)
+        {
+            AddLegalEntities addLegalEntities = new AddLegalEntities(this);
+            addLegalEntities.ShowDialog();
+        }
+
+        private void addIndividuals_Click(object sender, EventArgs e)
+        {
+            AddIndividualas addIndividualas = new AddIndividualas(this);
+            addIndividualas.ShowDialog();
+        }
+
+        private void externalOrdersAddButton_Click(object sender, EventArgs e)
+        {
+            AddExternalOrders addExternalOrders = new AddExternalOrders(this);
+            addExternalOrders.ShowDialog();
+        }
+
+        private void externalOrdersDeleteButton_Click(object sender, EventArgs e)
+        {
+            Helper.generateDelete(externalOrdersDataGrid, "external orders", "orders");
+        }
     }   
 }

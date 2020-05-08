@@ -53,11 +53,29 @@
     <Compile Include="AddDevelopmentTeams.Designer.cs">
       <DependentUpon>AddDevelopmentTeams.cs</DependentUpon>
     </Compile>
+    <Compile Include="AddExternalOrders.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddExternalOrders.Designer.cs">
+      <DependentUpon>AddExternalOrders.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddIndividualas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddIndividualas.Designer.cs">
+      <DependentUpon>AddIndividualas.cs</DependentUpon>
+    </Compile>
     <Compile Include="AddInternalOrders.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="AddInternalOrders.Designer.cs">
       <DependentUpon>AddInternalOrders.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddLegalEntities.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddLegalEntities.Designer.cs">
+      <DependentUpon>AddLegalEntities.cs</DependentUpon>
     </Compile>
     <Compile Include="ConnectionSetupForm.cs">
       <SubType>Form</SubType>
@@ -78,8 +96,17 @@
     <EmbeddedResource Include="AddDevelopmentTeams.resx">
       <DependentUpon>AddDevelopmentTeams.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AddExternalOrders.resx">
+      <DependentUpon>AddExternalOrders.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddIndividualas.resx">
+      <DependentUpon>AddIndividualas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AddInternalOrders.resx">
       <DependentUpon>AddInternalOrders.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddLegalEntities.resx">
+      <DependentUpon>AddLegalEntities.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ConnectionSetupForm.resx">
       <DependentUpon>ConnectionSetupForm.cs</DependentUpon>
