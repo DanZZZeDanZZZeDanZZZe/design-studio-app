@@ -84,6 +84,18 @@ namespace DesignStudio
             return dataTable;
         }
 
+        public static DataTable getProductsByID(int ID, int param)
+        {
+            CreateSqlCommand("getProductsByID");
+            command.CommandType = CommandType.StoredProcedure;
+            command.Parameters.Add("@ID", SqlDbType.NVarChar).Value = ID;
+            command.Parameters.Add("@param", SqlDbType.NVarChar).Value = param;
+            reader = command.ExecuteReader();
+            DataTable dataTable = new DataTable();
+            dataTable.Load(reader);
+            return dataTable;
+        }
+
         public static int IndividualsDelete(int id)
         {
             CreateSqlCommand("deleteIndividuals");
@@ -212,6 +224,14 @@ namespace DesignStudio
             grid.Update();
         }
 
+        public static void deleteOrderById(int id)
+        {
+            CreateSqlCommand("deleteOrderById");
+            command.CommandType = CommandType.StoredProcedure;
+            command.Parameters.Add("@ID", SqlDbType.Int).Value = id;
+
+            command.ExecuteNonQuery();
+        }
 
 
 

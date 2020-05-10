@@ -84,6 +84,15 @@ namespace DesignStudio
             return list;
         }
 
+        public static void generateDelete(DataGridView grid, string tableName)
+        {
+            int id = getDataGridSelectedKey(grid, 0);
+            int code = deleteAdapter(id, tableName);
+            if (code == 0)
+                DatabaseAPI.GenerateGrid(grid, tableName);
+            callDeleteMessage(code, id);
+        }
+
         public static void generateDelete(DataGridView grid, string tableName, string parentTableName)
         {
             int id = getDataGridSelectedKey(grid, 0);

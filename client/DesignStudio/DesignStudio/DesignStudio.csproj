@@ -77,6 +77,12 @@
     <Compile Include="AddLegalEntities.Designer.cs">
       <DependentUpon>AddLegalEntities.cs</DependentUpon>
     </Compile>
+    <Compile Include="compositionOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="compositionOrder.Designer.cs">
+      <DependentUpon>compositionOrder.cs</DependentUpon>
+    </Compile>
     <Compile Include="ConnectionSetupForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -107,6 +113,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AddLegalEntities.resx">
       <DependentUpon>AddLegalEntities.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="compositionOrder.resx">
+      <DependentUpon>compositionOrder.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ConnectionSetupForm.resx">
       <DependentUpon>ConnectionSetupForm.cs</DependentUpon>

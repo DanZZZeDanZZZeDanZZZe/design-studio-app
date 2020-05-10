@@ -110,8 +110,8 @@ namespace DesignStudio
 
         public void FillGrids()
         {
-            DatabaseAPI.GenerateGrid(fontsDataGrid, "fonts");
-            DatabaseAPI.GenerateGrid(logosDataGrid, "logos");
+           /* DatabaseAPI.GenerateGrid(fontsDataGrid, "fonts");
+            DatabaseAPI.GenerateGrid(logosDataGrid, "logos");*/
             DatabaseAPI.GenerateGrid(individualsDataGrid, "individuals");
             DatabaseAPI.GenerateGrid(legalEntitiesDataGrid, "legal entities");
             DatabaseAPI.GenerateGrid(externalOrdersDataGrid, "external orders");
@@ -119,9 +119,9 @@ namespace DesignStudio
             DatabaseAPI.GenerateGrid(developmentTeamsDataGrid, "development teams");
             DatabaseAPI.GenerateGrid(designersDataGrid, "designers");
             DatabaseAPI.GenerateGrid(employeesDataGrid, "employees");
-            DatabaseAPI.GenerateGrid(clothesDataGrid, "clothes");
+          /*  DatabaseAPI.GenerateGrid(clothesDataGrid, "clothes");
             DatabaseAPI.GenerateGrid(circlesDataGrid, "circles");
-            DatabaseAPI.GenerateGrid(coversDataGrid, "covers");
+            DatabaseAPI.GenerateGrid(coversDataGrid, "covers");*/
         }
 
         private void individualsDeleteButton_Click(object sender, EventArgs e)
@@ -156,11 +156,7 @@ namespace DesignStudio
 
         private void developmentTeamsDeleteButton_Click(object sender, EventArgs e)
         {
-          /*  int id = Helper.getDataGridSelectedKey(internalOrdersDataGrid, 0);
-            int code = Helper.deleteLegalEntities(id);
-            if (code == 0)
-                DatabaseAPI.GenerateGrid(internalOrdersDataGrid, "internal orders");
-            Helper.callDeleteMessage(code, id);*/
+            Helper.generateDelete(developmentTeamsDataGrid, "development Teams");
         }
 
         private void legalEntitiesAddButton_Click(object sender, EventArgs e)
@@ -183,7 +179,16 @@ namespace DesignStudio
 
         private void externalOrdersDeleteButton_Click(object sender, EventArgs e)
         {
+            int id =  Helper.getDataGridSelectedKey(externalOrdersDataGrid, 0);
+            DatabaseAPI.deleteOrderById(id);
             Helper.generateDelete(externalOrdersDataGrid, "external orders", "orders");
+        }
+
+        private void showProductsButton_Click(object sender, EventArgs e)
+        {
+            int id = Helper.getDataGridSelectedKey(developmentTeamsDataGrid, 0);
+            compositionOrder compositionOrderForm = new compositionOrder(id);
+            compositionOrderForm.ShowDialog();
         }
     }   
 }
