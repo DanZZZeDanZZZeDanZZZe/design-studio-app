@@ -111,5 +111,30 @@ namespace DesignStudio
             return deleteAdapter(id, "internal orders", "orders");
         }
 
+        public static void tryToRemoveTheProduct(int id, List<string> tables)
+        {
+            foreach (string table in tables)
+            {
+                try 
+                {
+                    deleteAdapter(id, table);
+                } catch { }
+            }
+        }
+
+        public static void useButtons(bool status, Button deleteB, Button addB, Button saveB)
+        {
+            if (status == true)
+            {
+                deleteB.Visible = true;
+                addB.Visible = false;
+                saveB.Visible = true;
+            } else
+            {
+                deleteB.Visible = false;
+                addB.Visible = true;
+                saveB.Visible = false;
+            }
+        }
     }
 }

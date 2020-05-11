@@ -188,6 +188,66 @@ namespace DesignStudio
             command.ExecuteNonQuery();
         }
 
+        public static void addFonts(int id, bool serif, string mark, string width, bool bold)
+        {
+            CreateSqlCommand("addFonts");
+            command.CommandType = CommandType.StoredProcedure;
+            command.Parameters.Add("@ID", SqlDbType.Int).Value = id;
+            command.Parameters.Add("@serif", SqlDbType.Bit).Value = serif;
+            command.Parameters.Add("@mark", SqlDbType.NVarChar).Value = mark;
+            command.Parameters.Add("@width", SqlDbType.NVarChar).Value = width;
+            command.Parameters.Add("@bold", SqlDbType.Bit).Value = bold;
+
+            command.ExecuteNonQuery();
+        }
+
+        public static void addLogos(int id, string imageLink, string description, string text)
+        {
+            CreateSqlCommand("addLogos");
+            command.CommandType = CommandType.StoredProcedure;
+            command.Parameters.Add("@ID", SqlDbType.Int).Value = id;
+            command.Parameters.Add("@imageLink", SqlDbType.NVarChar).Value = imageLink;
+            command.Parameters.Add("@description", SqlDbType.Text).Value = description;
+            command.Parameters.Add("@text", SqlDbType.NVarChar).Value = text;
+
+            command.ExecuteNonQuery();
+        }
+        public static void addCups(int id, string color, int volume)
+        {
+            CreateSqlCommand("addCups");
+            command.CommandType = CommandType.StoredProcedure;
+            command.Parameters.Add("@ID", SqlDbType.Int).Value = id;
+            command.Parameters.Add("@color", SqlDbType.NVarChar).Value = color;
+            command.Parameters.Add("@volume", SqlDbType.NVarChar).Value = volume;
+
+            command.ExecuteNonQuery();
+        }
+
+        public static void addClothes(int id, string type, string color, string size, string text)
+        {
+            CreateSqlCommand("addClothes");
+            command.CommandType = CommandType.StoredProcedure;
+            command.Parameters.Add("@ID", SqlDbType.Int).Value = id;
+            command.Parameters.Add("@type", SqlDbType.NVarChar).Value = type;
+            command.Parameters.Add("@color", SqlDbType.NVarChar).Value = color;
+            command.Parameters.Add("@size", SqlDbType.NVarChar).Value = size;
+            command.Parameters.Add("@text", SqlDbType.NVarChar).Value = text;
+
+            command.ExecuteNonQuery();
+        }
+
+        public static void addCovers(int id, string type, string color, string model)
+        {
+            CreateSqlCommand("addCovers");
+            command.CommandType = CommandType.StoredProcedure;
+            command.Parameters.Add("@ID", SqlDbType.Int).Value = id;
+            command.Parameters.Add("@type", SqlDbType.NVarChar).Value = type;
+            command.Parameters.Add("@color", SqlDbType.NVarChar).Value = color;
+            command.Parameters.Add("@model", SqlDbType.NVarChar).Value = model;
+
+            command.ExecuteNonQuery();
+        }
+
         public static int checkDevelopmentTeamID(int id)
         {
             CreateSqlCommand("checkDevelopmentTeamID");
