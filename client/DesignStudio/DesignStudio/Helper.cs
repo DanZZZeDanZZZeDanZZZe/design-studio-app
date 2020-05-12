@@ -136,5 +136,11 @@ namespace DesignStudio
                 saveB.Visible = false;
             }
         }
+
+        public static string checkUpdateStatus(bool status, string table1, string table2) 
+        {
+            if (status == true) return table2;
+            return table1;
+        }
     }
 }

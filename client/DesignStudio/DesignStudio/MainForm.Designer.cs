@@ -40,6 +40,7 @@
             this.designersDeleteButton = new System.Windows.Forms.Button();
             this.designersDataGrid = new System.Windows.Forms.DataGridView();
             this.developmentTeamsPage = new System.Windows.Forms.TabPage();
+            this.showProductsButton = new System.Windows.Forms.Button();
             this.developmentTeamsAddButton = new System.Windows.Forms.Button();
             this.developmentTeamsDeleteButton = new System.Windows.Forms.Button();
             this.developmentTeamsDataGrid = new System.Windows.Forms.DataGridView();
@@ -60,7 +61,7 @@
             this.individualsDeleteButton = new System.Windows.Forms.Button();
             this.individualsDataGrid = new System.Windows.Forms.DataGridView();
             this.Pages = new System.Windows.Forms.TabControl();
-            this.showProductsButton = new System.Windows.Forms.Button();
+            this.sendToTheTeamButton = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.employeesPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.employeesDataGrid)).BeginInit();
@@ -143,6 +144,7 @@
             // 
             // designersPage
             // 
+            this.designersPage.Controls.Add(this.sendToTheTeamButton);
             this.designersPage.Controls.Add(this.designersDeleteButton);
             this.designersPage.Controls.Add(this.designersDataGrid);
             this.designersPage.Location = new System.Drawing.Point(4, 25);
@@ -185,6 +187,16 @@
             this.developmentTeamsPage.TabIndex = 6;
             this.developmentTeamsPage.Text = "development teams";
             this.developmentTeamsPage.UseVisualStyleBackColor = true;
+            // 
+            // showProductsButton
+            // 
+            this.showProductsButton.Location = new System.Drawing.Point(85, 432);
+            this.showProductsButton.Name = "showProductsButton";
+            this.showProductsButton.Size = new System.Drawing.Size(276, 55);
+            this.showProductsButton.TabIndex = 6;
+            this.showProductsButton.Text = "show products";
+            this.showProductsButton.UseVisualStyleBackColor = true;
+            this.showProductsButton.Click += new System.EventHandler(this.showProductsButton_Click);
             // 
             // developmentTeamsAddButton
             // 
@@ -403,15 +415,15 @@
             this.Pages.Size = new System.Drawing.Size(959, 554);
             this.Pages.TabIndex = 3;
             // 
-            // showProductsButton
+            // sendToTheTeamButton
             // 
-            this.showProductsButton.Location = new System.Drawing.Point(85, 432);
-            this.showProductsButton.Name = "showProductsButton";
-            this.showProductsButton.Size = new System.Drawing.Size(276, 55);
-            this.showProductsButton.TabIndex = 6;
-            this.showProductsButton.Text = "show products";
-            this.showProductsButton.UseVisualStyleBackColor = true;
-            this.showProductsButton.Click += new System.EventHandler(this.showProductsButton_Click);
+            this.sendToTheTeamButton.Location = new System.Drawing.Point(470, 432);
+            this.sendToTheTeamButton.Name = "sendToTheTeamButton";
+            this.sendToTheTeamButton.Size = new System.Drawing.Size(186, 55);
+            this.sendToTheTeamButton.TabIndex = 5;
+            this.sendToTheTeamButton.Text = "send to the team";
+            this.sendToTheTeamButton.UseVisualStyleBackColor = true;
+            this.sendToTheTeamButton.Click += new System.EventHandler(this.sendToTheTeamButton_Click);
             // 
             // mainForm
             // 
@@ -476,6 +488,7 @@
         private System.Windows.Forms.DataGridView individualsDataGrid;
         private System.Windows.Forms.TabControl Pages;
         private System.Windows.Forms.Button showProductsButton;
+        private System.Windows.Forms.Button sendToTheTeamButton;
     }
 }
 

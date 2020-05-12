@@ -165,6 +165,7 @@
             this.fontsSaveButton.TabIndex = 11;
             this.fontsSaveButton.Text = "save";
             this.fontsSaveButton.UseVisualStyleBackColor = true;
+            this.fontsSaveButton.Click += new System.EventHandler(this.fontsSaveButton_Click);
             // 
             // fontsAddButton
             // 
@@ -265,6 +266,7 @@
             this.logosSaveButton.TabIndex = 12;
             this.logosSaveButton.Text = "save";
             this.logosSaveButton.UseVisualStyleBackColor = true;
+            this.logosSaveButton.Click += new System.EventHandler(this.logosSaveButton_Click);
             // 
             // logosAddButton
             // 
@@ -361,6 +363,7 @@
             this.clothesSaveButton.TabIndex = 12;
             this.clothesSaveButton.Text = "save";
             this.clothesSaveButton.UseVisualStyleBackColor = true;
+            this.clothesSaveButton.Click += new System.EventHandler(this.clothesSaveButton_Click);
             // 
             // clothesAddButton
             // 
@@ -471,6 +474,7 @@
             this.coversSaveButton.TabIndex = 12;
             this.coversSaveButton.Text = "save";
             this.coversSaveButton.UseVisualStyleBackColor = true;
+            this.coversSaveButton.Click += new System.EventHandler(this.coversSaveButton_Click);
             // 
             // coversAddButton
             // 
@@ -563,6 +567,7 @@
             this.cupsSaveButton.TabIndex = 12;
             this.cupsSaveButton.Text = "save";
             this.cupsSaveButton.UseVisualStyleBackColor = true;
+            this.cupsSaveButton.Click += new System.EventHandler(this.cupsSaveButton_Click);
             // 
             // cupsAddButton
             // 

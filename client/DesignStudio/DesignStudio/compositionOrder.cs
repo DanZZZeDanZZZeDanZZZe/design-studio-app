@@ -100,7 +100,7 @@ namespace DesignStudio
         {
             try
             {
-                DatabaseAPI.addFonts(id, fontSerifBox.Checked, fontMarkBox.Text, fontWidthBox.Text, fontBoldBox.Checked);
+                addFontsFromForm(false);
                 fontStatus = true;
                 Helper.useButtons(fontStatus, fontsDeleteButton, fontsAddButton, fontsSaveButton);
             } catch
@@ -114,7 +114,7 @@ namespace DesignStudio
         {
             try
             {
-                DatabaseAPI.addLogos(id, logoImageLinkBox.Text, logoDescriptionBox.Text, logoTextBox.Text);
+                addLogosFromForm(false);
                 logoStatus = true;
                 Helper.useButtons(logoStatus, logosDeleteButton, logosAddButton, logosSaveButton);
             }
@@ -128,7 +128,7 @@ namespace DesignStudio
         {
             try
             {
-                DatabaseAPI.addClothes(id, clothesTypeBox.Text, clothesColorBox.Text, clothesSizeBox.Text, clothesTextBox.Text);
+                addClothesFromForm(false);
                 clothesStatus = true;
                 Helper.useButtons(clothesStatus, clothesDeleteButton, clothesAddButton, clothesSaveButton);
             }
@@ -142,7 +142,7 @@ namespace DesignStudio
         {
             try
             {
-                DatabaseAPI.addCovers(id, coverTypeBox.Text, coverColorBox.Text, coverDeviceBox.Text);
+                addCoversFromForm(false);
                 coverStatus = true;
                 Helper.useButtons(coverStatus, coversDeleteButton, coversAddButton, coversSaveButton);
             }
@@ -156,7 +156,7 @@ namespace DesignStudio
         {
             try
             {
-                DatabaseAPI.addCups(id, cupColorBox.Text, int.Parse(cupVolumeBox.Text));
+                addCupsFromForm(false);
                 cupStatus = true;
                 Helper.useButtons(cupStatus, cupsDeleteButton, cupsAddButton, cupsSaveButton);
             }
@@ -174,6 +174,10 @@ namespace DesignStudio
                 Helper.tryToRemoveTheProduct(id, tables);
                 fontStatus = false;
                 Helper.useButtons(fontStatus, fontsDeleteButton, fontsAddButton, fontsSaveButton);
+                fontSerifBox.Checked = false;
+                fontMarkBox.Clear();
+                fontWidthBox.Clear();
+                fontBoldBox.Checked = false;
             }
             catch
             {
@@ -189,6 +193,9 @@ namespace DesignStudio
                 Helper.tryToRemoveTheProduct(id, tables);
                 logoStatus = false;
                 Helper.useButtons(logoStatus, logosDeleteButton, logosAddButton, logosSaveButton);
+                logoImageLinkBox.Clear();
+                logoDescriptionBox.Clear();
+                logoTextBox.Clear();
             }
             catch
             {
@@ -204,6 +211,11 @@ namespace DesignStudio
                 Helper.tryToRemoveTheProduct(id, tables);
                 clothesStatus = false;
                 Helper.useButtons(clothesStatus, clothesDeleteButton, clothesAddButton, clothesSaveButton);
+                clothesTypeBox.Clear();
+                clothesColorBox.Clear();
+                clothesSizeBox.Clear();
+                clothesTextBox.Clear();
+                clothesStatus = false;
             }
             catch
             {
@@ -219,6 +231,10 @@ namespace DesignStudio
                 Helper.tryToRemoveTheProduct(id, tables);
                 coverStatus = false;
                 Helper.useButtons(coverStatus, coversDeleteButton, coversAddButton, coversSaveButton);
+                coverTypeBox.Clear();
+                coverColorBox.Clear();
+                coverDeviceBox.Clear();
+                coverStatus = false;
             }
             catch
             {
@@ -234,11 +250,71 @@ namespace DesignStudio
                 Helper.tryToRemoveTheProduct(id, tables);
                 cupStatus = false;
                 Helper.useButtons(cupStatus, cupsDeleteButton, cupsAddButton, cupsSaveButton);
+                cupColorBox.Clear();
+                cupVolumeBox.Clear();
+                cupStatus = false;
             }
             catch
             {
                 MessageBox.Show("Something went wrong");
             }
         }
+
+        private void addFontsFromForm(bool updateStatus)
+        {
+            DatabaseAPI.addFonts(id, fontSerifBox.Checked, fontMarkBox.Text, fontWidthBox.Text, fontBoldBox.Checked, updateStatus);
+        }
+
+        private void addLogosFromForm(bool updateStatus)
+        {
+            DatabaseAPI.addLogos(id, logoImageLinkBox.Text, logoDescriptionBox.Text, logoTextBox.Text, updateStatus);
+        }
+
+        private void addClothesFromForm(bool updateStatus)
+        {
+            DatabaseAPI.addClothes(id, clothesTypeBox.Text, clothesColorBox.Text, clothesSizeBox.Text, clothesTextBox.Text, updateStatus);
+        }
+
+        private void addCoversFromForm(bool updateStatus)
+        {
+            DatabaseAPI.addCovers(id, coverTypeBox.Text, coverColorBox.Text, coverDeviceBox.Text, updateStatus);
+        }
+
+        private void addCupsFromForm(bool updateStatus)
+        {
+            DatabaseAPI.addCups(id, cupColorBox.Text, int.Parse(cupVolumeBox.Text), updateStatus);
+        }
+
+        private void logosSaveButton_Click(object sender, EventArgs e)
+        {
+            addLogosFromForm(true);
+            MessageBox.Show("Data updated");
+        }
+
+        private void clothesSaveButton_Click(object sender, EventArgs e)
+        {
+            addClothesFromForm(true);
+            MessageBox.Show("Data updated");
+        }
+
+        private void coversSaveButton_Click(object sender, EventArgs e)
+        {
+            addCoversFromForm(true);
+            MessageBox.Show("Data updated");
+        }
+
+        private void cupsSaveButton_Click(object sender, EventArgs e)
+        {
+            addCupsFromForm(true);
+            MessageBox.Show("Data updated");
+        }
+
+        private void fontsSaveButton_Click(object sender, EventArgs e)
+        {
+            addFontsFromForm(true);
+            MessageBox.Show("Data updated");
+        }
+
+
     }
 }

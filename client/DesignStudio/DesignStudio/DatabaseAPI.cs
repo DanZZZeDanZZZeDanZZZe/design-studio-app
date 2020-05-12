@@ -188,9 +188,11 @@ namespace DesignStudio
             command.ExecuteNonQuery();
         }
 
-        public static void addFonts(int id, bool serif, string mark, string width, bool bold)
+        public static void addFonts(int id, bool serif, string mark, string width, bool bold, bool updateStatus)
         {
-            CreateSqlCommand("addFonts");
+            string tableName = Helper.checkUpdateStatus(updateStatus, "addFonts", "updateFontsByID");
+
+            CreateSqlCommand(tableName);
             command.CommandType = CommandType.StoredProcedure;
             command.Parameters.Add("@ID", SqlDbType.Int).Value = id;
             command.Parameters.Add("@serif", SqlDbType.Bit).Value = serif;
@@ -201,9 +203,11 @@ namespace DesignStudio
             command.ExecuteNonQuery();
         }
 
-        public static void addLogos(int id, string imageLink, string description, string text)
+        public static void addLogos(int id, string imageLink, string description, string text, bool updateStatus)
         {
-            CreateSqlCommand("addLogos");
+            string tableName = Helper.checkUpdateStatus(updateStatus, "addLogos", "updateLogosByID");
+
+            CreateSqlCommand(tableName);
             command.CommandType = CommandType.StoredProcedure;
             command.Parameters.Add("@ID", SqlDbType.Int).Value = id;
             command.Parameters.Add("@imageLink", SqlDbType.NVarChar).Value = imageLink;
@@ -212,9 +216,11 @@ namespace DesignStudio
 
             command.ExecuteNonQuery();
         }
-        public static void addCups(int id, string color, int volume)
+        public static void addCups(int id, string color, int volume, bool updateStatus)
         {
-            CreateSqlCommand("addCups");
+            string tableName = Helper.checkUpdateStatus(updateStatus, "addCups", "updateCupsByID");
+
+            CreateSqlCommand(tableName);
             command.CommandType = CommandType.StoredProcedure;
             command.Parameters.Add("@ID", SqlDbType.Int).Value = id;
             command.Parameters.Add("@color", SqlDbType.NVarChar).Value = color;
@@ -223,9 +229,11 @@ namespace DesignStudio
             command.ExecuteNonQuery();
         }
 
-        public static void addClothes(int id, string type, string color, string size, string text)
+        public static void addClothes(int id, string type, string color, string size, string text, bool updateStatus)
         {
-            CreateSqlCommand("addClothes");
+            string tableName = Helper.checkUpdateStatus(updateStatus, "addClothes", "updateClothesByID");
+
+            CreateSqlCommand(tableName);
             command.CommandType = CommandType.StoredProcedure;
             command.Parameters.Add("@ID", SqlDbType.Int).Value = id;
             command.Parameters.Add("@type", SqlDbType.NVarChar).Value = type;
@@ -236,9 +244,11 @@ namespace DesignStudio
             command.ExecuteNonQuery();
         }
 
-        public static void addCovers(int id, string type, string color, string model)
+        public static void addCovers(int id, string type, string color, string model, bool updateStatus)
         {
-            CreateSqlCommand("addCovers");
+            string tableName = Helper.checkUpdateStatus(updateStatus, "addCovers", "updateCoversByID");
+
+            CreateSqlCommand(tableName);
             command.CommandType = CommandType.StoredProcedure;
             command.Parameters.Add("@ID", SqlDbType.Int).Value = id;
             command.Parameters.Add("@type", SqlDbType.NVarChar).Value = type;
@@ -293,7 +303,15 @@ namespace DesignStudio
             command.ExecuteNonQuery();
         }
 
+        public static void sendToTheTeam(int PN, int ID)
+        {
+            CreateSqlCommand("sendToTheTeam");
+            command.CommandType = CommandType.StoredProcedure;
+            command.Parameters.Add("@teamId", SqlDbType.Int).Value = ID;
+            command.Parameters.Add("@PN", SqlDbType.Int).Value = PN;
 
+            command.ExecuteNonQuery();
+        }
 
         /*  public List<string[]> LoadData(string query)
           {

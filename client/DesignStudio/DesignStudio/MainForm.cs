@@ -190,5 +190,12 @@ namespace DesignStudio
             compositionOrder compositionOrderForm = new compositionOrder(id);
             compositionOrderForm.ShowDialog();
         }
+
+        private void sendToTheTeamButton_Click(object sender, EventArgs e)
+        {
+            int id = Helper.getDataGridSelectedKey(designersDataGrid, 0);
+            SendToTheTeam sendToTheTeam = new SendToTheTeam(this, id);
+            sendToTheTeam.ShowDialog();
+        }
     }   
 }
