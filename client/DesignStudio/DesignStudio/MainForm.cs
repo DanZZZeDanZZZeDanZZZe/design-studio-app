@@ -114,7 +114,7 @@ namespace DesignStudio
             DatabaseAPI.GenerateGrid(logosDataGrid, "logos");*/
             DatabaseAPI.GenerateGrid(individualsDataGrid, "individuals");
             DatabaseAPI.GenerateGrid(legalEntitiesDataGrid, "legal entities");
-            DatabaseAPI.GenerateGrid(externalOrdersDataGrid, "external orders");
+            renderExOrders(externalOrdersDataGrid, "external orders");
             DatabaseAPI.GenerateGrid(internalOrdersDataGrid, "internal orders");
             DatabaseAPI.GenerateGrid(developmentTeamsDataGrid, "development teams");
             DatabaseAPI.GenerateGrid(designersDataGrid, "designers");
@@ -196,6 +196,38 @@ namespace DesignStudio
             int id = Helper.getDataGridSelectedKey(designersDataGrid, 0);
             SendToTheTeam sendToTheTeam = new SendToTheTeam(this, id);
             sendToTheTeam.ShowDialog();
+        }
+
+        private void renderExOrders(DataGridView grid, string name)
+        {
+            if (radioButtonExUndone.Checked == true)
+            {
+                DatabaseAPI.GenerateGrid(grid, "getUndoneExOrders", true);
+                exOrderBtnControl(true, true, false);
+            } else
+            {
+                DatabaseAPI.GenerateGrid(grid, "getDoneExOrders", true);
+                exOrderBtnControl(false, false, true);
+            }
+        }
+
+        private void radioButtonEx_CheckedChanged(object sender, EventArgs e)
+        {
+            renderExOrders(externalOrdersDataGrid, "external orders");
+        }
+
+        public void exOrderBtnControl(bool btnMark, bool btnAdd, bool btnDelete)
+        {
+            externalOrdersDeleteButton.Enabled = btnDelete;
+            externalOrdersMarkButton.Enabled = btnMark;
+            externalOrdersAddButton.Enabled = btnAdd;
+        }
+
+        private void externalOrdersMarkButton_Click(object sender, EventArgs e)
+        {
+            int id = Helper.getDataGridSelectedKey(externalOrdersDataGrid, 0);
+            AddSumForm addSumForm = new AddSumForm(this, id);
+            addSumForm.ShowDialog();
         }
     }   
 }

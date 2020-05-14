@@ -15,3 +15,4 @@ D:\Repositories\design-studio-app\client\DesignStudio\DesignStudio\obj\Debug\Des
 D:\Repositories\design-studio-app\client\DesignStudio\DesignStudio\obj\Debug\DesignStudio.AddExternalOrders.resources
 D:\Repositories\design-studio-app\client\DesignStudio\DesignStudio\obj\Debug\DesignStudio.compositionOrder.resources
 D:\Repositories\design-studio-app\client\DesignStudio\DesignStudio\obj\Debug\DesignStudio.SendToTheTeam.resources
+D:\Repositories\design-studio-app\client\DesignStudio\DesignStudio\obj\Debug\DesignStudio.AddSumForm.resources

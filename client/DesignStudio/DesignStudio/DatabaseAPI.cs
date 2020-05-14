@@ -287,11 +287,33 @@ namespace DesignStudio
             return LoadDataTableFromQuery("SELECT * FROM [" + name + "]");
         }
 
+        public static DataTable LoadAllDataFromSP(string sp)
+        {
+            CreateSqlCommand(sp);
+            command.CommandType = CommandType.StoredProcedure;
+            reader = command.ExecuteReader();
+            DataTable dataTable = new DataTable();
+            dataTable.Load(reader);
+            return dataTable;
+        }
+
         public static void GenerateGrid(DataGridView grid, string name)
         {
             DataTable dt = DatabaseAPI.LoadAllDataFromTable(name);
             grid.DataSource = dt;
             grid.Update();
+        }
+
+        public static void GenerateGrid(DataGridView grid, string name, bool spMode)
+        {
+            if (spMode == true)
+            {
+                grid.DataSource = LoadAllDataFromSP(name);
+                grid.Update();
+            } else
+            {
+                GenerateGrid(grid, name);
+            }
         }
 
         public static void deleteOrderById(int id)
@@ -309,6 +331,16 @@ namespace DesignStudio
             command.CommandType = CommandType.StoredProcedure;
             command.Parameters.Add("@teamId", SqlDbType.Int).Value = ID;
             command.Parameters.Add("@PN", SqlDbType.Int).Value = PN;
+
+            command.ExecuteNonQuery();
+        }
+
+        public static void markExOrder(int ID, int sum)
+        {
+            CreateSqlCommand("markExOrder");
+            command.CommandType = CommandType.StoredProcedure;
+            command.Parameters.Add("@ID", SqlDbType.Int).Value = ID;
+            command.Parameters.Add("@sum", SqlDbType.Int).Value = sum;
 
             command.ExecuteNonQuery();
         }
