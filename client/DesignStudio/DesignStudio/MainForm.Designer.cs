@@ -67,6 +67,7 @@
             this.internalOrdersAddButton = new System.Windows.Forms.Button();
             this.internalOrdersDeleteButton = new System.Windows.Forms.Button();
             this.internalOrdersDataGrid = new System.Windows.Forms.DataGridView();
+            this.openCheckButton = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.employeesPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.employeesDataGrid)).BeginInit();
@@ -246,6 +247,7 @@
             // 
             // externalOrdersPage
             // 
+            this.externalOrdersPage.Controls.Add(this.openCheckButton);
             this.externalOrdersPage.Controls.Add(this.externalOrdersAddButton);
             this.externalOrdersPage.Controls.Add(this.groupBox1);
             this.externalOrdersPage.Controls.Add(this.externalOrdersMarkButton);
@@ -487,6 +489,16 @@
             this.internalOrdersDataGrid.Size = new System.Drawing.Size(781, 303);
             this.internalOrdersDataGrid.TabIndex = 3;
             // 
+            // openCheckButton
+            // 
+            this.openCheckButton.Location = new System.Drawing.Point(296, 371);
+            this.openCheckButton.Name = "openCheckButton";
+            this.openCheckButton.Size = new System.Drawing.Size(186, 55);
+            this.openCheckButton.TabIndex = 17;
+            this.openCheckButton.Text = "open check";
+            this.openCheckButton.UseVisualStyleBackColor = true;
+            this.openCheckButton.Click += new System.EventHandler(this.openCheckButton_Click);
+            // 
             // mainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -558,6 +570,7 @@
         private System.Windows.Forms.RadioButton radioButtonExUndone;
         private System.Windows.Forms.RadioButton radioButtonExDone;
         private System.Windows.Forms.Button externalOrdersAddButton;
+        private System.Windows.Forms.Button openCheckButton;
     }
 }
 

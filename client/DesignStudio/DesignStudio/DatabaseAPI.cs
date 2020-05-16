@@ -282,6 +282,19 @@ namespace DesignStudio
             return returnCode;
         }
 
+        public static int checkAvailability(int id, int param)
+        {
+            CreateSqlCommand("checkAvailability");
+            command.CommandType = CommandType.StoredProcedure;
+            command.Parameters.Add("@ID", SqlDbType.Int).Value = id;
+            command.Parameters.Add("@param", SqlDbType.Int).Value = param;
+            command.Parameters.Add("@CODE", SqlDbType.Int);
+            command.Parameters["@CODE"].Direction = ParameterDirection.Output;
+            command.ExecuteNonQuery();
+            int returnCode = int.Parse(command.Parameters["@CODE"].Value.ToString());
+            return returnCode;
+        }
+
         public static DataTable LoadAllDataFromTable(string name)
         {
             return LoadDataTableFromQuery("SELECT * FROM [" + name + "]");
@@ -291,6 +304,17 @@ namespace DesignStudio
         {
             CreateSqlCommand(sp);
             command.CommandType = CommandType.StoredProcedure;
+            reader = command.ExecuteReader();
+            DataTable dataTable = new DataTable();
+            dataTable.Load(reader);
+            return dataTable;
+        }
+
+        public static DataTable getExOrderById(int id)
+        {
+            CreateSqlCommand("getExOrderById");
+            command.CommandType = CommandType.StoredProcedure;
+            command.Parameters.Add("@ID", SqlDbType.Int).Value = id;
             reader = command.ExecuteReader();
             DataTable dataTable = new DataTable();
             dataTable.Load(reader);

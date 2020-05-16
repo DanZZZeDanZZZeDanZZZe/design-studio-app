@@ -229,5 +229,13 @@ namespace DesignStudio
             AddSumForm addSumForm = new AddSumForm(this, id);
             addSumForm.ShowDialog();
         }
+
+        private void openCheckButton_Click(object sender, EventArgs e)
+        {
+            int id = Helper.getDataGridSelectedKey(externalOrdersDataGrid, 0);
+            Report report = new Report(id);
+            report.Show();
+
+        }
     }   
 }
