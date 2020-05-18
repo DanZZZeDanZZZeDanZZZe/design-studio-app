@@ -22,32 +22,25 @@ namespace DesignStudio
         bool flagConnectionButton = true;
         public SqlConnection con;
         public List<string[]> CurrentData;
-        /*  public DataSet ds;
-          SqlDataAdapter sqlDataAdapter;*/
 
         bool ContactTheDB(bool flag)
         {
             
             bool chekintConnection;
-
-            // con = new SqlConnection(connectionString);
-            /*sqlDataAdapter = new SqlDataAdapter("SELECT * FROM fonts", con);
-            ds = new DataSet();*/
             DatabaseAPI.CreateConnection();
 
             try
             {
                 if (flag)
                 {
-                    // con.Open();
                     DatabaseAPI.ConnectionOpen();
-                    MessageBox.Show("База данных подключена", "Успешно", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Database connected", "Successfully", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     FillGrids();
                 }
                 else
                 {
                     DatabaseAPI.ConnectionClose();
-                    MessageBox.Show("База данных отключена", "Успешно", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Database disconnected", "Successfully", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
 
                 chekintConnection = true;
@@ -60,23 +53,22 @@ namespace DesignStudio
                 switch (ex.Number)
                 {
                     case -1:
-                        title = "Неверное имя сервера";
+                        title = "Wrong server name";
                         break;
                     case 4060:
-                        title = "Неверное название базы данных";
+                        title = "invalid database name";
                         break;
                     case 18456:
-                        title = "Неверное имя пользователя или пароль";
+                        title = "The username or password you entered is incorrect";
                         break;
                     default:
-                        title = "Ошибка";
+                        title = "Error";
                         break;
                 }
 
                 MessageBox.Show(ex.Message, title, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 chekintConnection = false;
             }
-
             return chekintConnection;
         }
 
@@ -85,16 +77,18 @@ namespace DesignStudio
             SetEnableButtons();
             if (flagConnectionButton)
             {
-                connectButton.Text = "Отключить";
+                connectButton.Text = "Disconnect";
             }
             else
             {
-                connectButton.Text = "Подключить";
+                connectButton.Text = "Connect";
             }
 
             ContactTheDB(flagConnectionButton);
             SetEnableButtons();
             flagConnectionButton = !flagConnectionButton;
+            Pages.Visible = !flagConnectionButton;
+            label.Visible = flagConnectionButton;
         }
 
         private void SetEnableButtons()
@@ -110,8 +104,6 @@ namespace DesignStudio
 
         public void FillGrids()
         {
-           /* DatabaseAPI.GenerateGrid(fontsDataGrid, "fonts");
-            DatabaseAPI.GenerateGrid(logosDataGrid, "logos");*/
             DatabaseAPI.GenerateGrid(individualsDataGrid, "individuals");
             DatabaseAPI.GenerateGrid(legalEntitiesDataGrid, "legal entities");
             renderExOrders(externalOrdersDataGrid, "external orders");
@@ -119,17 +111,21 @@ namespace DesignStudio
             DatabaseAPI.GenerateGrid(developmentTeamsDataGrid, "development teams");
             DatabaseAPI.GenerateGrid(designersDataGrid, "designers");
             DatabaseAPI.GenerateGrid(employeesDataGrid, "employees");
-          /*  DatabaseAPI.GenerateGrid(clothesDataGrid, "clothes");
-            DatabaseAPI.GenerateGrid(circlesDataGrid, "circles");
-            DatabaseAPI.GenerateGrid(coversDataGrid, "covers");*/
         }
 
         private void individualsDeleteButton_Click(object sender, EventArgs e)
         {
             int id = Helper.getDataGridSelectedKey(individualsDataGrid, 0);
-            int code = DatabaseAPI.IndividualsDelete(id);
-            DatabaseAPI.GenerateGrid(individualsDataGrid, "individuals");
-            Helper.callDeleteMessage(code, id);
+            if (id >= 0)
+            {
+                int code = DatabaseAPI.IndividualsDelete(id);
+                DatabaseAPI.GenerateGrid(individualsDataGrid, "individuals");
+                Helper.callDeleteMessage(code, id);
+            }
+            else
+            {
+                Helper.reportTheAbsenceOfAKey();
+            }
         }
 
         private void developmentTeamsAddButton_Click(object sender, EventArgs e)
@@ -180,22 +176,43 @@ namespace DesignStudio
         private void externalOrdersDeleteButton_Click(object sender, EventArgs e)
         {
             int id =  Helper.getDataGridSelectedKey(externalOrdersDataGrid, 0);
-            DatabaseAPI.deleteOrderById(id);
-            Helper.generateDelete(externalOrdersDataGrid, "external orders", "orders");
+            if (id >= 0)
+            {
+                DatabaseAPI.deleteOrderById(id);
+                Helper.generateDelete(externalOrdersDataGrid, "external orders", "orders");
+            }
+            else
+            {
+                Helper.reportTheAbsenceOfAKey();
+            }
         }
 
         private void showProductsButton_Click(object sender, EventArgs e)
         {
             int id = Helper.getDataGridSelectedKey(developmentTeamsDataGrid, 0);
-            compositionOrder compositionOrderForm = new compositionOrder(id);
-            compositionOrderForm.ShowDialog();
+            if (id >= 0)
+            {
+                compositionOrder compositionOrderForm = new compositionOrder(id);
+                compositionOrderForm.ShowDialog();
+            }
+            else
+            {
+                Helper.reportTheAbsenceOfAKey();
+            }
         }
 
         private void sendToTheTeamButton_Click(object sender, EventArgs e)
         {
             int id = Helper.getDataGridSelectedKey(designersDataGrid, 0);
-            SendToTheTeam sendToTheTeam = new SendToTheTeam(this, id);
-            sendToTheTeam.ShowDialog();
+            if (id >= 0)
+            {
+                SendToTheTeam sendToTheTeam = new SendToTheTeam(this, id);
+                sendToTheTeam.ShowDialog();
+            }
+            else
+            {
+                Helper.reportTheAbsenceOfAKey();
+            } 
         }
 
         private void renderExOrders(DataGridView grid, string name)
@@ -203,11 +220,11 @@ namespace DesignStudio
             if (radioButtonExUndone.Checked == true)
             {
                 DatabaseAPI.GenerateGrid(grid, "getUndoneExOrders", true);
-                exOrderBtnControl(true, true, false);
+                exOrderBtnControl(true, true, false, false);
             } else
             {
                 DatabaseAPI.GenerateGrid(grid, "getDoneExOrders", true);
-                exOrderBtnControl(false, false, true);
+                exOrderBtnControl(false, false, true, true);
             }
         }
 
@@ -216,26 +233,39 @@ namespace DesignStudio
             renderExOrders(externalOrdersDataGrid, "external orders");
         }
 
-        public void exOrderBtnControl(bool btnMark, bool btnAdd, bool btnDelete)
+        public void exOrderBtnControl(bool btnMark, bool btnAdd, bool btnDelete, bool btncheck)
         {
             externalOrdersDeleteButton.Enabled = btnDelete;
             externalOrdersMarkButton.Enabled = btnMark;
             externalOrdersAddButton.Enabled = btnAdd;
+            openCheckButton.Enabled = btncheck;
         }
 
         private void externalOrdersMarkButton_Click(object sender, EventArgs e)
         {
             int id = Helper.getDataGridSelectedKey(externalOrdersDataGrid, 0);
-            AddSumForm addSumForm = new AddSumForm(this, id);
-            addSumForm.ShowDialog();
+            if (id >= 0)
+            {
+                AddSumForm addSumForm = new AddSumForm(this, id);
+                addSumForm.ShowDialog();
+            }
+            else
+            {
+                Helper.reportTheAbsenceOfAKey();
+            }
         }
 
         private void openCheckButton_Click(object sender, EventArgs e)
         {
             int id = Helper.getDataGridSelectedKey(externalOrdersDataGrid, 0);
-            Report report = new Report(id);
-            report.Show();
-
+            if (id >= 0)
+            {
+                Report report = new Report(id);
+                report.Show();
+            } else
+            {
+                Helper.reportTheAbsenceOfAKey();
+            }
         }
     }   
 }

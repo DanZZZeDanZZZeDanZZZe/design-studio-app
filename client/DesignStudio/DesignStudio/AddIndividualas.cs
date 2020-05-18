@@ -21,24 +21,44 @@ namespace DesignStudio
 
         private void buttonAdd_Click(object sender, EventArgs e)
         {
-            int ID = int.Parse(IDBox.Text);
-            int code = DatabaseAPI.checkByID(ID, "customers");
-            if (Convert.ToBoolean(code))
-            {
-                MessageBox.Show("A customer with that id already exists", "Error message",
-                MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            else
-            {
-                string name = nameBox.Text;
-                string suname = sunameBox.Text;
-                string patronymic = patronymicBox.Text;
-                float passportID = float.Parse(PIDBox.Text);
-                float phoneNumber = float.Parse(numberBox.Text);
+            bool flag = true;
+            string name = "";
+            string suname = "";
+            string patronymic = "";
+            float passportID = 0;
+            float phoneNumber = 0;
+            int ID = 0;
 
-                DatabaseAPI.addIndividualas(ID, passportID, name, suname, patronymic, phoneNumber);
-                this.Close();
-                main.FillGrids();
+
+            try
+            {
+                ID = int.Parse(IDBox.Text);
+                name = nameBox.Text;
+                suname = sunameBox.Text;
+                patronymic = patronymicBox.Text;
+                passportID = float.Parse(PIDBox.Text);
+                phoneNumber = float.Parse(numberBox.Text);
+            }
+            catch
+            {
+                Helper.reportWrongFieldFormat();
+                flag = false;
+            }
+            if (flag)
+            {
+                int code = DatabaseAPI.checkByID(ID, "customers");
+                if (Convert.ToBoolean(code))
+                {
+                    MessageBox.Show("A customer with that id already exists", "Error message",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+
+                    DatabaseAPI.addIndividualas(ID, passportID, name, suname, patronymic, phoneNumber);
+                    this.Close();
+                    main.FillGrids();
+                }
             }
         }
     }

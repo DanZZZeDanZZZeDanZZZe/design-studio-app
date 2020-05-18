@@ -34,11 +34,9 @@
             this.pageSetupDialog1 = new System.Windows.Forms.PageSetupDialog();
             this.panel1 = new System.Windows.Forms.Panel();
             this.employeesPage = new System.Windows.Forms.TabPage();
-            this.employeesDeleteButton = new System.Windows.Forms.Button();
             this.employeesDataGrid = new System.Windows.Forms.DataGridView();
             this.designersPage = new System.Windows.Forms.TabPage();
             this.sendToTheTeamButton = new System.Windows.Forms.Button();
-            this.designersDeleteButton = new System.Windows.Forms.Button();
             this.designersDataGrid = new System.Windows.Forms.DataGridView();
             this.developmentTeamsPage = new System.Windows.Forms.TabPage();
             this.showProductsButton = new System.Windows.Forms.Button();
@@ -46,6 +44,7 @@
             this.developmentTeamsDeleteButton = new System.Windows.Forms.Button();
             this.developmentTeamsDataGrid = new System.Windows.Forms.DataGridView();
             this.externalOrdersPage = new System.Windows.Forms.TabPage();
+            this.openCheckButton = new System.Windows.Forms.Button();
             this.externalOrdersAddButton = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -67,7 +66,7 @@
             this.internalOrdersAddButton = new System.Windows.Forms.Button();
             this.internalOrdersDeleteButton = new System.Windows.Forms.Button();
             this.internalOrdersDataGrid = new System.Windows.Forms.DataGridView();
-            this.openCheckButton = new System.Windows.Forms.Button();
+            this.label = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.employeesPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.employeesDataGrid)).BeginInit();
@@ -94,7 +93,7 @@
             this.settingButton.Name = "settingButton";
             this.settingButton.Size = new System.Drawing.Size(216, 47);
             this.settingButton.TabIndex = 2;
-            this.settingButton.Text = "Настройка соединения";
+            this.settingButton.Text = "Connection settings";
             this.settingButton.UseVisualStyleBackColor = true;
             this.settingButton.Click += new System.EventHandler(this.settingButton_Click);
             // 
@@ -105,7 +104,7 @@
             this.connectButton.Name = "connectButton";
             this.connectButton.Size = new System.Drawing.Size(216, 49);
             this.connectButton.TabIndex = 0;
-            this.connectButton.Text = "Подключить";
+            this.connectButton.Text = "Connect";
             this.connectButton.UseVisualStyleBackColor = true;
             this.connectButton.Click += new System.EventHandler(this.connectButton_Click);
             // 
@@ -120,7 +119,6 @@
             // 
             // employeesPage
             // 
-            this.employeesPage.Controls.Add(this.employeesDeleteButton);
             this.employeesPage.Controls.Add(this.employeesDataGrid);
             this.employeesPage.Location = new System.Drawing.Point(4, 25);
             this.employeesPage.Name = "employeesPage";
@@ -129,15 +127,6 @@
             this.employeesPage.TabIndex = 8;
             this.employeesPage.Text = "employees";
             this.employeesPage.UseVisualStyleBackColor = true;
-            // 
-            // employeesDeleteButton
-            // 
-            this.employeesDeleteButton.Location = new System.Drawing.Point(680, 432);
-            this.employeesDeleteButton.Name = "employeesDeleteButton";
-            this.employeesDeleteButton.Size = new System.Drawing.Size(186, 55);
-            this.employeesDeleteButton.TabIndex = 4;
-            this.employeesDeleteButton.Text = "delete";
-            this.employeesDeleteButton.UseVisualStyleBackColor = true;
             // 
             // employeesDataGrid
             // 
@@ -152,7 +141,6 @@
             // designersPage
             // 
             this.designersPage.Controls.Add(this.sendToTheTeamButton);
-            this.designersPage.Controls.Add(this.designersDeleteButton);
             this.designersPage.Controls.Add(this.designersDataGrid);
             this.designersPage.Location = new System.Drawing.Point(4, 25);
             this.designersPage.Name = "designersPage";
@@ -164,22 +152,13 @@
             // 
             // sendToTheTeamButton
             // 
-            this.sendToTheTeamButton.Location = new System.Drawing.Point(470, 432);
+            this.sendToTheTeamButton.Location = new System.Drawing.Point(680, 425);
             this.sendToTheTeamButton.Name = "sendToTheTeamButton";
             this.sendToTheTeamButton.Size = new System.Drawing.Size(186, 55);
             this.sendToTheTeamButton.TabIndex = 5;
             this.sendToTheTeamButton.Text = "send to the team";
             this.sendToTheTeamButton.UseVisualStyleBackColor = true;
             this.sendToTheTeamButton.Click += new System.EventHandler(this.sendToTheTeamButton_Click);
-            // 
-            // designersDeleteButton
-            // 
-            this.designersDeleteButton.Location = new System.Drawing.Point(680, 432);
-            this.designersDeleteButton.Name = "designersDeleteButton";
-            this.designersDeleteButton.Size = new System.Drawing.Size(186, 55);
-            this.designersDeleteButton.TabIndex = 4;
-            this.designersDeleteButton.Text = "delete";
-            this.designersDeleteButton.UseVisualStyleBackColor = true;
             // 
             // designersDataGrid
             // 
@@ -261,6 +240,17 @@
             this.externalOrdersPage.Text = "external orders";
             this.externalOrdersPage.UseVisualStyleBackColor = true;
             // 
+            // openCheckButton
+            // 
+            this.openCheckButton.Enabled = false;
+            this.openCheckButton.Location = new System.Drawing.Point(296, 371);
+            this.openCheckButton.Name = "openCheckButton";
+            this.openCheckButton.Size = new System.Drawing.Size(186, 55);
+            this.openCheckButton.TabIndex = 17;
+            this.openCheckButton.Text = "open check";
+            this.openCheckButton.UseVisualStyleBackColor = true;
+            this.openCheckButton.Click += new System.EventHandler(this.openCheckButton_Click);
+            // 
             // externalOrdersAddButton
             // 
             this.externalOrdersAddButton.Location = new System.Drawing.Point(488, 432);
@@ -276,9 +266,9 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.radioButtonExUndone);
             this.groupBox1.Controls.Add(this.radioButtonExDone);
-            this.groupBox1.Location = new System.Drawing.Point(85, 406);
+            this.groupBox1.Location = new System.Drawing.Point(90, 371);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(200, 91);
+            this.groupBox1.Size = new System.Drawing.Size(200, 116);
             this.groupBox1.TabIndex = 15;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Order display:";
@@ -445,6 +435,7 @@
             this.Pages.SelectedIndex = 0;
             this.Pages.Size = new System.Drawing.Size(959, 554);
             this.Pages.TabIndex = 3;
+            this.Pages.Visible = false;
             // 
             // internalOrdersPage
             // 
@@ -482,22 +473,22 @@
             // internalOrdersDataGrid
             // 
             this.internalOrdersDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.internalOrdersDataGrid.Location = new System.Drawing.Point(85, 37);
+            this.internalOrdersDataGrid.Location = new System.Drawing.Point(57, 63);
             this.internalOrdersDataGrid.Name = "internalOrdersDataGrid";
             this.internalOrdersDataGrid.RowHeadersWidth = 51;
             this.internalOrdersDataGrid.RowTemplate.Height = 24;
             this.internalOrdersDataGrid.Size = new System.Drawing.Size(781, 303);
             this.internalOrdersDataGrid.TabIndex = 3;
             // 
-            // openCheckButton
+            // label
             // 
-            this.openCheckButton.Location = new System.Drawing.Point(296, 371);
-            this.openCheckButton.Name = "openCheckButton";
-            this.openCheckButton.Size = new System.Drawing.Size(186, 55);
-            this.openCheckButton.TabIndex = 17;
-            this.openCheckButton.Text = "open check";
-            this.openCheckButton.UseVisualStyleBackColor = true;
-            this.openCheckButton.Click += new System.EventHandler(this.openCheckButton_Click);
+            this.label.AutoSize = true;
+            this.label.Font = new System.Drawing.Font("Microsoft Sans Serif", 21F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label.Location = new System.Drawing.Point(330, 9);
+            this.label.Name = "label";
+            this.label.Size = new System.Drawing.Size(488, 39);
+            this.label.TabIndex = 6;
+            this.label.Text = "The database is not connected";
             // 
             // mainForm
             // 
@@ -506,6 +497,7 @@
             this.ClientSize = new System.Drawing.Size(1251, 578);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.Pages);
+            this.Controls.Add(this.label);
             this.Name = "mainForm";
             this.Text = "Design studio";
             this.panel1.ResumeLayout(false);
@@ -527,6 +519,7 @@
             this.internalOrdersPage.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.internalOrdersDataGrid)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -537,10 +530,8 @@
         private System.Windows.Forms.PageSetupDialog pageSetupDialog1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TabPage employeesPage;
-        private System.Windows.Forms.Button employeesDeleteButton;
         private System.Windows.Forms.DataGridView employeesDataGrid;
         private System.Windows.Forms.TabPage designersPage;
-        private System.Windows.Forms.Button designersDeleteButton;
         private System.Windows.Forms.DataGridView designersDataGrid;
         private System.Windows.Forms.TabPage developmentTeamsPage;
         private System.Windows.Forms.Button developmentTeamsAddButton;
@@ -571,6 +562,7 @@
         private System.Windows.Forms.RadioButton radioButtonExDone;
         private System.Windows.Forms.Button externalOrdersAddButton;
         private System.Windows.Forms.Button openCheckButton;
+        private System.Windows.Forms.Label label;
     }
 }
 

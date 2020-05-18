@@ -76,7 +76,7 @@
             this.saveAndExitButton.Name = "saveAndExitButton";
             this.saveAndExitButton.Size = new System.Drawing.Size(164, 41);
             this.saveAndExitButton.TabIndex = 7;
-            this.saveAndExitButton.Text = "Сохранить и выйти";
+            this.saveAndExitButton.Text = "Save and exit";
             this.saveAndExitButton.UseVisualStyleBackColor = true;
             this.saveAndExitButton.Click += new System.EventHandler(this.saveAndExitButton_Click);
             // 
@@ -87,7 +87,7 @@
             this.exitButton.Name = "exitButton";
             this.exitButton.Size = new System.Drawing.Size(115, 41);
             this.exitButton.TabIndex = 6;
-            this.exitButton.Text = "Выйти";
+            this.exitButton.Text = "Exit";
             this.exitButton.UseVisualStyleBackColor = true;
             this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
             // 

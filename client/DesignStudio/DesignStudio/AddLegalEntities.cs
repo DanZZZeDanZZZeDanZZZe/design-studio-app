@@ -22,20 +22,35 @@ namespace DesignStudio
 
         private void buttonAdd_Click(object sender, EventArgs e)
         {
-            int ID = int.Parse(IDBox.Text);
-            int code = DatabaseAPI.checkByID(ID, "customers");
-            if (Convert.ToBoolean(code))
+            bool flag = true;
+            string name = "";
+            float inn = 0;
+            int ID = 0;
+            try
             {
-                MessageBox.Show("A customer with that id already exists", "Error message",
-                MessageBoxButtons.OK, MessageBoxIcon.Error);
+                ID = int.Parse(IDBox.Text);
+                name = nameBox.Text;
+                inn = float.Parse(innBox.Text);
+                if (ID <= 0) throw new Exception();
+            } catch
+            {
+                Helper.reportWrongFieldFormat();
+                flag = false;
             }
-            else
+            if (flag)
             {
-                string name = nameBox.Text;
-                float inn = float.Parse(innBox.Text);
-                DatabaseAPI.addLegalEntities(ID, name, inn);                
-                this.Close();
-                main.FillGrids();
+                int code = DatabaseAPI.checkByID(ID, "customers");
+                if (Convert.ToBoolean(code))
+                {
+                    MessageBox.Show("A customer with that id already exists", "Error message",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    DatabaseAPI.addLegalEntities(ID, name, inn);
+                    this.Close();
+                    main.FillGrids();
+                }
             }
         }
 

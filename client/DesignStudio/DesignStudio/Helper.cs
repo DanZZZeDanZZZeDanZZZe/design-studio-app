@@ -12,11 +12,15 @@ namespace DesignStudio
     {
         public static int getDataGridSelectedKey(DataGridView grid, int keyIndex)
         {
-            int rowNum = grid.CurrentCell.RowIndex;
-            int keyValue = int.Parse(grid.Rows[rowNum].Cells[keyIndex].Value.ToString());
-            return keyValue;
+            try {
+                int rowNum = grid.CurrentCell.RowIndex;
+                int keyValue = int.Parse(grid.Rows[rowNum].Cells[keyIndex].Value.ToString());
+                return keyValue;
+            } catch
+            {
+                return -1;
+            }
         }
-
         public static DateTime getDate()
         {
             DateTime dateTime = DateTime.Now;
@@ -87,19 +91,33 @@ namespace DesignStudio
         public static void generateDelete(DataGridView grid, string tableName)
         {
             int id = getDataGridSelectedKey(grid, 0);
-            int code = deleteAdapter(id, tableName);
-            if (code == 0)
-                DatabaseAPI.GenerateGrid(grid, tableName);
-            callDeleteMessage(code, id);
+            if (id == -1)
+            {
+                reportTheAbsenceOfAKey();
+            }
+            else
+            {
+                int code = deleteAdapter(id, tableName);
+                if (code == 0)
+                    DatabaseAPI.GenerateGrid(grid, tableName);
+                callDeleteMessage(code, id);
+            }
         }
 
         public static void generateDelete(DataGridView grid, string tableName, string parentTableName)
         {
+       
             int id = getDataGridSelectedKey(grid, 0);
-            int code = deleteAdapter(id, tableName, parentTableName);
-            if (code == 0)
-                DatabaseAPI.GenerateGrid(grid, tableName);
-            callDeleteMessage(code, id);
+            if (id == -1)
+            {
+                reportTheAbsenceOfAKey();
+            } else
+            {
+                int code = deleteAdapter(id, tableName, parentTableName);
+                if (code == 0)
+                    DatabaseAPI.GenerateGrid(grid, tableName);
+                callDeleteMessage(code, id);
+            }
         }
         public static int deleteLegalEntities(int id)
         {
@@ -143,5 +161,14 @@ namespace DesignStudio
             return table1;
         }
 
+        public static void reportTheAbsenceOfAKey()
+        {
+            MessageBox.Show("Item not selected!", "Error" , MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+
+        public static void reportWrongFieldFormat()
+        {
+            MessageBox.Show("Fields have an invalid value format!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
     }
 }

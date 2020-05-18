@@ -105,7 +105,7 @@ namespace DesignStudio
                 Helper.useButtons(fontStatus, fontsDeleteButton, fontsAddButton, fontsSaveButton);
             } catch
             {
-                MessageBox.Show("Something went wrong");
+                Helper.reportWrongFieldFormat();
             }
 
         }
@@ -120,7 +120,7 @@ namespace DesignStudio
             }
             catch 
             {
-                MessageBox.Show("Something went wrong");
+                Helper.reportWrongFieldFormat();
             }
         }
 
@@ -134,7 +134,7 @@ namespace DesignStudio
             }
             catch 
             {
-                MessageBox.Show("Something went wrong");
+                Helper.reportWrongFieldFormat();
             }
         }
 
@@ -148,7 +148,7 @@ namespace DesignStudio
             }
             catch
             {
-                MessageBox.Show("Something went wrong");
+                Helper.reportWrongFieldFormat();
             }
         }
 
@@ -158,7 +158,7 @@ namespace DesignStudio
             {
                 addCupsFromForm(false);
                 cupStatus = true;
-                Helper.useButtons(cupStatus, cupsDeleteButton, cupsAddButton, cupsSaveButton);
+                Helper.reportWrongFieldFormat();
             }
             catch
             {
