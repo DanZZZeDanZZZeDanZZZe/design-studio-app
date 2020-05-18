@@ -107,7 +107,7 @@ namespace DesignStudio
             DatabaseAPI.GenerateGrid(individualsDataGrid, "individuals");
             DatabaseAPI.GenerateGrid(legalEntitiesDataGrid, "legal entities");
             renderExOrders(externalOrdersDataGrid, "external orders");
-            DatabaseAPI.GenerateGrid(internalOrdersDataGrid, "internal orders");
+            renderIntOrders(internalOrdersDataGrid, "internal orders");
             DatabaseAPI.GenerateGrid(developmentTeamsDataGrid, "development teams");
             DatabaseAPI.GenerateGrid(designersDataGrid, "designers");
             DatabaseAPI.GenerateGrid(employeesDataGrid, "employees");
@@ -232,6 +232,30 @@ namespace DesignStudio
         {
             renderExOrders(externalOrdersDataGrid, "external orders");
         }
+        private void radioButtonIn_CheckedChanged(object sender, EventArgs e)
+        {
+            renderIntOrders(internalOrdersDataGrid, "internal orders");
+        }
+        private void renderIntOrders(DataGridView grid, string name)
+        {
+            if (radioButtonIntUndone.Checked == true)
+            {
+                DatabaseAPI.GenerateGrid(grid, "getUndoneInOrders", true);
+                intOrderBtnControl(true, false, true);
+            }
+            else
+            {
+                DatabaseAPI.GenerateGrid(grid, "getDoneInOrders", true);
+                intOrderBtnControl(false, true, false);
+            }
+        }
+
+        public void intOrderBtnControl(bool btnAdd, bool btnDelete, bool btnMark)
+        {
+            internalOrdersDeleteButton.Enabled = btnDelete;
+            internalOrdersAddButton.Enabled = btnAdd;
+            internalOrdersMarkButton.Enabled = btnMark;
+        }
 
         public void exOrderBtnControl(bool btnMark, bool btnAdd, bool btnDelete, bool btncheck)
         {
@@ -240,6 +264,7 @@ namespace DesignStudio
             externalOrdersAddButton.Enabled = btnAdd;
             openCheckButton.Enabled = btncheck;
         }
+
 
         private void externalOrdersMarkButton_Click(object sender, EventArgs e)
         {
@@ -263,6 +288,20 @@ namespace DesignStudio
                 Report report = new Report(id);
                 report.Show();
             } else
+            {
+                Helper.reportTheAbsenceOfAKey();
+            }
+        }
+
+        private void internalOrdersMarkButton_Click(object sender, EventArgs e)
+        {
+            int id = Helper.getDataGridSelectedKey(internalOrdersDataGrid, 0);
+            if (id >= 0)
+            {
+                DatabaseAPI.markInOrder(id);
+                renderIntOrders(internalOrdersDataGrid, "internal orders");
+            }
+            else
             {
                 Helper.reportTheAbsenceOfAKey();
             }

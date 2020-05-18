@@ -63,6 +63,11 @@
             this.individualsDataGrid = new System.Windows.Forms.DataGridView();
             this.Pages = new System.Windows.Forms.TabControl();
             this.internalOrdersPage = new System.Windows.Forms.TabPage();
+            this.internalOrdersMarkButton = new System.Windows.Forms.Button();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.radioButtonIntUndone = new System.Windows.Forms.RadioButton();
+            this.radioButtonIntDone = new System.Windows.Forms.RadioButton();
             this.internalOrdersAddButton = new System.Windows.Forms.Button();
             this.internalOrdersDeleteButton = new System.Windows.Forms.Button();
             this.internalOrdersDataGrid = new System.Windows.Forms.DataGridView();
@@ -83,6 +88,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.individualsDataGrid)).BeginInit();
             this.Pages.SuspendLayout();
             this.internalOrdersPage.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.internalOrdersDataGrid)).BeginInit();
             this.SuspendLayout();
             // 
@@ -439,6 +445,8 @@
             // 
             // internalOrdersPage
             // 
+            this.internalOrdersPage.Controls.Add(this.internalOrdersMarkButton);
+            this.internalOrdersPage.Controls.Add(this.groupBox2);
             this.internalOrdersPage.Controls.Add(this.internalOrdersAddButton);
             this.internalOrdersPage.Controls.Add(this.internalOrdersDeleteButton);
             this.internalOrdersPage.Controls.Add(this.internalOrdersDataGrid);
@@ -449,6 +457,60 @@
             this.internalOrdersPage.TabIndex = 5;
             this.internalOrdersPage.Text = "internal orders";
             this.internalOrdersPage.UseVisualStyleBackColor = true;
+            // 
+            // internalOrdersMarkButton
+            // 
+            this.internalOrdersMarkButton.Location = new System.Drawing.Point(263, 432);
+            this.internalOrdersMarkButton.Name = "internalOrdersMarkButton";
+            this.internalOrdersMarkButton.Size = new System.Drawing.Size(186, 55);
+            this.internalOrdersMarkButton.TabIndex = 17;
+            this.internalOrdersMarkButton.Text = "mark completion";
+            this.internalOrdersMarkButton.UseVisualStyleBackColor = true;
+            this.internalOrdersMarkButton.Click += new System.EventHandler(this.internalOrdersMarkButton_Click);
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.label2);
+            this.groupBox2.Controls.Add(this.radioButtonIntUndone);
+            this.groupBox2.Controls.Add(this.radioButtonIntDone);
+            this.groupBox2.Location = new System.Drawing.Point(57, 387);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(200, 116);
+            this.groupBox2.TabIndex = 16;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Order display:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(59, 13);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(0, 17);
+            this.label2.TabIndex = 13;
+            // 
+            // radioButtonIntUndone
+            // 
+            this.radioButtonIntUndone.AutoSize = true;
+            this.radioButtonIntUndone.Checked = true;
+            this.radioButtonIntUndone.Location = new System.Drawing.Point(62, 33);
+            this.radioButtonIntUndone.Name = "radioButtonIntUndone";
+            this.radioButtonIntUndone.Size = new System.Drawing.Size(79, 21);
+            this.radioButtonIntUndone.TabIndex = 16;
+            this.radioButtonIntUndone.TabStop = true;
+            this.radioButtonIntUndone.Text = "Undone";
+            this.radioButtonIntUndone.UseVisualStyleBackColor = true;
+            this.radioButtonIntUndone.CheckedChanged += new System.EventHandler(this.radioButtonIn_CheckedChanged);
+            // 
+            // radioButtonIntDone
+            // 
+            this.radioButtonIntDone.AutoSize = true;
+            this.radioButtonIntDone.Location = new System.Drawing.Point(62, 60);
+            this.radioButtonIntDone.Name = "radioButtonIntDone";
+            this.radioButtonIntDone.Size = new System.Drawing.Size(63, 21);
+            this.radioButtonIntDone.TabIndex = 15;
+            this.radioButtonIntDone.Text = "Done";
+            this.radioButtonIntDone.UseVisualStyleBackColor = true;
+            this.radioButtonIntDone.CheckedChanged += new System.EventHandler(this.radioButtonIn_CheckedChanged);
             // 
             // internalOrdersAddButton
             // 
@@ -517,6 +579,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.individualsDataGrid)).EndInit();
             this.Pages.ResumeLayout(false);
             this.internalOrdersPage.ResumeLayout(false);
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.internalOrdersDataGrid)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -563,6 +627,11 @@
         private System.Windows.Forms.Button externalOrdersAddButton;
         private System.Windows.Forms.Button openCheckButton;
         private System.Windows.Forms.Label label;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.RadioButton radioButtonIntUndone;
+        private System.Windows.Forms.RadioButton radioButtonIntDone;
+        private System.Windows.Forms.Button internalOrdersMarkButton;
     }
 }
 

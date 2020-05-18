@@ -21,8 +21,6 @@ namespace DesignStudio
 
         public static SqlCommand command;
         public static SqlDataReader reader;
-      //  public static List<string[]> data;
-       // public static DataTable dataTable;
         public static void CreateConnectionString()
         {
             connectionString = serverName + dbName + settings;
@@ -53,7 +51,7 @@ namespace DesignStudio
             CreateSqlCommand(query);
             reader = command.ExecuteReader();
         }
-        
+
         public static DataTable LoadDataTableFromQuery(string query)
         {
             DataTable dataTable = new DataTable();
@@ -323,7 +321,7 @@ namespace DesignStudio
 
         public static void GenerateGrid(DataGridView grid, string name)
         {
-            DataTable dt = DatabaseAPI.LoadAllDataFromTable(name);
+            DataTable dt = LoadAllDataFromTable(name);
             grid.DataSource = dt;
             grid.Update();
         }
@@ -334,7 +332,8 @@ namespace DesignStudio
             {
                 grid.DataSource = LoadAllDataFromSP(name);
                 grid.Update();
-            } else
+            }
+            else
             {
                 GenerateGrid(grid, name);
             }
@@ -369,26 +368,14 @@ namespace DesignStudio
             command.ExecuteNonQuery();
         }
 
-        /*  public List<string[]> LoadData(string query)
-          {
+        public static void markInOrder(int ID)
+        {
+            CreateSqlCommand("markInOrder");
+            command.CommandType = CommandType.StoredProcedure;
+            command.Parameters.Add("@ID", SqlDbType.Int).Value = ID;
 
-              CreateReader(query);
-              Console.WriteLine(reader.ToString(), command.ToString());
-              data = new List<string[]>();
-
-              while (reader.Read())
-              {
-
-                  data.Add(new string[3]);
-                  data[data.Count - 1][0] = reader[0].ToString();
-                  data[data.Count - 1][1] = reader[1].ToString();
-                  data[data.Count - 1][2] = reader[2].ToString();
-              }
-
-              reader.Close();
-              return data;
-              /*foreach (string[] s in data)
-                  dataGridView1.Rows.Add(s);*/
+            command.ExecuteNonQuery();
+        }
 
     }
 }
