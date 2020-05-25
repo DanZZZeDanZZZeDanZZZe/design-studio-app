@@ -12,14 +12,17 @@ namespace DesignStudio
 {
     public partial class ConnectionSetupForm : Form
     {
-
+        public mainForm f;
+        public string[] DBNameArr;
+        public string[] ServerNameArr;
         public ConnectionSetupForm(mainForm f)
         {
             InitializeComponent();
-            string[] DBNameArr = DatabaseAPI.dbName.Split('=');
+            this.DBNameArr = DatabaseAPI.dbName.Split('=');
             dBNameTextBox.Text = DBNameArr[1];
-            string[] ServerNameArr = DatabaseAPI.serverName.Split('=');
+            this.ServerNameArr = DatabaseAPI.serverName.Split('=');
             serverNameTextBox.Text = ServerNameArr[1];
+            this.f = f;
         }
 
         private void exitButton_Click(object sender, EventArgs e)
@@ -29,9 +32,19 @@ namespace DesignStudio
 
         private void saveAndExitButton_Click(object sender, EventArgs e)
         {
-            // ConnectionSetupForm settingsForm = (ConnectionSetupForm)Application.OpenForms["SettingsForm"];
-            // settingsForm.Close();
+            DatabaseAPI.dbName = this.ServerNameArr[0] + "=" + dBNameTextBox.Text;
+            DatabaseAPI.serverName = this.DBNameArr[0] + "=" + serverNameTextBox.Text;
             this.Close();
+        }
+
+        private void serverNameTextBox_TextChanged(object sender, EventArgs e)
+        {
+            saveAndExitButton.Enabled = true;
+        }
+
+        private void dBNameTextBox_TextChanged(object sender, EventArgs e)
+        {
+            saveAndExitButton.Enabled = true;
         }
     }
 }

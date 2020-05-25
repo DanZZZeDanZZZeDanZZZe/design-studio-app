@@ -137,11 +137,12 @@
             // employeesDataGrid
             // 
             this.employeesDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.employeesDataGrid.Location = new System.Drawing.Point(85, 37);
+            this.employeesDataGrid.Location = new System.Drawing.Point(0, 0);
             this.employeesDataGrid.Name = "employeesDataGrid";
+            this.employeesDataGrid.ReadOnly = true;
             this.employeesDataGrid.RowHeadersWidth = 51;
             this.employeesDataGrid.RowTemplate.Height = 24;
-            this.employeesDataGrid.Size = new System.Drawing.Size(781, 303);
+            this.employeesDataGrid.Size = new System.Drawing.Size(951, 529);
             this.employeesDataGrid.TabIndex = 3;
             // 
             // designersPage
@@ -158,7 +159,7 @@
             // 
             // sendToTheTeamButton
             // 
-            this.sendToTheTeamButton.Location = new System.Drawing.Point(680, 425);
+            this.sendToTheTeamButton.Location = new System.Drawing.Point(749, 450);
             this.sendToTheTeamButton.Name = "sendToTheTeamButton";
             this.sendToTheTeamButton.Size = new System.Drawing.Size(186, 55);
             this.sendToTheTeamButton.TabIndex = 5;
@@ -169,11 +170,12 @@
             // designersDataGrid
             // 
             this.designersDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.designersDataGrid.Location = new System.Drawing.Point(85, 37);
+            this.designersDataGrid.Location = new System.Drawing.Point(0, 0);
             this.designersDataGrid.Name = "designersDataGrid";
+            this.designersDataGrid.ReadOnly = true;
             this.designersDataGrid.RowHeadersWidth = 51;
             this.designersDataGrid.RowTemplate.Height = 24;
-            this.designersDataGrid.Size = new System.Drawing.Size(781, 303);
+            this.designersDataGrid.Size = new System.Drawing.Size(951, 432);
             this.designersDataGrid.TabIndex = 3;
             // 
             // developmentTeamsPage
@@ -223,11 +225,12 @@
             // developmentTeamsDataGrid
             // 
             this.developmentTeamsDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.developmentTeamsDataGrid.Location = new System.Drawing.Point(85, 37);
+            this.developmentTeamsDataGrid.Location = new System.Drawing.Point(0, 0);
             this.developmentTeamsDataGrid.Name = "developmentTeamsDataGrid";
+            this.developmentTeamsDataGrid.ReadOnly = true;
             this.developmentTeamsDataGrid.RowHeadersWidth = 51;
             this.developmentTeamsDataGrid.RowTemplate.Height = 24;
-            this.developmentTeamsDataGrid.Size = new System.Drawing.Size(781, 303);
+            this.developmentTeamsDataGrid.Size = new System.Drawing.Size(951, 401);
             this.developmentTeamsDataGrid.TabIndex = 3;
             // 
             // externalOrdersPage
@@ -334,11 +337,12 @@
             // externalOrdersDataGrid
             // 
             this.externalOrdersDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.externalOrdersDataGrid.Location = new System.Drawing.Point(85, 37);
+            this.externalOrdersDataGrid.Location = new System.Drawing.Point(-4, 0);
             this.externalOrdersDataGrid.Name = "externalOrdersDataGrid";
+            this.externalOrdersDataGrid.ReadOnly = true;
             this.externalOrdersDataGrid.RowHeadersWidth = 51;
             this.externalOrdersDataGrid.RowTemplate.Height = 24;
-            this.externalOrdersDataGrid.Size = new System.Drawing.Size(781, 303);
+            this.externalOrdersDataGrid.Size = new System.Drawing.Size(955, 340);
             this.externalOrdersDataGrid.TabIndex = 3;
             // 
             // legalEntitiesPage
@@ -377,11 +381,12 @@
             // legalEntitiesDataGrid
             // 
             this.legalEntitiesDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.legalEntitiesDataGrid.Location = new System.Drawing.Point(85, 37);
+            this.legalEntitiesDataGrid.Location = new System.Drawing.Point(-4, 0);
             this.legalEntitiesDataGrid.Name = "legalEntitiesDataGrid";
+            this.legalEntitiesDataGrid.ReadOnly = true;
             this.legalEntitiesDataGrid.RowHeadersWidth = 51;
             this.legalEntitiesDataGrid.RowTemplate.Height = 24;
-            this.legalEntitiesDataGrid.Size = new System.Drawing.Size(781, 303);
+            this.legalEntitiesDataGrid.Size = new System.Drawing.Size(952, 340);
             this.legalEntitiesDataGrid.TabIndex = 3;
             // 
             // individualsPage
@@ -420,11 +425,12 @@
             // individualsDataGrid
             // 
             this.individualsDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.individualsDataGrid.Location = new System.Drawing.Point(85, 37);
+            this.individualsDataGrid.Location = new System.Drawing.Point(0, 0);
             this.individualsDataGrid.Name = "individualsDataGrid";
-            this.individualsDataGrid.RowHeadersWidth = 51;
+            this.individualsDataGrid.ReadOnly = true;
+            this.individualsDataGrid.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             this.individualsDataGrid.RowTemplate.Height = 24;
-            this.individualsDataGrid.Size = new System.Drawing.Size(781, 303);
+            this.individualsDataGrid.Size = new System.Drawing.Size(951, 390);
             this.individualsDataGrid.TabIndex = 3;
             // 
             // Pages
@@ -535,11 +541,12 @@
             // internalOrdersDataGrid
             // 
             this.internalOrdersDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.internalOrdersDataGrid.Location = new System.Drawing.Point(57, 63);
+            this.internalOrdersDataGrid.Location = new System.Drawing.Point(3, 0);
             this.internalOrdersDataGrid.Name = "internalOrdersDataGrid";
+            this.internalOrdersDataGrid.ReadOnly = true;
             this.internalOrdersDataGrid.RowHeadersWidth = 51;
             this.internalOrdersDataGrid.RowTemplate.Height = 24;
-            this.internalOrdersDataGrid.Size = new System.Drawing.Size(781, 303);
+            this.internalOrdersDataGrid.Size = new System.Drawing.Size(948, 366);
             this.internalOrdersDataGrid.TabIndex = 3;
             // 
             // label
@@ -561,7 +568,8 @@
             this.Controls.Add(this.Pages);
             this.Controls.Add(this.label);
             this.Name = "mainForm";
-            this.Text = "Design studio";
+            this.Text = "н";
+            this.Load += new System.EventHandler(this.mainForm_Load);
             this.panel1.ResumeLayout(false);
             this.employeesPage.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.employeesDataGrid)).EndInit();

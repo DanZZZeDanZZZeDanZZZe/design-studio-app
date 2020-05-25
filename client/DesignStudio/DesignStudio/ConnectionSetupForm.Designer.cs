@@ -42,6 +42,7 @@
             this.serverNameTextBox.Name = "serverNameTextBox";
             this.serverNameTextBox.Size = new System.Drawing.Size(326, 22);
             this.serverNameTextBox.TabIndex = 11;
+            this.serverNameTextBox.TextChanged += new System.EventHandler(this.serverNameTextBox_TextChanged);
             // 
             // serverNameLabel
             // 
@@ -68,6 +69,7 @@
             this.dBNameTextBox.Name = "dBNameTextBox";
             this.dBNameTextBox.Size = new System.Drawing.Size(326, 22);
             this.dBNameTextBox.TabIndex = 8;
+            this.dBNameTextBox.TextChanged += new System.EventHandler(this.dBNameTextBox_TextChanged);
             // 
             // saveAndExitButton
             // 

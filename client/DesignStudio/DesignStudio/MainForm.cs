@@ -84,11 +84,14 @@ namespace DesignStudio
                 connectButton.Text = "Connect";
             }
 
-            ContactTheDB(flagConnectionButton);
+            bool con  = ContactTheDB(flagConnectionButton);
+            if (con == true)
+            {
+                flagConnectionButton = !flagConnectionButton;
+                Pages.Visible = !flagConnectionButton;
+                label.Visible = flagConnectionButton;
+            }
             SetEnableButtons();
-            flagConnectionButton = !flagConnectionButton;
-            Pages.Visible = !flagConnectionButton;
-            label.Visible = flagConnectionButton;
         }
 
         private void SetEnableButtons()
@@ -305,6 +308,11 @@ namespace DesignStudio
             {
                 Helper.reportTheAbsenceOfAKey();
             }
+        }
+
+        private void mainForm_Load(object sender, EventArgs e)
+        {
+
         }
     }   
 }
