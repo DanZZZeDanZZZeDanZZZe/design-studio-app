@@ -54,14 +54,14 @@ namespace DesignStudio
             switch (code)
             {
                 case 0:
-                    MessageBox.Show("deleted item with key " + id.ToString());
+                    MessageBox.Show("удалён элемент по номеру " + id.ToString(), "Ошибка");
                     break;
                 case 1:
-                    MessageBox.Show("Item does not exist", "Error message",
+                    MessageBox.Show("Выбранный элемент не существует", "Ошибка", 
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
                     break;
                 case 2:
-                    MessageBox.Show("Item has related records", "Error message",
+                    MessageBox.Show("Выбранный элемент имеент связанные записи", "Ошибка",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
                     break;
             }
@@ -163,12 +163,13 @@ namespace DesignStudio
 
         public static void reportTheAbsenceOfAKey()
         {
-            MessageBox.Show("Item not selected!", "Error" , MessageBoxButtons.OK, MessageBoxIcon.Error);
+            MessageBox.Show("Элемент не выбран!", "Ошибка" , MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
         public static void reportWrongFieldFormat()
         {
-            MessageBox.Show("Fields have an invalid value format!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            MessageBox.Show("Поле иммет неверный формат!", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
+
     }
 }

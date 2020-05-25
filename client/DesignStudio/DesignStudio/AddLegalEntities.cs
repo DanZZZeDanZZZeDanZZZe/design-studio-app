@@ -37,12 +37,18 @@ namespace DesignStudio
                 Helper.reportWrongFieldFormat();
                 flag = false;
             }
+            if (inn < 12)
+            {
+                MessageBox.Show("ИНН должен содержать 12 символов", "Ошибка",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                flag = false;
+            }
             if (flag)
             {
-                int code = DatabaseAPI.checkByID(ID, "customers");
+                int code = DatabaseAPI.checkByID(ID, "legal entities");
                 if (Convert.ToBoolean(code))
                 {
-                    MessageBox.Show("A customer with that id already exists", "Error message",
+                    MessageBox.Show("Юр. лицо с таким ID уже существует", "Ошибка",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else

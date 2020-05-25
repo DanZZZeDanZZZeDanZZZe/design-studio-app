@@ -25,7 +25,7 @@ namespace DesignStudio
             int code = DatabaseAPI.checkOrdersID(ID);
             if (Convert.ToBoolean(code))
             {
-                MessageBox.Show("A internal order with that id already exists", "Error message",
+                MessageBox.Show("Внутренний заказ с таким ID уже существует", "Ошибка",
                 MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else

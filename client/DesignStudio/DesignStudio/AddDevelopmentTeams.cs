@@ -46,7 +46,7 @@ namespace DesignStudio
                 int code = DatabaseAPI.checkDevelopmentTeamID(ID);
                 if (Convert.ToBoolean(code))
                 {
-                    MessageBox.Show("A team with that id already exists", "Error message",
+                    MessageBox.Show("Команда с таким ID уже существует", "Ошибка",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else

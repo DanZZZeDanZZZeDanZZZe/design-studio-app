@@ -38,35 +38,36 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(246, 100);
+            this.label3.Location = new System.Drawing.Point(281, 103);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(46, 17);
+            this.label3.Size = new System.Drawing.Size(21, 17);
             this.label3.TabIndex = 12;
-            this.label3.Text = "Set ID";
+            this.label3.Text = "ID";
             // 
             // dateBox
             // 
             this.dateBox.Location = new System.Drawing.Point(318, 38);
             this.dateBox.Name = "dateBox";
+            this.dateBox.ReadOnly = true;
             this.dateBox.Size = new System.Drawing.Size(100, 22);
             this.dateBox.TabIndex = 11;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(178, 43);
+            this.label2.Location = new System.Drawing.Point(201, 41);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(114, 17);
+            this.label2.Size = new System.Drawing.Size(101, 17);
             this.label2.TabIndex = 10;
-            this.label2.Text = "The current date";
+            this.label2.Text = "Текущая дата";
             // 
             // buttonAdd
             // 
-            this.buttonAdd.Location = new System.Drawing.Point(266, 210);
+            this.buttonAdd.Location = new System.Drawing.Point(266, 214);
             this.buttonAdd.Name = "buttonAdd";
             this.buttonAdd.Size = new System.Drawing.Size(152, 43);
             this.buttonAdd.TabIndex = 9;
-            this.buttonAdd.Text = "Add";
+            this.buttonAdd.Text = "Добавить";
             this.buttonAdd.UseVisualStyleBackColor = true;
             this.buttonAdd.Click += new System.EventHandler(this.buttonAdd_Click);
             // 
@@ -89,7 +90,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.buttonAdd);
             this.Name = "AddInternalOrders";
-            this.Text = "Add internal order";
+            this.Text = "Добавить внутренний заказ";
             this.Load += new System.EventHandler(this.AddInternalOrders_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

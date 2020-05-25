@@ -99,7 +99,7 @@
             this.settingButton.Name = "settingButton";
             this.settingButton.Size = new System.Drawing.Size(216, 47);
             this.settingButton.TabIndex = 2;
-            this.settingButton.Text = "Connection settings";
+            this.settingButton.Text = "Настройки подключения";
             this.settingButton.UseVisualStyleBackColor = true;
             this.settingButton.Click += new System.EventHandler(this.settingButton_Click);
             // 
@@ -110,7 +110,7 @@
             this.connectButton.Name = "connectButton";
             this.connectButton.Size = new System.Drawing.Size(216, 49);
             this.connectButton.TabIndex = 0;
-            this.connectButton.Text = "Connect";
+            this.connectButton.Text = "Подключение";
             this.connectButton.UseVisualStyleBackColor = true;
             this.connectButton.Click += new System.EventHandler(this.connectButton_Click);
             // 
@@ -131,13 +131,13 @@
             this.employeesPage.Padding = new System.Windows.Forms.Padding(3);
             this.employeesPage.Size = new System.Drawing.Size(951, 525);
             this.employeesPage.TabIndex = 8;
-            this.employeesPage.Text = "employees";
+            this.employeesPage.Text = "работники";
             this.employeesPage.UseVisualStyleBackColor = true;
             // 
             // employeesDataGrid
             // 
             this.employeesDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.employeesDataGrid.Location = new System.Drawing.Point(0, 0);
+            this.employeesDataGrid.Location = new System.Drawing.Point(-4, 0);
             this.employeesDataGrid.Name = "employeesDataGrid";
             this.employeesDataGrid.ReadOnly = true;
             this.employeesDataGrid.RowHeadersWidth = 51;
@@ -154,7 +154,7 @@
             this.designersPage.Padding = new System.Windows.Forms.Padding(3);
             this.designersPage.Size = new System.Drawing.Size(951, 525);
             this.designersPage.TabIndex = 7;
-            this.designersPage.Text = "designers";
+            this.designersPage.Text = "дизайнеры";
             this.designersPage.UseVisualStyleBackColor = true;
             // 
             // sendToTheTeamButton
@@ -163,7 +163,7 @@
             this.sendToTheTeamButton.Name = "sendToTheTeamButton";
             this.sendToTheTeamButton.Size = new System.Drawing.Size(186, 55);
             this.sendToTheTeamButton.TabIndex = 5;
-            this.sendToTheTeamButton.Text = "send to the team";
+            this.sendToTheTeamButton.Text = "направить в команду";
             this.sendToTheTeamButton.UseVisualStyleBackColor = true;
             this.sendToTheTeamButton.Click += new System.EventHandler(this.sendToTheTeamButton_Click);
             // 
@@ -189,16 +189,17 @@
             this.developmentTeamsPage.Padding = new System.Windows.Forms.Padding(3);
             this.developmentTeamsPage.Size = new System.Drawing.Size(951, 525);
             this.developmentTeamsPage.TabIndex = 6;
-            this.developmentTeamsPage.Text = "development teams";
+            this.developmentTeamsPage.Text = "команды разработки";
             this.developmentTeamsPage.UseVisualStyleBackColor = true;
             // 
             // showProductsButton
             // 
+            this.showProductsButton.Cursor = System.Windows.Forms.Cursors.Default;
             this.showProductsButton.Location = new System.Drawing.Point(85, 432);
             this.showProductsButton.Name = "showProductsButton";
             this.showProductsButton.Size = new System.Drawing.Size(276, 55);
             this.showProductsButton.TabIndex = 6;
-            this.showProductsButton.Text = "show products";
+            this.showProductsButton.Text = "показать продукцию";
             this.showProductsButton.UseVisualStyleBackColor = true;
             this.showProductsButton.Click += new System.EventHandler(this.showProductsButton_Click);
             // 
@@ -208,7 +209,7 @@
             this.developmentTeamsAddButton.Name = "developmentTeamsAddButton";
             this.developmentTeamsAddButton.Size = new System.Drawing.Size(186, 55);
             this.developmentTeamsAddButton.TabIndex = 5;
-            this.developmentTeamsAddButton.Text = "add";
+            this.developmentTeamsAddButton.Text = "добавить";
             this.developmentTeamsAddButton.UseVisualStyleBackColor = true;
             this.developmentTeamsAddButton.Click += new System.EventHandler(this.developmentTeamsAddButton_Click);
             // 
@@ -218,7 +219,7 @@
             this.developmentTeamsDeleteButton.Name = "developmentTeamsDeleteButton";
             this.developmentTeamsDeleteButton.Size = new System.Drawing.Size(186, 55);
             this.developmentTeamsDeleteButton.TabIndex = 4;
-            this.developmentTeamsDeleteButton.Text = "delete";
+            this.developmentTeamsDeleteButton.Text = "удалить";
             this.developmentTeamsDeleteButton.UseVisualStyleBackColor = true;
             this.developmentTeamsDeleteButton.Click += new System.EventHandler(this.developmentTeamsDeleteButton_Click);
             // 
@@ -246,7 +247,7 @@
             this.externalOrdersPage.Padding = new System.Windows.Forms.Padding(3);
             this.externalOrdersPage.Size = new System.Drawing.Size(951, 525);
             this.externalOrdersPage.TabIndex = 4;
-            this.externalOrdersPage.Text = "external orders";
+            this.externalOrdersPage.Text = "внешние заказы";
             this.externalOrdersPage.UseVisualStyleBackColor = true;
             // 
             // openCheckButton
@@ -256,7 +257,7 @@
             this.openCheckButton.Name = "openCheckButton";
             this.openCheckButton.Size = new System.Drawing.Size(186, 55);
             this.openCheckButton.TabIndex = 17;
-            this.openCheckButton.Text = "open check";
+            this.openCheckButton.Text = "открыть чек";
             this.openCheckButton.UseVisualStyleBackColor = true;
             this.openCheckButton.Click += new System.EventHandler(this.openCheckButton_Click);
             // 
@@ -266,7 +267,7 @@
             this.externalOrdersAddButton.Name = "externalOrdersAddButton";
             this.externalOrdersAddButton.Size = new System.Drawing.Size(186, 55);
             this.externalOrdersAddButton.TabIndex = 16;
-            this.externalOrdersAddButton.Text = "add";
+            this.externalOrdersAddButton.Text = "добавить";
             this.externalOrdersAddButton.UseVisualStyleBackColor = true;
             this.externalOrdersAddButton.Click += new System.EventHandler(this.externalOrdersAddButton_Click);
             // 
@@ -280,7 +281,7 @@
             this.groupBox1.Size = new System.Drawing.Size(200, 116);
             this.groupBox1.TabIndex = 15;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Order display:";
+            this.groupBox1.Text = "Отображение заказов:";
             // 
             // label1
             // 
@@ -294,23 +295,23 @@
             // 
             this.radioButtonExUndone.AutoSize = true;
             this.radioButtonExUndone.Checked = true;
-            this.radioButtonExUndone.Location = new System.Drawing.Point(62, 33);
+            this.radioButtonExUndone.Location = new System.Drawing.Point(6, 34);
             this.radioButtonExUndone.Name = "radioButtonExUndone";
-            this.radioButtonExUndone.Size = new System.Drawing.Size(79, 21);
+            this.radioButtonExUndone.Size = new System.Drawing.Size(138, 21);
             this.radioButtonExUndone.TabIndex = 16;
             this.radioButtonExUndone.TabStop = true;
-            this.radioButtonExUndone.Text = "Undone";
+            this.radioButtonExUndone.Text = "Невыполненные";
             this.radioButtonExUndone.UseVisualStyleBackColor = true;
             this.radioButtonExUndone.CheckedChanged += new System.EventHandler(this.radioButtonEx_CheckedChanged);
             // 
             // radioButtonExDone
             // 
             this.radioButtonExDone.AutoSize = true;
-            this.radioButtonExDone.Location = new System.Drawing.Point(62, 60);
+            this.radioButtonExDone.Location = new System.Drawing.Point(6, 78);
             this.radioButtonExDone.Name = "radioButtonExDone";
-            this.radioButtonExDone.Size = new System.Drawing.Size(63, 21);
+            this.radioButtonExDone.Size = new System.Drawing.Size(122, 21);
             this.radioButtonExDone.TabIndex = 15;
-            this.radioButtonExDone.Text = "Done";
+            this.radioButtonExDone.Text = "Выполненные";
             this.radioButtonExDone.UseVisualStyleBackColor = true;
             this.radioButtonExDone.CheckedChanged += new System.EventHandler(this.radioButtonEx_CheckedChanged);
             // 
@@ -320,7 +321,7 @@
             this.externalOrdersMarkButton.Name = "externalOrdersMarkButton";
             this.externalOrdersMarkButton.Size = new System.Drawing.Size(186, 55);
             this.externalOrdersMarkButton.TabIndex = 5;
-            this.externalOrdersMarkButton.Text = "mark completion";
+            this.externalOrdersMarkButton.Text = "отметить выполнение";
             this.externalOrdersMarkButton.UseVisualStyleBackColor = true;
             this.externalOrdersMarkButton.Click += new System.EventHandler(this.externalOrdersMarkButton_Click);
             // 
@@ -330,7 +331,7 @@
             this.externalOrdersDeleteButton.Name = "externalOrdersDeleteButton";
             this.externalOrdersDeleteButton.Size = new System.Drawing.Size(186, 55);
             this.externalOrdersDeleteButton.TabIndex = 4;
-            this.externalOrdersDeleteButton.Text = "delete";
+            this.externalOrdersDeleteButton.Text = "удалить";
             this.externalOrdersDeleteButton.UseVisualStyleBackColor = true;
             this.externalOrdersDeleteButton.Click += new System.EventHandler(this.externalOrdersDeleteButton_Click);
             // 
@@ -355,7 +356,7 @@
             this.legalEntitiesPage.Padding = new System.Windows.Forms.Padding(3);
             this.legalEntitiesPage.Size = new System.Drawing.Size(951, 525);
             this.legalEntitiesPage.TabIndex = 3;
-            this.legalEntitiesPage.Text = "legal entities";
+            this.legalEntitiesPage.Text = "юридические лица";
             this.legalEntitiesPage.UseVisualStyleBackColor = true;
             // 
             // legalEntitiesAddButton
@@ -364,7 +365,7 @@
             this.legalEntitiesAddButton.Name = "legalEntitiesAddButton";
             this.legalEntitiesAddButton.Size = new System.Drawing.Size(186, 55);
             this.legalEntitiesAddButton.TabIndex = 5;
-            this.legalEntitiesAddButton.Text = "add";
+            this.legalEntitiesAddButton.Text = "добавить";
             this.legalEntitiesAddButton.UseVisualStyleBackColor = true;
             this.legalEntitiesAddButton.Click += new System.EventHandler(this.legalEntitiesAddButton_Click);
             // 
@@ -374,14 +375,14 @@
             this.legalEntitiesDeleteButton.Name = "legalEntitiesDeleteButton";
             this.legalEntitiesDeleteButton.Size = new System.Drawing.Size(186, 55);
             this.legalEntitiesDeleteButton.TabIndex = 4;
-            this.legalEntitiesDeleteButton.Text = "delete";
+            this.legalEntitiesDeleteButton.Text = "удалить";
             this.legalEntitiesDeleteButton.UseVisualStyleBackColor = true;
             this.legalEntitiesDeleteButton.Click += new System.EventHandler(this.legalEntitiesDeleteButton_Click);
             // 
             // legalEntitiesDataGrid
             // 
             this.legalEntitiesDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.legalEntitiesDataGrid.Location = new System.Drawing.Point(-4, 0);
+            this.legalEntitiesDataGrid.Location = new System.Drawing.Point(-1, 0);
             this.legalEntitiesDataGrid.Name = "legalEntitiesDataGrid";
             this.legalEntitiesDataGrid.ReadOnly = true;
             this.legalEntitiesDataGrid.RowHeadersWidth = 51;
@@ -399,7 +400,7 @@
             this.individualsPage.Padding = new System.Windows.Forms.Padding(3);
             this.individualsPage.Size = new System.Drawing.Size(951, 525);
             this.individualsPage.TabIndex = 2;
-            this.individualsPage.Text = "individuals";
+            this.individualsPage.Text = "физические лица";
             this.individualsPage.UseVisualStyleBackColor = true;
             // 
             // addIndividuals
@@ -408,7 +409,7 @@
             this.addIndividuals.Name = "addIndividuals";
             this.addIndividuals.Size = new System.Drawing.Size(186, 55);
             this.addIndividuals.TabIndex = 6;
-            this.addIndividuals.Text = "add";
+            this.addIndividuals.Text = "добавить";
             this.addIndividuals.UseVisualStyleBackColor = true;
             this.addIndividuals.Click += new System.EventHandler(this.addIndividuals_Click);
             // 
@@ -418,14 +419,14 @@
             this.individualsDeleteButton.Name = "individualsDeleteButton";
             this.individualsDeleteButton.Size = new System.Drawing.Size(186, 55);
             this.individualsDeleteButton.TabIndex = 4;
-            this.individualsDeleteButton.Text = "delete";
+            this.individualsDeleteButton.Text = "удалить";
             this.individualsDeleteButton.UseVisualStyleBackColor = true;
             this.individualsDeleteButton.Click += new System.EventHandler(this.individualsDeleteButton_Click);
             // 
             // individualsDataGrid
             // 
             this.individualsDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.individualsDataGrid.Location = new System.Drawing.Point(0, 0);
+            this.individualsDataGrid.Location = new System.Drawing.Point(-3, 0);
             this.individualsDataGrid.Name = "individualsDataGrid";
             this.individualsDataGrid.ReadOnly = true;
             this.individualsDataGrid.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
@@ -442,7 +443,7 @@
             this.Pages.Controls.Add(this.developmentTeamsPage);
             this.Pages.Controls.Add(this.designersPage);
             this.Pages.Controls.Add(this.employeesPage);
-            this.Pages.Location = new System.Drawing.Point(12, 12);
+            this.Pages.Location = new System.Drawing.Point(12, 9);
             this.Pages.Name = "Pages";
             this.Pages.SelectedIndex = 0;
             this.Pages.Size = new System.Drawing.Size(959, 554);
@@ -461,7 +462,7 @@
             this.internalOrdersPage.Padding = new System.Windows.Forms.Padding(3);
             this.internalOrdersPage.Size = new System.Drawing.Size(951, 525);
             this.internalOrdersPage.TabIndex = 5;
-            this.internalOrdersPage.Text = "internal orders";
+            this.internalOrdersPage.Text = "внутренние заказы";
             this.internalOrdersPage.UseVisualStyleBackColor = true;
             // 
             // internalOrdersMarkButton
@@ -470,7 +471,7 @@
             this.internalOrdersMarkButton.Name = "internalOrdersMarkButton";
             this.internalOrdersMarkButton.Size = new System.Drawing.Size(186, 55);
             this.internalOrdersMarkButton.TabIndex = 17;
-            this.internalOrdersMarkButton.Text = "mark completion";
+            this.internalOrdersMarkButton.Text = "отметить выполнение";
             this.internalOrdersMarkButton.UseVisualStyleBackColor = true;
             this.internalOrdersMarkButton.Click += new System.EventHandler(this.internalOrdersMarkButton_Click);
             // 
@@ -484,7 +485,7 @@
             this.groupBox2.Size = new System.Drawing.Size(200, 116);
             this.groupBox2.TabIndex = 16;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Order display:";
+            this.groupBox2.Text = "Отображение заказов:";
             // 
             // label2
             // 
@@ -498,23 +499,23 @@
             // 
             this.radioButtonIntUndone.AutoSize = true;
             this.radioButtonIntUndone.Checked = true;
-            this.radioButtonIntUndone.Location = new System.Drawing.Point(62, 33);
+            this.radioButtonIntUndone.Location = new System.Drawing.Point(6, 33);
             this.radioButtonIntUndone.Name = "radioButtonIntUndone";
-            this.radioButtonIntUndone.Size = new System.Drawing.Size(79, 21);
+            this.radioButtonIntUndone.Size = new System.Drawing.Size(138, 21);
             this.radioButtonIntUndone.TabIndex = 16;
             this.radioButtonIntUndone.TabStop = true;
-            this.radioButtonIntUndone.Text = "Undone";
+            this.radioButtonIntUndone.Text = "Невыполненный";
             this.radioButtonIntUndone.UseVisualStyleBackColor = true;
             this.radioButtonIntUndone.CheckedChanged += new System.EventHandler(this.radioButtonIn_CheckedChanged);
             // 
             // radioButtonIntDone
             // 
             this.radioButtonIntDone.AutoSize = true;
-            this.radioButtonIntDone.Location = new System.Drawing.Point(62, 60);
+            this.radioButtonIntDone.Location = new System.Drawing.Point(6, 60);
             this.radioButtonIntDone.Name = "radioButtonIntDone";
-            this.radioButtonIntDone.Size = new System.Drawing.Size(63, 21);
+            this.radioButtonIntDone.Size = new System.Drawing.Size(122, 21);
             this.radioButtonIntDone.TabIndex = 15;
-            this.radioButtonIntDone.Text = "Done";
+            this.radioButtonIntDone.Text = "Выполненный";
             this.radioButtonIntDone.UseVisualStyleBackColor = true;
             this.radioButtonIntDone.CheckedChanged += new System.EventHandler(this.radioButtonIn_CheckedChanged);
             // 
@@ -524,7 +525,7 @@
             this.internalOrdersAddButton.Name = "internalOrdersAddButton";
             this.internalOrdersAddButton.Size = new System.Drawing.Size(186, 55);
             this.internalOrdersAddButton.TabIndex = 5;
-            this.internalOrdersAddButton.Text = "add";
+            this.internalOrdersAddButton.Text = "добавить";
             this.internalOrdersAddButton.UseVisualStyleBackColor = true;
             this.internalOrdersAddButton.Click += new System.EventHandler(this.internalOrdersAddButton_Click);
             // 
@@ -534,14 +535,14 @@
             this.internalOrdersDeleteButton.Name = "internalOrdersDeleteButton";
             this.internalOrdersDeleteButton.Size = new System.Drawing.Size(186, 55);
             this.internalOrdersDeleteButton.TabIndex = 4;
-            this.internalOrdersDeleteButton.Text = "delete";
+            this.internalOrdersDeleteButton.Text = "удалить";
             this.internalOrdersDeleteButton.UseVisualStyleBackColor = true;
             this.internalOrdersDeleteButton.Click += new System.EventHandler(this.internalOrdersDeleteButton_Click);
             // 
             // internalOrdersDataGrid
             // 
             this.internalOrdersDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.internalOrdersDataGrid.Location = new System.Drawing.Point(3, 0);
+            this.internalOrdersDataGrid.Location = new System.Drawing.Point(0, 0);
             this.internalOrdersDataGrid.Name = "internalOrdersDataGrid";
             this.internalOrdersDataGrid.ReadOnly = true;
             this.internalOrdersDataGrid.RowHeadersWidth = 51;
@@ -553,11 +554,11 @@
             // 
             this.label.AutoSize = true;
             this.label.Font = new System.Drawing.Font("Microsoft Sans Serif", 21F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label.Location = new System.Drawing.Point(330, 9);
+            this.label.Location = new System.Drawing.Point(313, 9);
             this.label.Name = "label";
-            this.label.Size = new System.Drawing.Size(488, 39);
+            this.label.Size = new System.Drawing.Size(479, 39);
             this.label.TabIndex = 6;
-            this.label.Text = "The database is not connected";
+            this.label.Text = "База данных не подключена";
             // 
             // mainForm
             // 
@@ -568,7 +569,7 @@
             this.Controls.Add(this.Pages);
             this.Controls.Add(this.label);
             this.Name = "mainForm";
-            this.Text = "н";
+            this.Text = "Дизайн студия";
             this.Load += new System.EventHandler(this.mainForm_Load);
             this.panel1.ResumeLayout(false);
             this.employeesPage.ResumeLayout(false);

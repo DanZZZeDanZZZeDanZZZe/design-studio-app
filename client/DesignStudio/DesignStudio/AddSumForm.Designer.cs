@@ -37,6 +37,7 @@
             // textBoxSum
             // 
             this.textBoxSum.Location = new System.Drawing.Point(39, 50);
+            this.textBoxSum.MaxLength = 8;
             this.textBoxSum.Name = "textBoxSum";
             this.textBoxSum.Size = new System.Drawing.Size(333, 22);
             this.textBoxSum.TabIndex = 0;
@@ -46,9 +47,9 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(36, 19);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(115, 17);
+            this.label1.Size = new System.Drawing.Size(92, 17);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Enter order price";
+            this.label1.Text = "Цена заказа";
             // 
             // buttonOK
             // 
@@ -66,7 +67,7 @@
             this.buttonCancel.Name = "buttonCancel";
             this.buttonCancel.Size = new System.Drawing.Size(143, 34);
             this.buttonCancel.TabIndex = 3;
-            this.buttonCancel.Text = "Cancel";
+            this.buttonCancel.Text = "Выход";
             this.buttonCancel.UseVisualStyleBackColor = true;
             this.buttonCancel.Click += new System.EventHandler(this.buttonCancel_Click);
             // 
@@ -80,7 +81,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBoxSum);
             this.Name = "AddSumForm";
-            this.Text = "Add sum";
+            this.Text = "Установить сумму";
             this.ResumeLayout(false);
             this.PerformLayout();
 

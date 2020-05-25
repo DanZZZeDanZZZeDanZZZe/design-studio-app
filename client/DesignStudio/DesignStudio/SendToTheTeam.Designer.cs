@@ -44,11 +44,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(118, 26);
+            this.label1.Location = new System.Drawing.Point(140, 25);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(103, 17);
+            this.label1.Size = new System.Drawing.Size(66, 17);
             this.label1.TabIndex = 2;
-            this.label1.Text = "Choose a team";
+            this.label1.Text = "Команда";
             // 
             // buttonAdd
             // 
@@ -56,7 +56,7 @@
             this.buttonAdd.Name = "buttonAdd";
             this.buttonAdd.Size = new System.Drawing.Size(152, 43);
             this.buttonAdd.TabIndex = 4;
-            this.buttonAdd.Text = "Send";
+            this.buttonAdd.Text = "Направить";
             this.buttonAdd.UseVisualStyleBackColor = true;
             this.buttonAdd.Click += new System.EventHandler(this.buttonAdd_Click);
             // 
@@ -69,7 +69,7 @@
             this.Controls.Add(this.teamsComboBox);
             this.Controls.Add(this.label1);
             this.Name = "SendToTheTeam";
-            this.Text = "Send to the team";
+            this.Text = "Направить в команду";
             this.Load += new System.EventHandler(this.SendToTheTeam_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

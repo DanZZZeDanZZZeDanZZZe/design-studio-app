@@ -48,7 +48,7 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.reportViewer1);
             this.Name = "Report";
-            this.Text = "Report";
+            this.Text = "Чек";
             this.Load += new System.EventHandler(this.Report_Load);
             this.ResumeLayout(false);
 

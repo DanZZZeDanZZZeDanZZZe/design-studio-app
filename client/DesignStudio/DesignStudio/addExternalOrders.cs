@@ -35,18 +35,26 @@ namespace DesignStudio
             int code = DatabaseAPI.checkByID(ID, "orders");
             if (Convert.ToBoolean(code))
             {
-                MessageBox.Show("A order with that id already exists", "Error message",
+                MessageBox.Show("Заказ с таким ID уже существует", "Ошибка",
                 MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
                 int customersID = int.Parse(customerComboBox.SelectedValue.ToString());
                 string dateStr = dateBox.Text;
-                int dayCount = int.Parse(durationBox.Text);
-                string deadline = date.AddDays(dayCount).ToString("dd.MM.yyyy");
-                DatabaseAPI.addExternalOrders(ID, dateStr, deadline, customersID);
-                this.Close();
-                main.FillGrids();
+                try
+                {
+                    int dayCount = int.Parse(durationBox.Text);
+                    if (dayCount <= 0) throw new Exception();
+                    string deadline = date.AddDays(dayCount).ToString("dd.MM.yyyy");
+                    DatabaseAPI.addExternalOrders(ID, dateStr, deadline, customersID);
+                    this.Close();
+                    main.FillGrids();
+                } catch
+                {
+                    MessageBox.Show("Длительность должна быть положительным числом", "Ошибка",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
     }

@@ -27,8 +27,7 @@ namespace DesignStudio
             string patronymic = "";
             float passportID = 0;
             float phoneNumber = 0;
-            int ID = 0;
-
+            int ID = 0; 
 
             try
             {
@@ -44,12 +43,24 @@ namespace DesignStudio
                 Helper.reportWrongFieldFormat();
                 flag = false;
             }
+            if(passportID < 9)
+            {
+                MessageBox.Show("Номер паспорта должен содержать 9 символов!", "Ошибка",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                flag = false;
+            }
+            if (phoneNumber < 6)
+            {
+                MessageBox.Show("Номер должен содержать минимум 6 символов", "Ошибка",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                flag = false;
+            }
             if (flag)
             {
-                int code = DatabaseAPI.checkByID(ID, "customers");
+                int code = DatabaseAPI.checkByID(ID, "individuals");
                 if (Convert.ToBoolean(code))
                 {
-                    MessageBox.Show("A customer with that id already exists", "Error message",
+                    MessageBox.Show("Физ. лицо с таким ID уже существует", "Ошибка",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else

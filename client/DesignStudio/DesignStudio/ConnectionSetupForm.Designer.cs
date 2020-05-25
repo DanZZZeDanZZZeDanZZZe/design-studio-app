@@ -78,7 +78,7 @@
             this.saveAndExitButton.Name = "saveAndExitButton";
             this.saveAndExitButton.Size = new System.Drawing.Size(164, 41);
             this.saveAndExitButton.TabIndex = 7;
-            this.saveAndExitButton.Text = "Save and exit";
+            this.saveAndExitButton.Text = "Сохранить и выйти";
             this.saveAndExitButton.UseVisualStyleBackColor = true;
             this.saveAndExitButton.Click += new System.EventHandler(this.saveAndExitButton_Click);
             // 
@@ -89,7 +89,7 @@
             this.exitButton.Name = "exitButton";
             this.exitButton.Size = new System.Drawing.Size(115, 41);
             this.exitButton.TabIndex = 6;
-            this.exitButton.Text = "Exit";
+            this.exitButton.Text = "Выход";
             this.exitButton.UseVisualStyleBackColor = true;
             this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
             // 
@@ -105,7 +105,7 @@
             this.Controls.Add(this.saveAndExitButton);
             this.Controls.Add(this.exitButton);
             this.Name = "ConnectionSetupForm";
-            this.Text = "ConnectionSetupForm";
+            this.Text = "Настройки подключения";
             this.ResumeLayout(false);
             this.PerformLayout();
 

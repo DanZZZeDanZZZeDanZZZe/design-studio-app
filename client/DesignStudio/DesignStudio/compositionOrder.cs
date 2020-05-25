@@ -158,11 +158,11 @@ namespace DesignStudio
             {
                 addCupsFromForm(false);
                 cupStatus = true;
-                Helper.reportWrongFieldFormat();
+                Helper.useButtons(cupStatus, cupsDeleteButton, cupsAddButton, cupsSaveButton);
             }
             catch
             {
-                MessageBox.Show("Something went wrong");
+                Helper.reportWrongFieldFormat();
             }
         }
 
@@ -181,7 +181,7 @@ namespace DesignStudio
             }
             catch
             {
-                MessageBox.Show("Something went wrong");
+                MessageBox.Show("Что-то пошло не так");
             }
         }
 
@@ -199,7 +199,7 @@ namespace DesignStudio
             }
             catch
             {
-                MessageBox.Show("Something went wrong");
+                MessageBox.Show("Что-то пошло не так");
             }
         }
 
@@ -219,7 +219,7 @@ namespace DesignStudio
             }
             catch
             {
-                MessageBox.Show("Something went wrong");
+                MessageBox.Show("Что-то пошло не так");
             }
         }
 
@@ -238,7 +238,7 @@ namespace DesignStudio
             }
             catch
             {
-                MessageBox.Show("Something went wrong");
+                MessageBox.Show("Что-то пошло не так");
             }
         }
 
@@ -256,27 +256,44 @@ namespace DesignStudio
             }
             catch
             {
-                MessageBox.Show("Something went wrong");
+                MessageBox.Show("Что-то пошло не так");
             }
         }
 
         private void addFontsFromForm(bool updateStatus)
         {
+            if (fontMarkBox.Text.Length == 0 && fontWidthBox.Text.Length == 0)
+                throw new Exception();
             DatabaseAPI.addFonts(id, fontSerifBox.Checked, fontMarkBox.Text, fontWidthBox.Text, fontBoldBox.Checked, updateStatus);
         }
 
         private void addLogosFromForm(bool updateStatus)
         {
+            if (logoImageLinkBox.Text.Length == 0 && logoDescriptionBox.Text.Length == 0)
+                throw new Exception();
             DatabaseAPI.addLogos(id, logoImageLinkBox.Text, logoDescriptionBox.Text, logoTextBox.Text, updateStatus);
         }
 
         private void addClothesFromForm(bool updateStatus)
         {
+            if (
+                clothesTypeBox.Text.Length == 0 && 
+                clothesColorBox.Text.Length == 0 &&
+                clothesSizeBox.Text.Length == 0 
+            )
+                throw new Exception();
             DatabaseAPI.addClothes(id, clothesTypeBox.Text, clothesColorBox.Text, clothesSizeBox.Text, clothesTextBox.Text, updateStatus);
         }
 
         private void addCoversFromForm(bool updateStatus)
         {
+
+            if (
+                coverTypeBox.Text.Length == 0 &&
+                coverColorBox.Text.Length == 0 &&
+                coverDeviceBox.Text.Length == 0
+            )
+                throw new Exception();
             DatabaseAPI.addCovers(id, coverTypeBox.Text, coverColorBox.Text, coverDeviceBox.Text, updateStatus);
         }
 
@@ -288,31 +305,31 @@ namespace DesignStudio
         private void logosSaveButton_Click(object sender, EventArgs e)
         {
             addLogosFromForm(true);
-            MessageBox.Show("Data updated");
+            MessageBox.Show("Данные обновлены");
         }
 
         private void clothesSaveButton_Click(object sender, EventArgs e)
         {
             addClothesFromForm(true);
-            MessageBox.Show("Data updated");
+            MessageBox.Show("Данные обновлены");
         }
 
         private void coversSaveButton_Click(object sender, EventArgs e)
         {
             addCoversFromForm(true);
-            MessageBox.Show("Data updated");
+            MessageBox.Show("Данные обновлены");
         }
 
         private void cupsSaveButton_Click(object sender, EventArgs e)
         {
             addCupsFromForm(true);
-            MessageBox.Show("Data updated");
+            MessageBox.Show("Данные обновлены");
         }
 
         private void fontsSaveButton_Click(object sender, EventArgs e)
         {
             addFontsFromForm(true);
-            MessageBox.Show("Data updated");
+            MessageBox.Show("Данные обновлены");
         }
 
 

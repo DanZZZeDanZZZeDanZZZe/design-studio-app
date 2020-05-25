@@ -34,13 +34,13 @@ namespace DesignStudio
                 if (flag)
                 {
                     DatabaseAPI.ConnectionOpen();
-                    MessageBox.Show("Database connected", "Successfully", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("База данных подключена", "Успешное выполнение", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     FillGrids();
                 }
                 else
                 {
                     DatabaseAPI.ConnectionClose();
-                    MessageBox.Show("Database disconnected", "Successfully", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("База данных отключена", "Успешное выполнение", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
 
                 chekintConnection = true;
@@ -53,16 +53,13 @@ namespace DesignStudio
                 switch (ex.Number)
                 {
                     case -1:
-                        title = "Wrong server name";
+                        title = "Неправильное имя сервера";
                         break;
                     case 4060:
-                        title = "invalid database name";
-                        break;
-                    case 18456:
-                        title = "The username or password you entered is incorrect";
+                        title = "Неправильное имя базы";
                         break;
                     default:
-                        title = "Error";
+                        title = "Ошибка";
                         break;
                 }
 
@@ -77,11 +74,11 @@ namespace DesignStudio
             SetEnableButtons();
             if (flagConnectionButton)
             {
-                connectButton.Text = "Disconnect";
+                connectButton.Text = "Отключить";
             }
             else
             {
-                connectButton.Text = "Connect";
+                connectButton.Text = "Подключить";
             }
 
             bool con  = ContactTheDB(flagConnectionButton);
@@ -114,8 +111,41 @@ namespace DesignStudio
             DatabaseAPI.GenerateGrid(developmentTeamsDataGrid, "development teams");
             DatabaseAPI.GenerateGrid(designersDataGrid, "designers");
             DatabaseAPI.GenerateGrid(employeesDataGrid, "employees");
+            translateHeaders();
         }
 
+        public void translateHeaders()
+        {
+            individualsDataGrid.Columns[1].HeaderText = "Номер пасспорта";
+            individualsDataGrid.Columns[2].HeaderText = "Имя";
+            individualsDataGrid.Columns[3].HeaderText = "Фамилия";
+            individualsDataGrid.Columns[4].HeaderText = "Отчество";
+            individualsDataGrid.Columns[5].HeaderText = "Номер телефона";
+
+            legalEntitiesDataGrid.Columns[1].HeaderText = "Имя";
+            legalEntitiesDataGrid.Columns[2].HeaderText = "ИНН";
+
+            externalOrdersDataGrid.Columns[1].HeaderText = "Дата формирования";
+            externalOrdersDataGrid.Columns[2].HeaderText = "Деделайн";
+            externalOrdersDataGrid.Columns[3].HeaderText = "Сумма";
+            externalOrdersDataGrid.Columns[4].HeaderText = "Выполненность";
+
+            internalOrdersDataGrid.Columns[1].HeaderText = "Дата формирования";
+            internalOrdersDataGrid.Columns[1].HeaderText = "Выполненность";
+
+            developmentTeamsDataGrid.Columns[1].HeaderText = "Командный лидер";
+            developmentTeamsDataGrid.Columns[2].HeaderText = "Дата формирования";
+
+            designersDataGrid.Columns[0].HeaderText = "Персональный номер";
+            designersDataGrid.Columns[1].HeaderText = "Команды разработки"; 
+            designersDataGrid.Columns[2].HeaderText = "Специализация";
+
+            employeesDataGrid.Columns[0].HeaderText = "Персональный номер";
+            employeesDataGrid.Columns[1].HeaderText = "Имя";
+            employeesDataGrid.Columns[2].HeaderText = "Фамилия";
+            employeesDataGrid.Columns[3].HeaderText = "Отчество";
+            employeesDataGrid.Columns[4].HeaderText = "Опыт";
+        }
         private void individualsDeleteButton_Click(object sender, EventArgs e)
         {
             int id = Helper.getDataGridSelectedKey(individualsDataGrid, 0);

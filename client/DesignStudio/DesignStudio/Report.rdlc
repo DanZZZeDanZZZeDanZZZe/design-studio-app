@@ -49,7 +49,7 @@
               </Paragraph>
             </Paragraphs>
             <Top>1.24517cm</Top>
-            <Left>3.52398cm</Left>
+            <Left>4.58231cm</Left>
             <Height>0.6cm</Height>
             <Width>3.48778cm</Width>
             <ZIndex>1</ZIndex>
@@ -78,7 +78,7 @@
               </Paragraph>
             </Paragraphs>
             <Top>1.20989cm</Top>
-            <Left>9.0202cm</Left>
+            <Left>10.4313cm</Left>
             <Height>0.6cm</Height>
             <Width>4.532cm</Width>
             <ZIndex>2</ZIndex>
@@ -107,7 +107,7 @@
               </Paragraph>
             </Paragraphs>
             <Top>7.33411cm</Top>
-            <Left>1.54842cm</Left>
+            <Left>2.50564cm</Left>
             <Height>0.56472cm</Height>
             <Width>2.6905cm</Width>
             <ZIndex>3</ZIndex>
@@ -128,7 +128,7 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>Order ID:</Value>
+                    <Value>ID заказа</Value>
                     <Style />
                   </TextRun>
                 </TextRuns>
@@ -139,7 +139,7 @@
             <Top>0.3302cm</Top>
             <Left>0.3937cm</Left>
             <Height>0.6cm</Height>
-            <Width>1.65333cm</Width>
+            <Width>1.93555cm</Width>
             <ZIndex>4</ZIndex>
             <Style>
               <Border>
@@ -158,7 +158,7 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>Date of formation:</Value>
+                    <Value>Дата формирования:</Value>
                     <Style />
                   </TextRun>
                 </TextRuns>
@@ -166,10 +166,10 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox9</rd:DefaultName>
-            <Top>1.24517cm</Top>
-            <Left>0.3937cm</Left>
+            <Top>1.20989cm</Top>
+            <Left>0.46426cm</Left>
             <Height>0.6cm</Height>
-            <Width>2.91861cm</Width>
+            <Width>3.77466cm</Width>
             <ZIndex>5</ZIndex>
             <Style>
               <Border>
@@ -196,8 +196,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox9</rd:DefaultName>
-            <Top>1.20989cm</Top>
-            <Left>7.18814cm</Left>
+            <Top>1.24517cm</Top>
+            <Left>8.56397cm</Left>
             <Height>0.6cm</Height>
             <Width>1.69094cm</Width>
             <ZIndex>6</ZIndex>
@@ -218,7 +218,7 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>Sum:</Value>
+                    <Value>Сумма:</Value>
                     <Style />
                   </TextRun>
                 </TextRuns>
@@ -229,7 +229,7 @@
             <Top>7.33411cm</Top>
             <Left>0.3937cm</Left>
             <Height>0.56472cm</Height>
-            <Width>1.01361cm</Width>
+            <Width>1.45811cm</Width>
             <ZIndex>7</ZIndex>
             <Style>
               <Border>
@@ -250,7 +250,7 @@
                   <Paragraph>
                     <TextRuns>
                       <TextRun>
-                        <Value>Order list:</Value>
+                        <Value>Состав заказа:</Value>
                         <Style />
                       </TextRun>
                     </TextRuns>
@@ -278,7 +278,7 @@
                   <Paragraph>
                     <TextRuns>
                       <TextRun>
-                        <Value>Logo:</Value>
+                        <Value>Логотип:</Value>
                         <Style />
                       </TextRun>
                     </TextRuns>
@@ -289,7 +289,7 @@
                 <Top>1.17122cm</Top>
                 <Left>1.183cm</Left>
                 <Height>0.6cm</Height>
-                <Width>1.33111cm</Width>
+                <Width>1.73561cm</Width>
                 <ZIndex>1</ZIndex>
                 <Style>
                   <Border>
@@ -308,7 +308,7 @@
                   <Paragraph>
                     <TextRuns>
                       <TextRun>
-                        <Value>Font:</Value>
+                        <Value>Шрифт:</Value>
                         <Style />
                       </TextRun>
                     </TextRuns>
@@ -319,7 +319,7 @@
                 <Top>1.94761cm</Top>
                 <Left>1.183cm</Left>
                 <Height>0.6cm</Height>
-                <Width>1.33111cm</Width>
+                <Width>1.73561cm</Width>
                 <ZIndex>2</ZIndex>
                 <Style>
                   <Border>
@@ -338,7 +338,7 @@
                   <Paragraph>
                     <TextRuns>
                       <TextRun>
-                        <Value>Clothes:</Value>
+                        <Value>Одежда:</Value>
                         <Style />
                       </TextRun>
                     </TextRuns>
@@ -368,7 +368,7 @@
                   <Paragraph>
                     <TextRuns>
                       <TextRun>
-                        <Value>Cover:</Value>
+                        <Value>Чихол:</Value>
                         <Style />
                       </TextRun>
                     </TextRuns>
@@ -398,7 +398,7 @@
                   <Paragraph>
                     <TextRuns>
                       <TextRun>
-                        <Value>Cup:</Value>
+                        <Value>Кружка:</Value>
                         <Style />
                       </TextRun>
                     </TextRuns>
@@ -409,7 +409,7 @@
                 <Top>4.20622cm</Top>
                 <Left>1.183cm</Left>
                 <Height>0.6cm</Height>
-                <Width>1.33111cm</Width>
+                <Width>1.73561cm</Width>
                 <ZIndex>5</ZIndex>
                 <Style>
                   <Border>

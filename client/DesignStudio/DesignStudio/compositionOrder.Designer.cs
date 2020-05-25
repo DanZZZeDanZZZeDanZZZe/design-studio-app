@@ -92,51 +92,51 @@
             // 
             // coversDeleteButton
             // 
-            this.coversDeleteButton.Location = new System.Drawing.Point(878, 18);
+            this.coversDeleteButton.Location = new System.Drawing.Point(829, 18);
             this.coversDeleteButton.Name = "coversDeleteButton";
-            this.coversDeleteButton.Size = new System.Drawing.Size(69, 55);
+            this.coversDeleteButton.Size = new System.Drawing.Size(97, 55);
             this.coversDeleteButton.TabIndex = 5;
-            this.coversDeleteButton.Text = "delete";
+            this.coversDeleteButton.Text = "удалить";
             this.coversDeleteButton.UseVisualStyleBackColor = true;
             this.coversDeleteButton.Click += new System.EventHandler(this.coversDeleteButton_Click);
             // 
             // cupsDeleteButton
             // 
-            this.cupsDeleteButton.Location = new System.Drawing.Point(878, 19);
+            this.cupsDeleteButton.Location = new System.Drawing.Point(829, 19);
             this.cupsDeleteButton.Name = "cupsDeleteButton";
-            this.cupsDeleteButton.Size = new System.Drawing.Size(69, 55);
+            this.cupsDeleteButton.Size = new System.Drawing.Size(97, 55);
             this.cupsDeleteButton.TabIndex = 5;
-            this.cupsDeleteButton.Text = "delete";
+            this.cupsDeleteButton.Text = "удалить";
             this.cupsDeleteButton.UseVisualStyleBackColor = true;
             this.cupsDeleteButton.Click += new System.EventHandler(this.cupsDeleteButton_Click);
             // 
             // clothesDeleteButton
             // 
-            this.clothesDeleteButton.Location = new System.Drawing.Point(878, 18);
+            this.clothesDeleteButton.Location = new System.Drawing.Point(829, 18);
             this.clothesDeleteButton.Name = "clothesDeleteButton";
-            this.clothesDeleteButton.Size = new System.Drawing.Size(69, 55);
+            this.clothesDeleteButton.Size = new System.Drawing.Size(97, 55);
             this.clothesDeleteButton.TabIndex = 5;
-            this.clothesDeleteButton.Text = "delete";
+            this.clothesDeleteButton.Text = "удалить";
             this.clothesDeleteButton.UseVisualStyleBackColor = true;
             this.clothesDeleteButton.Click += new System.EventHandler(this.clothesDeleteButton_Click);
             // 
             // fontsDeleteButton
             // 
-            this.fontsDeleteButton.Location = new System.Drawing.Point(878, 19);
+            this.fontsDeleteButton.Location = new System.Drawing.Point(829, 19);
             this.fontsDeleteButton.Name = "fontsDeleteButton";
-            this.fontsDeleteButton.Size = new System.Drawing.Size(69, 55);
+            this.fontsDeleteButton.Size = new System.Drawing.Size(97, 55);
             this.fontsDeleteButton.TabIndex = 3;
-            this.fontsDeleteButton.Text = "delete";
+            this.fontsDeleteButton.Text = "удалить";
             this.fontsDeleteButton.UseVisualStyleBackColor = true;
             this.fontsDeleteButton.Click += new System.EventHandler(this.fontsDeleteButton_Click);
             // 
             // logosDeleteButton
             // 
-            this.logosDeleteButton.Location = new System.Drawing.Point(878, 18);
+            this.logosDeleteButton.Location = new System.Drawing.Point(829, 18);
             this.logosDeleteButton.Name = "logosDeleteButton";
-            this.logosDeleteButton.Size = new System.Drawing.Size(69, 55);
+            this.logosDeleteButton.Size = new System.Drawing.Size(97, 55);
             this.logosDeleteButton.TabIndex = 3;
-            this.logosDeleteButton.Text = "delete";
+            this.logosDeleteButton.Text = "удалить";
             this.logosDeleteButton.UseVisualStyleBackColor = true;
             this.logosDeleteButton.Click += new System.EventHandler(this.logosDeleteButton_Click);
             // 
@@ -159,21 +159,21 @@
             // 
             // fontsSaveButton
             // 
-            this.fontsSaveButton.Location = new System.Drawing.Point(1028, 19);
+            this.fontsSaveButton.Location = new System.Drawing.Point(1035, 19);
             this.fontsSaveButton.Name = "fontsSaveButton";
-            this.fontsSaveButton.Size = new System.Drawing.Size(69, 55);
+            this.fontsSaveButton.Size = new System.Drawing.Size(95, 55);
             this.fontsSaveButton.TabIndex = 11;
-            this.fontsSaveButton.Text = "save";
+            this.fontsSaveButton.Text = "сохранить";
             this.fontsSaveButton.UseVisualStyleBackColor = true;
             this.fontsSaveButton.Click += new System.EventHandler(this.fontsSaveButton_Click);
             // 
             // fontsAddButton
             // 
-            this.fontsAddButton.Location = new System.Drawing.Point(953, 19);
+            this.fontsAddButton.Location = new System.Drawing.Point(932, 19);
             this.fontsAddButton.Name = "fontsAddButton";
-            this.fontsAddButton.Size = new System.Drawing.Size(69, 55);
+            this.fontsAddButton.Size = new System.Drawing.Size(97, 55);
             this.fontsAddButton.TabIndex = 9;
-            this.fontsAddButton.Text = "add";
+            this.fontsAddButton.Text = "добавить";
             this.fontsAddButton.UseVisualStyleBackColor = true;
             this.fontsAddButton.Click += new System.EventHandler(this.fontsAddButton_Click);
             // 
@@ -181,34 +181,36 @@
             // 
             this.fontBoldBox.AutoSize = true;
             this.fontBoldBox.CheckAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.fontBoldBox.Location = new System.Drawing.Point(418, 19);
+            this.fontBoldBox.Location = new System.Drawing.Point(507, 19);
             this.fontBoldBox.Name = "fontBoldBox";
-            this.fontBoldBox.Size = new System.Drawing.Size(39, 38);
+            this.fontBoldBox.Size = new System.Drawing.Size(74, 38);
             this.fontBoldBox.TabIndex = 8;
-            this.fontBoldBox.Text = "bold";
+            this.fontBoldBox.Text = "жирность";
             this.fontBoldBox.UseVisualStyleBackColor = true;
             // 
             // fontSerifBox
             // 
             this.fontSerifBox.AutoSize = true;
             this.fontSerifBox.CheckAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.fontSerifBox.Location = new System.Drawing.Point(151, 19);
+            this.fontSerifBox.Location = new System.Drawing.Point(162, 19);
             this.fontSerifBox.Name = "fontSerifBox";
-            this.fontSerifBox.Size = new System.Drawing.Size(39, 38);
+            this.fontSerifBox.Size = new System.Drawing.Size(114, 38);
             this.fontSerifBox.TabIndex = 8;
-            this.fontSerifBox.Text = "serif";
+            this.fontSerifBox.Text = "подчеркивание";
             this.fontSerifBox.UseVisualStyleBackColor = true;
             // 
             // fontWidthBox
             // 
-            this.fontWidthBox.Location = new System.Drawing.Point(312, 39);
+            this.fontWidthBox.Location = new System.Drawing.Point(401, 39);
+            this.fontWidthBox.MaxLength = 10;
             this.fontWidthBox.Name = "fontWidthBox";
             this.fontWidthBox.Size = new System.Drawing.Size(100, 22);
             this.fontWidthBox.TabIndex = 7;
             // 
             // fontMarkBox
             // 
-            this.fontMarkBox.Location = new System.Drawing.Point(196, 39);
+            this.fontMarkBox.Location = new System.Drawing.Point(285, 39);
+            this.fontMarkBox.MaxLength = 10;
             this.fontMarkBox.Name = "fontMarkBox";
             this.fontMarkBox.Size = new System.Drawing.Size(100, 22);
             this.fontMarkBox.TabIndex = 6;
@@ -216,20 +218,20 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(340, 19);
+            this.label4.Location = new System.Drawing.Point(419, 19);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(40, 17);
+            this.label4.Size = new System.Drawing.Size(59, 17);
             this.label4.TabIndex = 4;
-            this.label4.Text = "width";
+            this.label4.Text = "ширина";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(226, 19);
+            this.label3.Location = new System.Drawing.Point(302, 19);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(39, 17);
+            this.label3.Size = new System.Drawing.Size(61, 17);
             this.label3.TabIndex = 3;
-            this.label3.Text = "mark";
+            this.label3.Text = "засечки";
             // 
             // label1
             // 
@@ -237,9 +239,9 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label1.Location = new System.Drawing.Point(31, 32);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(52, 29);
+            this.label1.Size = new System.Drawing.Size(92, 29);
             this.label1.TabIndex = 1;
-            this.label1.Text = "font";
+            this.label1.Text = "шрифт";
             // 
             // panel2
             // 
@@ -260,21 +262,21 @@
             // 
             // logosSaveButton
             // 
-            this.logosSaveButton.Location = new System.Drawing.Point(1028, 18);
+            this.logosSaveButton.Location = new System.Drawing.Point(1035, 18);
             this.logosSaveButton.Name = "logosSaveButton";
-            this.logosSaveButton.Size = new System.Drawing.Size(69, 55);
+            this.logosSaveButton.Size = new System.Drawing.Size(95, 55);
             this.logosSaveButton.TabIndex = 12;
-            this.logosSaveButton.Text = "save";
+            this.logosSaveButton.Text = "сохранить";
             this.logosSaveButton.UseVisualStyleBackColor = true;
             this.logosSaveButton.Click += new System.EventHandler(this.logosSaveButton_Click);
             // 
             // logosAddButton
             // 
-            this.logosAddButton.Location = new System.Drawing.Point(953, 18);
+            this.logosAddButton.Location = new System.Drawing.Point(932, 18);
             this.logosAddButton.Name = "logosAddButton";
-            this.logosAddButton.Size = new System.Drawing.Size(69, 55);
+            this.logosAddButton.Size = new System.Drawing.Size(97, 55);
             this.logosAddButton.TabIndex = 10;
-            this.logosAddButton.Text = "add";
+            this.logosAddButton.Text = "добавить";
             this.logosAddButton.UseVisualStyleBackColor = true;
             this.logosAddButton.Click += new System.EventHandler(this.logosAddButton_Click);
             // 
@@ -283,9 +285,9 @@
             this.text.AutoSize = true;
             this.text.Location = new System.Drawing.Point(563, 19);
             this.text.Name = "text";
-            this.text.Size = new System.Drawing.Size(30, 17);
+            this.text.Size = new System.Drawing.Size(44, 17);
             this.text.TabIndex = 9;
-            this.text.Text = "text";
+            this.text.Text = "текст";
             // 
             // logoTextBox
             // 
@@ -313,18 +315,18 @@
             this.description.AutoSize = true;
             this.description.Location = new System.Drawing.Point(380, 18);
             this.description.Name = "description";
-            this.description.Size = new System.Drawing.Size(77, 17);
+            this.description.Size = new System.Drawing.Size(71, 17);
             this.description.TabIndex = 4;
-            this.description.Text = "description";
+            this.description.Text = "описание";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(225, 18);
+            this.label5.Location = new System.Drawing.Point(191, 18);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(71, 17);
+            this.label5.Size = new System.Drawing.Size(139, 17);
             this.label5.TabIndex = 3;
-            this.label5.Text = "image link";
+            this.label5.Text = "ссылка на картинку";
             // 
             // label6
             // 
@@ -332,9 +334,9 @@
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label6.Location = new System.Drawing.Point(31, 32);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(61, 29);
+            this.label6.Size = new System.Drawing.Size(109, 29);
             this.label6.TabIndex = 1;
-            this.label6.Text = "logo";
+            this.label6.Text = "логотип";
             // 
             // panel3
             // 
@@ -357,32 +359,32 @@
             // 
             // clothesSaveButton
             // 
-            this.clothesSaveButton.Location = new System.Drawing.Point(1028, 18);
+            this.clothesSaveButton.Location = new System.Drawing.Point(1035, 18);
             this.clothesSaveButton.Name = "clothesSaveButton";
-            this.clothesSaveButton.Size = new System.Drawing.Size(69, 55);
+            this.clothesSaveButton.Size = new System.Drawing.Size(97, 55);
             this.clothesSaveButton.TabIndex = 12;
-            this.clothesSaveButton.Text = "save";
+            this.clothesSaveButton.Text = "сохранить";
             this.clothesSaveButton.UseVisualStyleBackColor = true;
             this.clothesSaveButton.Click += new System.EventHandler(this.clothesSaveButton_Click);
             // 
             // clothesAddButton
             // 
-            this.clothesAddButton.Location = new System.Drawing.Point(953, 18);
+            this.clothesAddButton.Location = new System.Drawing.Point(932, 19);
             this.clothesAddButton.Name = "clothesAddButton";
-            this.clothesAddButton.Size = new System.Drawing.Size(69, 55);
+            this.clothesAddButton.Size = new System.Drawing.Size(97, 55);
             this.clothesAddButton.TabIndex = 12;
-            this.clothesAddButton.Text = "add";
+            this.clothesAddButton.Text = "добавить";
             this.clothesAddButton.UseVisualStyleBackColor = true;
             this.clothesAddButton.Click += new System.EventHandler(this.clothesAddButton_Click);
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(687, 19);
+            this.label10.Location = new System.Drawing.Point(682, 18);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(30, 17);
+            this.label10.Size = new System.Drawing.Size(44, 17);
             this.label10.TabIndex = 11;
-            this.label10.Text = "text";
+            this.label10.Text = "текст";
             // 
             // clothesTextBox
             // 
@@ -394,11 +396,11 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(523, 18);
+            this.label2.Location = new System.Drawing.Point(507, 18);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(33, 17);
+            this.label2.Size = new System.Drawing.Size(56, 17);
             this.label2.TabIndex = 9;
-            this.label2.Text = "size";
+            this.label2.Text = "размер";
             // 
             // clothesSizeBox
             // 
@@ -426,18 +428,18 @@
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(398, 19);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(39, 17);
+            this.label7.Size = new System.Drawing.Size(38, 17);
             this.label7.TabIndex = 4;
-            this.label7.Text = "color";
+            this.label7.Text = "цвет";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(241, 19);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(35, 17);
+            this.label8.Size = new System.Drawing.Size(31, 17);
             this.label8.TabIndex = 3;
-            this.label8.Text = "type";
+            this.label8.Text = "тип";
             // 
             // label9
             // 
@@ -445,9 +447,9 @@
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label9.Location = new System.Drawing.Point(31, 32);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(90, 29);
+            this.label9.Size = new System.Drawing.Size(100, 29);
             this.label9.TabIndex = 1;
-            this.label9.Text = "clothes";
+            this.label9.Text = "оджеда";
             // 
             // panel4
             // 
@@ -468,21 +470,21 @@
             // 
             // coversSaveButton
             // 
-            this.coversSaveButton.Location = new System.Drawing.Point(1028, 18);
+            this.coversSaveButton.Location = new System.Drawing.Point(1031, 18);
             this.coversSaveButton.Name = "coversSaveButton";
-            this.coversSaveButton.Size = new System.Drawing.Size(69, 55);
+            this.coversSaveButton.Size = new System.Drawing.Size(99, 55);
             this.coversSaveButton.TabIndex = 12;
-            this.coversSaveButton.Text = "save";
+            this.coversSaveButton.Text = "сохранить";
             this.coversSaveButton.UseVisualStyleBackColor = true;
             this.coversSaveButton.Click += new System.EventHandler(this.coversSaveButton_Click);
             // 
             // coversAddButton
             // 
-            this.coversAddButton.Location = new System.Drawing.Point(953, 18);
+            this.coversAddButton.Location = new System.Drawing.Point(932, 18);
             this.coversAddButton.Name = "coversAddButton";
-            this.coversAddButton.Size = new System.Drawing.Size(69, 55);
+            this.coversAddButton.Size = new System.Drawing.Size(97, 55);
             this.coversAddButton.TabIndex = 11;
-            this.coversAddButton.Text = "add";
+            this.coversAddButton.Text = "добавить";
             this.coversAddButton.UseVisualStyleBackColor = true;
             this.coversAddButton.Click += new System.EventHandler(this.coversAddButton_Click);
             // 
@@ -491,9 +493,9 @@
             this.label12.AutoSize = true;
             this.label12.Location = new System.Drawing.Point(507, 18);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(49, 17);
+            this.label12.Size = new System.Drawing.Size(54, 17);
             this.label12.TabIndex = 9;
-            this.label12.Text = "device";
+            this.label12.Text = "девайс";
             // 
             // coverDeviceBox
             // 
@@ -521,18 +523,18 @@
             this.label13.AutoSize = true;
             this.label13.Location = new System.Drawing.Point(398, 19);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(39, 17);
+            this.label13.Size = new System.Drawing.Size(38, 17);
             this.label13.TabIndex = 4;
-            this.label13.Text = "color";
+            this.label13.Text = "цвет";
             // 
             // label14
             // 
             this.label14.AutoSize = true;
             this.label14.Location = new System.Drawing.Point(241, 19);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(35, 17);
+            this.label14.Size = new System.Drawing.Size(31, 17);
             this.label14.TabIndex = 3;
-            this.label14.Text = "type";
+            this.label14.Text = "тип";
             // 
             // label15
             // 
@@ -540,9 +542,9 @@
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label15.Location = new System.Drawing.Point(31, 32);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(72, 29);
+            this.label15.Size = new System.Drawing.Size(81, 29);
             this.label15.TabIndex = 1;
-            this.label15.Text = "cover";
+            this.label15.Text = "чехол";
             // 
             // panel5
             // 
@@ -561,36 +563,37 @@
             // 
             // cupsSaveButton
             // 
-            this.cupsSaveButton.Location = new System.Drawing.Point(1028, 19);
+            this.cupsSaveButton.Location = new System.Drawing.Point(1031, 19);
             this.cupsSaveButton.Name = "cupsSaveButton";
-            this.cupsSaveButton.Size = new System.Drawing.Size(69, 55);
+            this.cupsSaveButton.Size = new System.Drawing.Size(102, 55);
             this.cupsSaveButton.TabIndex = 12;
-            this.cupsSaveButton.Text = "save";
+            this.cupsSaveButton.Text = "сохранить";
             this.cupsSaveButton.UseVisualStyleBackColor = true;
             this.cupsSaveButton.Click += new System.EventHandler(this.cupsSaveButton_Click);
             // 
             // cupsAddButton
             // 
-            this.cupsAddButton.Location = new System.Drawing.Point(953, 19);
+            this.cupsAddButton.Location = new System.Drawing.Point(932, 19);
             this.cupsAddButton.Name = "cupsAddButton";
-            this.cupsAddButton.Size = new System.Drawing.Size(69, 55);
+            this.cupsAddButton.Size = new System.Drawing.Size(97, 55);
             this.cupsAddButton.TabIndex = 11;
-            this.cupsAddButton.Text = "add";
+            this.cupsAddButton.Text = "добавить";
             this.cupsAddButton.UseVisualStyleBackColor = true;
             this.cupsAddButton.Click += new System.EventHandler(this.cupsAddButton_Click);
             // 
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(372, 19);
+            this.label16.Location = new System.Drawing.Point(377, 19);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(53, 17);
+            this.label16.Size = new System.Drawing.Size(48, 17);
             this.label16.TabIndex = 11;
-            this.label16.Text = "volume";
+            this.label16.Text = "обьём";
             // 
             // cupVolumeBox
             // 
             this.cupVolumeBox.Location = new System.Drawing.Point(372, 39);
+            this.cupVolumeBox.MaxLength = 4;
             this.cupVolumeBox.Name = "cupVolumeBox";
             this.cupVolumeBox.Size = new System.Drawing.Size(53, 22);
             this.cupVolumeBox.TabIndex = 10;
@@ -605,11 +608,11 @@
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(247, 19);
+            this.label18.Location = new System.Drawing.Point(238, 19);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(39, 17);
+            this.label18.Size = new System.Drawing.Size(38, 17);
             this.label18.TabIndex = 4;
-            this.label18.Text = "color";
+            this.label18.Text = "цвет";
             // 
             // label20
             // 
@@ -617,9 +620,9 @@
             this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label20.Location = new System.Drawing.Point(31, 32);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(52, 29);
+            this.label20.Size = new System.Drawing.Size(93, 29);
             this.label20.TabIndex = 1;
-            this.label20.Text = "cup";
+            this.label20.Text = "кружка";
             // 
             // compositionOrder
             // 
@@ -632,7 +635,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "compositionOrder";
-            this.Text = "composition order";
+            this.Text = "состав заказа";
             this.Load += new System.EventHandler(this.compositionOrder_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

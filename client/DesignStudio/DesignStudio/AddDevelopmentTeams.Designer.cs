@@ -40,11 +40,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 47);
+            this.label1.Location = new System.Drawing.Point(16, 47);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(271, 17);
+            this.label1.Size = new System.Drawing.Size(267, 17);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Choose a leader from the list of designers";
+            this.label1.Text = "Выбрать лидера из списка дизайнеров";
             // 
             // leadersComboBox
             // 
@@ -60,38 +60,40 @@
             this.buttonAdd.Name = "buttonAdd";
             this.buttonAdd.Size = new System.Drawing.Size(152, 43);
             this.buttonAdd.TabIndex = 2;
-            this.buttonAdd.Text = "Add";
+            this.buttonAdd.Text = "Добавить";
             this.buttonAdd.UseVisualStyleBackColor = true;
             this.buttonAdd.Click += new System.EventHandler(this.buttonAdd_Click);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(169, 100);
+            this.label2.Location = new System.Drawing.Point(182, 98);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(114, 17);
+            this.label2.Size = new System.Drawing.Size(101, 17);
             this.label2.TabIndex = 3;
-            this.label2.Text = "The current date";
+            this.label2.Text = "Текущая дата";
             // 
             // dateBox
             // 
             this.dateBox.Location = new System.Drawing.Point(309, 95);
             this.dateBox.Name = "dateBox";
+            this.dateBox.ReadOnly = true;
             this.dateBox.Size = new System.Drawing.Size(100, 22);
             this.dateBox.TabIndex = 4;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(237, 157);
+            this.label3.Location = new System.Drawing.Point(182, 157);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(46, 17);
+            this.label3.Size = new System.Drawing.Size(101, 17);
             this.label3.TabIndex = 5;
-            this.label3.Text = "Set ID";
+            this.label3.Text = "Установить ID";
             // 
             // IDBox
             // 
             this.IDBox.Location = new System.Drawing.Point(309, 152);
+            this.IDBox.MaxLength = 3;
             this.IDBox.Name = "IDBox";
             this.IDBox.Size = new System.Drawing.Size(100, 22);
             this.IDBox.TabIndex = 6;
@@ -109,7 +111,7 @@
             this.Controls.Add(this.leadersComboBox);
             this.Controls.Add(this.label1);
             this.Name = "AddDevelopmentTeam";
-            this.Text = "Add development team";
+            this.Text = "Добавить команду разработки";
             this.Load += new System.EventHandler(this.AddDevelopmentTeam_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

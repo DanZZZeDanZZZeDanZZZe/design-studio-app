@@ -47,19 +47,19 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(36, 39);
+            this.label3.Location = new System.Drawing.Point(81, 37);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(46, 17);
+            this.label3.Size = new System.Drawing.Size(21, 17);
             this.label3.TabIndex = 15;
-            this.label3.Text = "Set ID";
+            this.label3.Text = "ID";
             // 
             // buttonAdd
             // 
-            this.buttonAdd.Location = new System.Drawing.Point(56, 223);
+            this.buttonAdd.Location = new System.Drawing.Point(108, 226);
             this.buttonAdd.Name = "buttonAdd";
             this.buttonAdd.Size = new System.Drawing.Size(152, 43);
             this.buttonAdd.TabIndex = 14;
-            this.buttonAdd.Text = "Add";
+            this.buttonAdd.Text = "Добавить";
             this.buttonAdd.UseVisualStyleBackColor = true;
             this.buttonAdd.Click += new System.EventHandler(this.buttonAdd_Click);
             // 
@@ -73,15 +73,16 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(36, 98);
+            this.label1.Location = new System.Drawing.Point(67, 93);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(68, 17);
+            this.label1.Size = new System.Drawing.Size(35, 17);
             this.label1.TabIndex = 17;
-            this.label1.Text = "Set name";
+            this.label1.Text = "Имя";
             // 
             // innBox
             // 
             this.innBox.Location = new System.Drawing.Point(108, 149);
+            this.innBox.MaxLength = 12;
             this.innBox.Name = "innBox";
             this.innBox.Size = new System.Drawing.Size(100, 22);
             this.innBox.TabIndex = 20;
@@ -89,17 +90,17 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(36, 154);
+            this.label2.Location = new System.Drawing.Point(64, 149);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(52, 17);
+            this.label2.Size = new System.Drawing.Size(38, 17);
             this.label2.TabIndex = 19;
-            this.label2.Text = "Set inn";
+            this.label2.Text = "ИНН";
             // 
             // AddLegalEntities
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(269, 298);
+            this.ClientSize = new System.Drawing.Size(377, 298);
             this.Controls.Add(this.innBox);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.nameBox);
@@ -108,7 +109,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.buttonAdd);
             this.Name = "AddLegalEntities";
-            this.Text = "Add legal entities";
+            this.Text = "Добавить юридическое лицо";
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -222,7 +222,7 @@ namespace DesignStudio
             command.CommandType = CommandType.StoredProcedure;
             command.Parameters.Add("@ID", SqlDbType.Int).Value = id;
             command.Parameters.Add("@color", SqlDbType.NVarChar).Value = color;
-            command.Parameters.Add("@volume", SqlDbType.NVarChar).Value = volume;
+            command.Parameters.Add("@volume", SqlDbType.Int).Value = volume;
 
             command.ExecuteNonQuery();
         }
