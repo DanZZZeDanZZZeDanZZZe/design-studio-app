@@ -45,10 +45,10 @@ namespace DesignStudio
             }
             if (flag)
             {
-                int code = DatabaseAPI.checkByID(ID, "legal entities");
+                int code = DatabaseAPI.checkByID(ID, "customers");
                 if (Convert.ToBoolean(code))
                 {
-                    MessageBox.Show("Юр. лицо с таким ID уже существует", "Ошибка",
+                    MessageBox.Show("Заказчик с таким ID уже существует", "Ошибка",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else
@@ -60,5 +60,9 @@ namespace DesignStudio
             }
         }
 
+        private void AddLegalEntities_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -40,6 +40,7 @@
             // IDBox
             // 
             this.IDBox.Location = new System.Drawing.Point(108, 34);
+            this.IDBox.MaxLength = 3;
             this.IDBox.Name = "IDBox";
             this.IDBox.Size = new System.Drawing.Size(100, 22);
             this.IDBox.TabIndex = 16;
@@ -66,6 +67,7 @@
             // nameBox
             // 
             this.nameBox.Location = new System.Drawing.Point(108, 93);
+            this.nameBox.MaxLength = 30;
             this.nameBox.Name = "nameBox";
             this.nameBox.Size = new System.Drawing.Size(100, 22);
             this.nameBox.TabIndex = 18;
@@ -110,6 +112,7 @@
             this.Controls.Add(this.buttonAdd);
             this.Name = "AddLegalEntities";
             this.Text = "Добавить юридическое лицо";
+            this.Load += new System.EventHandler(this.AddLegalEntities_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

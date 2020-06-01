@@ -292,6 +292,7 @@
             // logoTextBox
             // 
             this.logoTextBox.Location = new System.Drawing.Point(489, 39);
+            this.logoTextBox.MaxLength = 30;
             this.logoTextBox.Name = "logoTextBox";
             this.logoTextBox.Size = new System.Drawing.Size(184, 22);
             this.logoTextBox.TabIndex = 8;
@@ -299,6 +300,7 @@
             // logoDescriptionBox
             // 
             this.logoDescriptionBox.Location = new System.Drawing.Point(368, 39);
+            this.logoDescriptionBox.MaxLength = 30;
             this.logoDescriptionBox.Name = "logoDescriptionBox";
             this.logoDescriptionBox.Size = new System.Drawing.Size(100, 22);
             this.logoDescriptionBox.TabIndex = 7;
@@ -306,6 +308,7 @@
             // logoImageLinkBox
             // 
             this.logoImageLinkBox.Location = new System.Drawing.Point(165, 39);
+            this.logoImageLinkBox.MaxLength = 30;
             this.logoImageLinkBox.Name = "logoImageLinkBox";
             this.logoImageLinkBox.Size = new System.Drawing.Size(184, 22);
             this.logoImageLinkBox.TabIndex = 6;
@@ -389,6 +392,7 @@
             // clothesTextBox
             // 
             this.clothesTextBox.Location = new System.Drawing.Point(611, 39);
+            this.clothesTextBox.MaxLength = 30;
             this.clothesTextBox.Name = "clothesTextBox";
             this.clothesTextBox.Size = new System.Drawing.Size(184, 22);
             this.clothesTextBox.TabIndex = 10;
@@ -405,6 +409,7 @@
             // clothesSizeBox
             // 
             this.clothesSizeBox.Location = new System.Drawing.Point(489, 39);
+            this.clothesSizeBox.MaxLength = 30;
             this.clothesSizeBox.Name = "clothesSizeBox";
             this.clothesSizeBox.Size = new System.Drawing.Size(100, 22);
             this.clothesSizeBox.TabIndex = 8;
@@ -412,6 +417,7 @@
             // clothesColorBox
             // 
             this.clothesColorBox.Location = new System.Drawing.Point(368, 39);
+            this.clothesColorBox.MaxLength = 30;
             this.clothesColorBox.Name = "clothesColorBox";
             this.clothesColorBox.Size = new System.Drawing.Size(100, 22);
             this.clothesColorBox.TabIndex = 7;
@@ -419,6 +425,7 @@
             // clothesTypeBox
             // 
             this.clothesTypeBox.Location = new System.Drawing.Point(165, 39);
+            this.clothesTypeBox.MaxLength = 30;
             this.clothesTypeBox.Name = "clothesTypeBox";
             this.clothesTypeBox.Size = new System.Drawing.Size(184, 22);
             this.clothesTypeBox.TabIndex = 6;
@@ -500,6 +507,7 @@
             // coverDeviceBox
             // 
             this.coverDeviceBox.Location = new System.Drawing.Point(489, 39);
+            this.coverDeviceBox.MaxLength = 30;
             this.coverDeviceBox.Name = "coverDeviceBox";
             this.coverDeviceBox.Size = new System.Drawing.Size(100, 22);
             this.coverDeviceBox.TabIndex = 8;
@@ -507,6 +515,7 @@
             // coverColorBox
             // 
             this.coverColorBox.Location = new System.Drawing.Point(368, 39);
+            this.coverColorBox.MaxLength = 30;
             this.coverColorBox.Name = "coverColorBox";
             this.coverColorBox.Size = new System.Drawing.Size(100, 22);
             this.coverColorBox.TabIndex = 7;
@@ -514,6 +523,7 @@
             // coverTypeBox
             // 
             this.coverTypeBox.Location = new System.Drawing.Point(165, 39);
+            this.coverTypeBox.MaxLength = 30;
             this.coverTypeBox.Name = "coverTypeBox";
             this.coverTypeBox.Size = new System.Drawing.Size(184, 22);
             this.coverTypeBox.TabIndex = 6;
@@ -601,6 +611,7 @@
             // cupColorBox
             // 
             this.cupColorBox.Location = new System.Drawing.Point(165, 39);
+            this.cupColorBox.MaxLength = 30;
             this.cupColorBox.Name = "cupColorBox";
             this.cupColorBox.Size = new System.Drawing.Size(184, 22);
             this.cupColorBox.TabIndex = 7;

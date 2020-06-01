@@ -382,7 +382,7 @@
             // legalEntitiesDataGrid
             // 
             this.legalEntitiesDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.legalEntitiesDataGrid.Location = new System.Drawing.Point(-1, 0);
+            this.legalEntitiesDataGrid.Location = new System.Drawing.Point(6, 6);
             this.legalEntitiesDataGrid.Name = "legalEntitiesDataGrid";
             this.legalEntitiesDataGrid.ReadOnly = true;
             this.legalEntitiesDataGrid.RowHeadersWidth = 51;

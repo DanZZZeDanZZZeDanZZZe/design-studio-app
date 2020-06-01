@@ -129,9 +129,10 @@ namespace DesignStudio
             externalOrdersDataGrid.Columns[2].HeaderText = "Деделайн";
             externalOrdersDataGrid.Columns[3].HeaderText = "Сумма";
             externalOrdersDataGrid.Columns[4].HeaderText = "Выполненность";
+            externalOrdersDataGrid.Columns[5].HeaderText = "Заказчик";
 
             internalOrdersDataGrid.Columns[1].HeaderText = "Дата формирования";
-            internalOrdersDataGrid.Columns[1].HeaderText = "Выполненность";
+            internalOrdersDataGrid.Columns[2].HeaderText = "Выполненность";
 
             developmentTeamsDataGrid.Columns[1].HeaderText = "Командный лидер";
             developmentTeamsDataGrid.Columns[2].HeaderText = "Дата формирования";
@@ -148,7 +149,8 @@ namespace DesignStudio
         }
         private void individualsDeleteButton_Click(object sender, EventArgs e)
         {
-            int id = Helper.getDataGridSelectedKey(individualsDataGrid, 0);
+            Helper.generateDelete(individualsDataGrid, "individuals", "customers");
+            /*int id = Helper.getDataGridSelectedKey(individualsDataGrid, 0);
             if (id >= 0)
             {
                 int code = DatabaseAPI.IndividualsDelete(id);
@@ -158,7 +160,7 @@ namespace DesignStudio
             else
             {
                 Helper.reportTheAbsenceOfAKey();
-            }
+            }*/
         }
 
         private void developmentTeamsAddButton_Click(object sender, EventArgs e)

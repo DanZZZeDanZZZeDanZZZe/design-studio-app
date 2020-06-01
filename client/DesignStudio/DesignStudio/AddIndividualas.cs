@@ -57,10 +57,10 @@ namespace DesignStudio
             }
             if (flag)
             {
-                int code = DatabaseAPI.checkByID(ID, "individuals");
+                int code = DatabaseAPI.checkByID(ID, "customers");
                 if (Convert.ToBoolean(code))
                 {
-                    MessageBox.Show("Физ. лицо с таким ID уже существует", "Ошибка",
+                    MessageBox.Show("Заказчик с таким ID уже существует", "Ошибка",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else
